@@ -1,9 +1,9 @@
 ![Player-1 — Learning to Play from Synthetic Experience](assets/player1-banner.png)
 
 <p align="center">
-  <a href="https://player-1-project.github.io/"><img src="https://img.shields.io/badge/🌐_Project_Page-6366F1?style=for-the-badge" alt="Project Page"></a>
-  <a href="https://player-1-project.github.io/assets/player-1.pdf"><img src="https://img.shields.io/badge/📄_Paper-EF4444?style=for-the-badge" alt="Paper"></a>
-  <img src="https://img.shields.io/badge/🤗_Dataset-Coming_Soon-6B7280?style=for-the-badge&amp;labelColor=2B2F3A" alt="Dataset — Coming Soon">
+  <a href="https://player-1-project.github.io/"><img src="https://img.shields.io/badge/🌐_Project_Page-6366F1?style=for-the-badge" alt="Project Page"></a>&nbsp;
+  <a href="https://player-1-project.github.io/assets/player-1.pdf"><img src="https://img.shields.io/badge/📄_Paper-EF4444?style=for-the-badge" alt="Paper"></a>&nbsp;
+  <img src="https://img.shields.io/badge/🤗_Dataset-Coming_Soon-6B7280?style=for-the-badge&amp;labelColor=2B2F3A" alt="Dataset — Coming Soon">&nbsp;
   <img src="https://img.shields.io/badge/🤗_Model-Coming_Soon-6B7280?style=for-the-badge&amp;labelColor=2B2F3A" alt="Model — Coming Soon">
 </p>
 
@@ -21,7 +21,7 @@ https://github.com/user-attachments/assets/8b55b5f3-f93f-4d1d-a767-257de0f742c2
 
 ## Player-1 Overview
 
-We build the general game agent with: **Computer-use model → SFT on Player-1-Data → RL in Player-1-Gym → Evaluation in external games**
+Player-1 training and evaluation pipeline: **Computer-use model → SFT on Player-1-Data → RL in Player-1-Gym → Evaluation in external games**
 
 ### 1/ Player-1-Data
 
@@ -39,7 +39,7 @@ We evaluate transfer to games outside the RL training suite:
 
 - **[MineDojo-300](https://github.com/MineDojo/MineDojo) (300 tasks):** Goal-directed control in Minecraft's open-ended world.
 - **[ViZDoom-10](https://github.com/Farama-Foundation/ViZDoom) (10 maps):** First-person navigation, aiming, and combat in ViZDoom.
-- **[GameWorld](https://github.com/gameworld-project/GameWorld) (170 tasks):** Varied mechanics and interaction across 34 browser games.
+- **[GameWorld](https://github.com/gameworld-project/GameWorld) (170 tasks):** Game control across 34 browser games with diverse mechanics.
 
 ## 🚀 Release Plan
 
