@@ -2,13 +2,13 @@
 
 ![Player-1 — Learning to Play from Synthetic Experience](assets/player1-banner.png)
 
-# Player-1: Learning to Play from Synthetic Experience
+**Player-1** is an open VLM post-training framework for generalist game-playing agents, following:<br>**SFT on Player-1-Data → RL in Player-1-Gym → Evaluation on held-out gameplay benchmarks**.
 
 [![Project Page](https://img.shields.io/badge/🌐_Project_Page-6366F1?style=for-the-badge)](https://player-1-project.github.io/)
 [![Paper](https://img.shields.io/badge/📄_Paper-EF4444?style=for-the-badge)](https://arxiv.org/abs/2610.20584)
 [![Dataset](https://img.shields.io/badge/🤗_Dataset-Player--1--Data-F59E0B?style=for-the-badge)](https://huggingface.co/datasets/yyyang/Player-1-Data)
 <br>
-[![Model: Player-1-9B](https://img.shields.io/badge/🤗_Model-Player--1--9B-10B981?style=for-the-badge)](https://huggingface.co/yyyang/Player-1-9B)
+[![Model: Player-1-9B](https://img.shields.io/badge/🤗_Model-Player--1--9B-8B5CF6?style=for-the-badge)](https://huggingface.co/yyyang/Player-1-9B)
 [![Model: Player-1-35B-A3B](https://img.shields.io/badge/🤗_Model-Player--1--35B--A3B-10B981?style=for-the-badge)](https://huggingface.co/yyyang/Player-1-35B-A3B)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
@@ -16,9 +16,7 @@
 
 ---
 
-**Player-1** is an open post-training pipeline for VLM generalist game-playing agents, following: **SFT on Player-1-Data → RL in Player-1-Gym → Evaluation on held-out gameplay benchmarks**.
-
-We provide the core components for the **Player-1** framework:
+Core components of the **Player-1** framework:
 - **Player-1-Data:** [6,044 curated trajectories from 172 games](https://huggingface.co/datasets/yyyang/Player-1-Data), complete with screenshots, chain-of-thought reasoning, and normalized keyboard/mouse actions.
 - **Player-1-Gym:** 16 synthetic 2D/3D environments for aiming, combat, driving, navigation, and UI crafting with verifiable rewards.
 - **Training Engine:** [VeRL](https://github.com/verl-project/verl) integration supporting PPO, GRPO, and GSPO. Base models: Qwen3.5-9B / Qwen3.5-35B-A3B.
