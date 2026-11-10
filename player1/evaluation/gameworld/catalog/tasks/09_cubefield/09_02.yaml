@@ -1,0 +1,15 @@
+task_prompt: |
+  Stay alive through early waves and push your score to at least 20000.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 20000
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.distance
+    - metrics.speed_forward
+    - metrics.speed_side
+    - metrics.cubes_alive
+    - metrics.high_score

@@ -1,0 +1,57 @@
+game_name: base_2d_aim
+
+game_rules: |-
+  You are playing 2D Aim, an endless target-shooting game.
+  - Hit the active target to score.
+  - Hits near the target center earn a better accuracy score.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the on-screen pointer.
+    Controls:
+    - Aim directly with absolute coordinates in [0, 1000] from top-left to bottom-right.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Left-click to shoot.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    mouse_move: true
+    mouse_click: [left]
+
+in_context_examples:
+  original_player1_control:
+    - name: aim and fire
+      response: |-
+        <think>
+        The target center is around x=600 and y=450. I should move the pointer directly there and left-click in the same game step for an accurate hit.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"absolute","x":600,"y":450}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: move the pointer
+      response: |-
+        <think>
+        The pointer is near the left side of the screen. I should move it directly to x=600 and y=450 to reposition it farther to the right.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"absolute","x":600,"y":450}
+        </parameter>
+        </function>
+        </tool_call>

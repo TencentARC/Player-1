@@ -1,0 +1,18 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Pass all checkpoints and reach the exit in one run.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.checkpoints_passed: 4
+    require:
+      metrics.exit_reached: true
+  metrics_fields:
+    - game_state.completion_progress
+    - metrics.checkpoints_total
+    - metrics.checkpoints_required_for_exit
+    - metrics.deaths
+    - metrics.distance_to_goal
+    - metrics.total_levels

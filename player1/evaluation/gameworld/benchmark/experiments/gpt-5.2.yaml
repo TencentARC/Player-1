@@ -1,0 +1,8 @@
+experiment_name: gpt-5.2_all_games_all_tasks
+headless: true
+
+cases:
+  - game: all
+    tasks: all
+    models: ["gpt-5.2"]
+    repeat: 1

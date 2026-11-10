@@ -1,0 +1,64 @@
+game_name: base_3d_duel
+
+game_rules: |-
+  You are playing 3D Duel, an endless first-person fight with a charged spear.
+  - Each opponent spawns within spear reach and evades sideways by circling or jumping.
+  - A hit knocks the opponent back; after recovering, it returns to its previous distance from you.
+  - Hold the left mouse button for at least 400 ms to charge, keep the crosshair on the opponent, then release to thrust.
+  - A thrust hits only when the crosshair is on the opponent, within spear reach and with no cover in the way. Each hit gives +1 reward.
+  - Releasing before the charge completes does not attack. Each charged release produces only one thrust.
+  - Dodge when the opponent prepares to attack; taking an enemy hit costs 0.5 reward.
+  - Defeating an opponent records a kill and spawns another opponent, but gives no extra reward.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control a fighter carrying a charged spear in a one-on-one duel.
+    Controls:
+    - Move with w/s/a/d relative to where you are looking.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Hold the left mouse button across consecutive game steps for at least 400 ms to charge the spear. Omit mouse_hold to release one thrust.
+    - Press space to dodge, or wait for one game step.
+  game_controls:
+    duration_ms: 200
+    keys: [w, s, a, d, space]
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: [left]
+
+in_context_examples:
+  original_player1_control:
+    - name: charge a close attack
+      response: |-
+        <think>
+        The opponent is within reach and slightly to the right. I should turn toward its body and continue holding to complete the spear charge before releasing.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        <parameter=mouse_hold>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: turn the view right
+      response: |-
+        <think>
+        The current view shows an open part of the arena on the right. I should move the mouse right to turn the view toward that area.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>

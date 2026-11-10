@@ -1,0 +1,3 @@
+gemini-2.5-computer-use:
+  model: "gemini-2.5-computer-use-preview-10-2025"
+  enable_memory: false

@@ -1,0 +1,12 @@
+task_prompt: |
+  Stay alive and reach a score of at least 100.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 100
+  metrics_fields:
+    - metrics.distance
+    - metrics.speed
+    - metrics.attempts
+    - metrics.high_score

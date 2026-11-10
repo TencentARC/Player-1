@@ -1,0 +1,68 @@
+game_name: gw_07_chrome-dino_runner
+game_rules: 'You are playing Chrome Dino, an endless runner game.
+
+  - The dinosaur runs forward automatically.
+
+  - Avoid ground and flying obstacles to survive and increase the score.'
+role_control:
+  role_control_block: 'Role:
+
+    You control the dinosaur''s jumps and ducks.
+
+    Controls:
+
+    - Tap space or arrowup to start the run or jump.
+
+    - Hold arrowdown to duck or descend faster.
+
+    - Wait for one game step to continue running normally.'
+  game_controls:
+    duration_ms: 200
+    keys:
+    - ArrowDown
+    - ArrowUp
+    - Space
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: jump over a cactus
+    response: '<think>
+
+      A cactus is close in front of the running dinosaur, so I should jump now to
+      pass safely over the obstacle.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["space"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: run on a clear path
+    response: '<think>
+
+      The path ahead is empty and the dinosaur is running safely, so I should wait
+      instead of jumping before an obstacle appears.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

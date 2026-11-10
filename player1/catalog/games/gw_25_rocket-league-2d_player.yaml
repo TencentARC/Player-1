@@ -1,0 +1,79 @@
+game_name: gw_25_rocket-league-2d_player
+game_rules: 'You are playing Rocket League 2D, a side-view car soccer game.
+
+  - Hit the ball into the opponent''s net while protecting your own goal.
+
+  - Jumping reaches airborne balls and an available boost increases speed.'
+role_control:
+  role_control_block: 'Role:
+
+    You control the blue car.
+
+    Controls:
+
+    - Hold a or d to drive left or right.
+
+    - Hold w to jump.
+
+    - Hold space to use an available boost.
+
+    - Combine driving with jump or boost when needed.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - Space
+    - a
+    - d
+    - w
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: drive toward the ball
+    response: '<think>
+
+      The ball is ahead and slightly above the car on the right, so I should drive
+      right and jump to meet it.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["d","w"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: turn back toward the ball
+    response: '<think>
+
+      The ball has moved behind the car toward the left side, so I should drive left
+      and quickly recover a useful position.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["a"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

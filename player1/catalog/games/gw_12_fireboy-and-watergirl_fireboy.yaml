@@ -1,0 +1,81 @@
+game_name: gw_12_fireboy-and-watergirl_fireboy
+game_rules: 'You are playing Fireboy and Watergirl in the Forest Temple.
+
+  - Both characters must cooperate and reach their matching exit doors.
+
+  - Watergirl collects blue diamonds and cannot touch red lava.
+
+  - Fireboy collects red diamonds and cannot touch blue water.
+
+  - Green liquid defeats either character; buttons, levers, and movable boxes control
+  paths.'
+role_control:
+  role_control_block: 'Role:
+
+    You control Fireboy and guide him to red diamonds and the red exit.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to move horizontally.
+
+    - Hold arrowup to jump.
+
+    - Hold arrowup with arrowleft or arrowright to jump while moving.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: jump to the left platform
+    response: '<think>
+
+      Fireboy needs to cross the gap toward the platform on the left, so I should
+      move left and jump at the same time.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowleft","arrowup"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: move away from water
+    response: '<think>
+
+      Blue water blocks Fireboy''s route on the left while safe floor continues right,
+      so I should move right away from the hazard.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

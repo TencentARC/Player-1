@@ -1,0 +1,16 @@
+task_prompt: |
+  Push score to at least 2500 before the game ends.
+  Choose safe paths as ghosts approach and circle through the maze.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 2500
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.primary_score
+    - metrics.high_score
+    - metrics.lives
+    - metrics.deaths
+    - metrics.maze_index

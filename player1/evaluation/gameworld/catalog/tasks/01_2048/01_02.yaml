@@ -1,0 +1,10 @@
+task_prompt: |
+  Keep empty spaces while combining tiles to reach value 64 or higher.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.max_tile: 64
+  metrics_fields:
+    - game_state.score
+    - game_state.level

@@ -1,0 +1,11 @@
+task_prompt: |
+  Build a stable early climb and finish with a score of at least 200.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 200
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.platforms_visible

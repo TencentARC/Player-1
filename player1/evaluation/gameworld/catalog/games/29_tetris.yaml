@@ -1,0 +1,71 @@
+game_rules: |
+  You are playing Tetris, a falling block puzzle game.
+
+  ## Game Objective
+  - Clear lines by filling them with blocks.
+  - Prevent the stack from reaching the top and get the highest score possible.
+
+  ## Game Rules
+  - Pieces fall from the top and can be moved or rotated.
+  - Completed horizontal lines clear and score points.
+  - The game ends when new pieces can no longer spawn or the stack reaches the top.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the falling pieces.
+        Control the player to move, rotate, drop, and swap pieces.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowLeft / ArrowRight: move left or right
+        - X: rotate clockwise
+        - Z: rotate counter-clockwise
+        - ArrowDown: make the piece fall faster
+        - Space: drop the piece straight to the bottom immediately
+        - C: Swap piece (swap the current piece with the next piece)
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowDown", "z", "x", "Space", "c"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Wait briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_left
+        description: Shift the piece left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+      - id: move_right
+        description: Shift the piece right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+      - id: soft_drop
+        description: Make the piece fall faster.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+      - id: rotate_cw
+        description: Rotate the piece clockwise.
+        binding:
+          action: press_key
+          key: "x"
+      - id: rotate_ccw
+        description: Rotate the piece counter-clockwise.
+        binding:
+          action: press_key
+          key: "z"
+      - id: hard_drop
+        description: Drop the piece straight to the bottom immediately.
+        binding:
+          action: press_key
+          key: "Space"
+      - id: hold_piece
+        description: Hold or swap the current piece.
+        binding:
+          action: press_key
+          key: "c"

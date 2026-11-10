@@ -1,0 +1,60 @@
+game_name: vizdoom_battle2
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom Battle 2, a first-person combat maze.
+  - Maximize the episode reward by defeating hostile monsters while staying alive.
+  - Moving creatures are hostile monsters; aim at them and fire.
+  - Health and ammunition pickups lie along corridors and are collected by moving over them.
+  - Explore through doors and narrow passages because enemies can appear throughout the maze.
+  - The weapon aims only horizontally; vertical camera movement has no effect.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the ViZDoom player.
+    Controls:
+    - Hold w or s to move forward or backward.
+    - Hold a or d to move left or right.
+    - Hold shift with movement to move faster.
+    Turn the camera horizontally with dx in [-1000, 1000], and always set dy=0.
+
+    dx=1000 represents one full visible game width.
+    Positive dx turns right, and negative dx turns left.
+
+    dx sets the mouse movement amount.
+    - Left-click or hold the left mouse button to fire.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [w, a, s, d, shift]
+    mouse_move: true
+    mouse_click: [left]
+    mouse_hold: [left]
+
+in_context_examples:
+  player1_control:
+    - name: enter and engage
+      response: |-
+        <think>
+        A monster is visible past the opening on the left. I should move through the passage while turning left and firing at it.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":-100,"dy":0}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

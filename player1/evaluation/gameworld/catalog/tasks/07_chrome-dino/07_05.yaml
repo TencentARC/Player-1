@@ -1,0 +1,12 @@
+task_prompt: |
+  Keep the run alive and reach a score of at least 800.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 800
+  metrics_fields:
+    - metrics.distance
+    - metrics.speed
+    - metrics.attempts
+    - metrics.high_score

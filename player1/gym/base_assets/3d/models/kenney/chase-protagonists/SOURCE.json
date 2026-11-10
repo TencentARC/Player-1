@@ -1,0 +1,30 @@
+{
+  "source_url": "https://kenney.nl/assets/animated-characters-protagonists",
+  "version": "1.1; conversion gamegym-protagonists-1",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "criminalMaleA.glb",
+      "bytes": 771136
+    },
+    {
+      "file": "skaterMaleA.glb",
+      "bytes": 782296
+    },
+    {
+      "file": "cyborgFemaleA.glb",
+      "bytes": 797660,
+      "prepared_source_file": "outputs/visual-upgrade-implementation-20260910/prepared-assets/protagonists/cyborgFemaleA.glb"
+    },
+    {
+      "file": "skaterFemaleA.glb",
+      "bytes": 776952,
+      "prepared_source_file": "outputs/visual-upgrade-implementation-20260910/prepared-assets/protagonists/skaterFemaleA.glb"
+    }
+  ],
+  "diversity_additions": {
+    "source": "outputs/visual-upgrade-implementation-20260910/prepared-assets/protagonists",
+    "models": ["cyborgFemaleA.glb", "skaterFemaleA.glb"],
+    "license": "CC0; same Kenney Animated Characters Protagonists source and conversion pipeline"
+  }
+}

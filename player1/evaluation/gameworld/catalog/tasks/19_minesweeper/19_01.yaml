@@ -1,0 +1,17 @@
+task_prompt: |
+  Reveal at least 58 safe cells without hitting a mine.
+  Open cells that are most likely safe from nearby number clues.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.revealed_safe_cells: 58
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.primary_score
+    - metrics.total_safe_cells
+    - metrics.correct_flags
+    - metrics.total_mines
+    - metrics.remaining_mines

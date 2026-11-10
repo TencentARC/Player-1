@@ -1,0 +1,85 @@
+{
+  "joint_training_id": "player1-gym-training",
+  "environments": [
+    {
+      "environment_id": "base_3d_drive_lane",
+      "train_preset_spec": "base_3d_drive_lane+base_3d_drive_lane_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_2d_drive_lane_collect",
+      "train_preset_spec": "base_2d_drive_lane_collect+base_2d_drive_lane_collect_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_2d_arcade_planar",
+      "train_preset_spec": "base_2d_arcade_planar+base_2d_arcade_planar_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_aim",
+      "train_preset_spec": "base_3d_aim+base_3d_aim_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_movement",
+      "train_preset_spec": "base_3d_movement+base_3d_movement_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_combat_arena",
+      "train_preset_spec": "base_3d_combat_arena+base_3d_combat_arena_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_2d_aim",
+      "train_preset_spec": "base_2d_aim+base_2d_aim_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_drive",
+      "train_preset_spec": "base_3d_drive+base_3d_drive_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_navigate_chase",
+      "train_preset_spec": "base_3d_navigate_chase+base_3d_navigate_chase_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_2d_aim_arena",
+      "train_preset_spec": "base_2d_aim_arena+base_2d_aim_arena_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_2d_drive_planar_wasd",
+      "train_preset_spec": "base_2d_drive_planar_wasd+base_2d_drive_planar_wasd_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_melee_arena",
+      "train_preset_spec": "base_3d_melee_arena+base_3d_melee_arena_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_duel",
+      "train_preset_spec": "base_3d_duel+base_3d_duel_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_2d_ui_crafting",
+      "train_preset_spec": "base_2d_ui_crafting+base_2d_ui_crafting_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_3d_duel_precision",
+      "train_preset_spec": "base_3d_duel_precision+base_3d_duel_precision_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    },
+    {
+      "environment_id": "base_2d_platform",
+      "train_preset_spec": "base_2d_platform+base_2d_platform_train+qwen3.5-player1-control-v-a-baserl",
+      "train_weight": 1
+    }
+  ]
+}

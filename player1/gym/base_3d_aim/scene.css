@@ -1,0 +1,1 @@
+.range-crosshair{width:15px;height:15px;opacity:.96}.range-crosshair::before,.range-crosshair::after{box-shadow:0 0 2px #142b33;background:#f5f7e9}.range-crosshair::before{left:7px;top:0;width:1px;height:15px}.range-crosshair::after{left:0;top:7px;width:15px;height:1px}

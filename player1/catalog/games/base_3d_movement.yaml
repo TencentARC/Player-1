@@ -1,0 +1,60 @@
+game_name: base_3d_movement
+
+game_rules: |-
+  You are playing 3D Movement, a first-person movement game.
+  - Walk to the single flag in the room. Reaching its base earns one point and moves the flag to another spot.
+  - Use the open space around the low obstacles to reach the flag.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control a first-person camera.
+    Controls:
+    - Move with w=forward, s=backward, a=left, d=right.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    keys: [w, s, a, d]
+    mouse_move: true
+
+in_context_examples:
+  original_player1_control:
+    - name: approach the flag
+      response: |-
+        <think>
+        The flag is ahead and to the right. I should turn toward it and move forward, leaving room to pass around the obstacle.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":150,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: turn the view right
+      response: |-
+        <think>
+        The room continues to the right of the current view. I should turn a little right, bringing more of that area into view.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>

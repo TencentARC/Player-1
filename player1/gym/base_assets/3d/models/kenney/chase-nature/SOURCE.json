@@ -1,0 +1,15 @@
+{
+  "source_url": "https://kenney.nl/assets/nature-kit",
+  "version": "2.1",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "tree_small.glb",
+      "bytes": 6500
+    },
+    {
+      "file": "tree_plateau.glb",
+      "bytes": 16304
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+game_name: base_3d_melee_arena
+
+game_rules: |-
+  You are playing 3D Melee Arena, an endless third-person sword game.
+  - Move close, face enemies, attack within reach, and dodge when they prepare to attack.
+  - Each hit scores points, each kill gives extra points.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control a sword fighter.
+    Controls:
+    - Move with w/s/a/d relative to where you are looking.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Left-click to slash, press space to dodge, or wait for one game step.
+  game_controls:
+    duration_ms: 200
+    keys: [w, s, a, d, space]
+    mouse_move: true
+    mouse_click: [left]
+
+in_context_examples:
+  original_player1_control:
+    - name: close distance and attack
+      response: |-
+        <think>
+        The nearest enemy is just ahead on my left. I should close the gap, turn toward that enemy, and attack before the others move closer.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":-100,"dy":0}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: turn the view right
+      response: |-
+        <think>
+        The character is facing forward with more ground visible on the right. I should move the mouse right to turn the view toward that area.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>

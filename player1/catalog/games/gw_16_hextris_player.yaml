@@ -1,0 +1,70 @@
+game_name: gw_16_hextris_player
+game_rules: 'You are playing Hextris, a rotating hexagon puzzle game.
+
+  - Group three or more blocks of the same color on a side to clear them and score.
+
+  - Falling blocks accelerate over time.
+
+  - The game ends when blocks stack beyond the outer boundary.'
+role_control:
+  role_control_block: 'Role:
+
+    You rotate the central hexagon to place incoming blocks.
+
+    Controls:
+
+    - Tap arrowleft or arrowright to rotate the hexagon.
+
+    - Hold arrowdown to accelerate falling blocks.
+
+    - Wait for one game step to keep the current orientation.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: rotate toward the open side
+    response: '<think>
+
+      The falling block matches the color on the next side to the right, so I should
+      rotate right to align them correctly.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["arrowright"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: keep an aligned side
+    response: '<think>
+
+      The matching side is already under the falling block, so I should simply wait
+      and preserve the alignment until the block lands.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

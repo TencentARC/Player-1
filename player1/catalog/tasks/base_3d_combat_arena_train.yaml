@@ -1,0 +1,61 @@
+task_id: "base_3d_combat_arena_train"
+game_id: base_3d_combat_arena
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 1
+max_steps: 100
+task_target_score_field: 100
+continue_on_fail: false
+
+task_prompt: |
+  Eliminate enemies.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.primary_score
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.best_primary_score
+    - metrics.kills
+    - metrics.deaths
+    - metrics.health
+    - metrics.max_health
+    - metrics.health_unlimited
+    - metrics.damage_dealt
+    - metrics.damage_taken
+    - metrics.shots_fired
+    - metrics.projectile_hits
+    - metrics.shots_missed
+    - metrics.accuracy
+    - metrics.cooldown_fire_attempts
+    - metrics.jumps
+    - metrics.player_y
+    - metrics.player_vertical_velocity
+    - metrics.player_grounded
+    - metrics.enemies_alive
+    - metrics.enemies_visible
+    - metrics.enemies_spawned
+    - metrics.enemy_respawns
+    - metrics.enemy_shots_fired
+    - metrics.enemy_hits
+    - metrics.enemy_accuracy
+    - metrics.player_projectiles_blocked
+    - metrics.enemy_projectiles_blocked
+    - metrics.nearest_enemy_distance
+    - metrics.step_count
+    - game_state.environment.difficulty
+    - game_state.environment.no_obstacles
+    - game_state.environment.enemy_targeting_accuracy
+    - game_state.environment.fullscreen.active
+    - game_state.environment.fullscreen.width
+    - game_state.environment.fullscreen.height
+    - game_state.environment.fullscreen.fov
+    - terminal.outcome
+    - terminal.reason
+    - terminal.isTerminal

@@ -1,0 +1,47 @@
+profile: game-gym
+game_id: 29_tetris
+
+game_rules: |-
+  You are playing Tetris, a falling block puzzle game.
+  - Complete horizontal lines to clear them and score.
+  - Move and rotate each falling piece to keep the stack low and leave usable spaces.
+  - The game ends when a new piece can no longer enter the board.
+
+roles:
+  player:
+    description: |-
+      You control the active falling piece and the held piece.
+    controls:
+      - Tap arrowleft or arrowright to move the active piece.
+      - Tap x to rotate clockwise or z to rotate counterclockwise.
+      - Hold arrowdown to fall faster; tap space to drop straight to the bottom.
+      - Tap c to swap the active and held pieces.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: drop an aligned piece
+          response: |-
+            <think>
+            The active piece is aligned with the open space at the bottom, so I should drop it straight to the bottom immediately.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["space"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: rotate toward an open space
+          response: |-
+            <think>
+            The active piece has the wrong orientation for the open space below, so I should rotate it clockwise before choosing its final column.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["x"]
+            </parameter>
+            </function>
+            </tool_call>

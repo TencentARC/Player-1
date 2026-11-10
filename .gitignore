@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+/outputs/
+/downloads/
+/models/
+/.venv/
+/tests/*
+!/tests/__init__.py
+!/tests/release_fixture.py
+!/tests/core/
+work/
+raw/

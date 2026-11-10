@@ -1,0 +1,13 @@
+task_prompt: |
+  Survive for at least 25 seconds in one continuous run.
+  Plan which platforms to land on next and avoid hazards to preserve health.
+
+evaluator_config:
+  objective:
+    reach:
+      gameTimeMs: 25000
+  metrics_fields:
+    - game_state.score
+    - metrics.hp
+    - metrics.best_score
+    - metrics.primary_score

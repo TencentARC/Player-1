@@ -1,0 +1,17 @@
+task_prompt: |
+  Correctly flag at least 3 mines using right-click.
+  Infer mine locations from numbers, then place accurate flags.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.correct_flags: 3
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.primary_score
+    - metrics.revealed_safe_cells
+    - metrics.total_safe_cells
+    - metrics.total_mines
+    - metrics.remaining_mines

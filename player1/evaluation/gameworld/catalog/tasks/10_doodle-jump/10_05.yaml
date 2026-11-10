@@ -1,0 +1,11 @@
+task_prompt: |
+  Keep landing safely on higher platforms and finish with at least 10000 points.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 10000
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.platforms_visible

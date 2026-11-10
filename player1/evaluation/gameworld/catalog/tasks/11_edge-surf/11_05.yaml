@@ -1,0 +1,14 @@
+task_prompt: |
+  Execute an extended survival run and finish with a score of at least 2000.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 2000
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.lives
+    - metrics.boosts
+    - metrics.shields
+    - metrics.attempts

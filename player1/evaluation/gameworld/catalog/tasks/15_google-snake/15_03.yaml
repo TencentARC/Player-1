@@ -1,0 +1,14 @@
+task_prompt: |
+  Reach at least 6 apples before crashing.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.apples_eaten: 6
+  metrics_fields:
+    - game_state.score
+    - gameTimeMs
+    - metrics.snake_length
+    - metrics.speed
+    - metrics.board_width
+    - metrics.board_height

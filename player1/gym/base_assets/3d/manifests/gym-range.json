@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "pack_id": "gym-range",
+  "content_revision": "range-diversity-2",
+  "visual_profile": "stylized",
+  "palette": {
+    "sky": "#a5bcc3",
+    "floor": "#697a7b",
+    "floorAccent": "#85918c",
+    "floorLine": "#bfc7bf",
+    "wall": "#c9d0c6",
+    "wallAccent": "#344e55",
+    "trim": "#e6eadc",
+    "metal": "#31464d",
+    "darkMetal": "#182c33",
+    "glass": "#517882",
+    "cover": "#566d6c",
+    "coverAccent": "#e8b469",
+    "target": "#ff684f",
+    "goal": "#91ebc9",
+    "neutral": "#dae4dc"
+  },
+  "alternate_palette": {
+    "target": "#ed67aa",
+    "goal": "#62d8e7"
+  },
+  "surfaces": {
+    "floor": "tiles",
+    "wall": "panels"
+  },
+  "textures": {},
+  "assets": {
+    "range_target_board": {
+      "type": "model",
+      "url": "../models/kenney/range/target-large.glb",
+      "forward_axis": "+x"
+    },
+    "range_case": {
+      "type": "model",
+      "url": "../models/kenney/range/crate-wide.glb",
+      "forward_axis": "+z"
+    },
+    "range_machine_window": {
+      "type": "model",
+      "url": "../models/kenney/factory/machine-window.glb",
+      "forward_axis": "+z"
+    },
+    "range_screen_wide": {
+      "type": "model",
+      "url": "../models/kenney/factory/screen-wide.glb",
+      "forward_axis": "+z"
+    },
+    "range_pipe_large_long": {
+      "type": "model",
+      "url": "../models/kenney/factory/pipe-large-long.glb",
+      "forward_axis": "+z"
+    },
+    "range_pipe_large_bend": {
+      "type": "model",
+      "url": "../models/kenney/factory/pipe-large-bend.glb",
+      "forward_axis": "+z"
+    },
+    "range_box_small": {
+      "type": "model",
+      "url": "../models/kenney/factory/box-small.glb",
+      "forward_axis": "+z"
+    },
+    "range_catwalk_straight": {
+      "type": "model",
+      "url": "../models/kenney/factory/catwalk-straight.glb",
+      "forward_axis": "+z"
+    },
+    "range_machine_window_v1": {
+      "type": "model",
+      "url": "../models/kenney/range-variants/machine-fortified.glb",
+      "forward_axis": "+z",
+      "role": "range_machine_window"
+    },
+    "range_machine_window_v2": {
+      "type": "model",
+      "url": "../models/kenney/range-variants/machine-window-bar.glb",
+      "forward_axis": "+z",
+      "role": "range_machine_window"
+    },
+    "range_case_v1": {
+      "type": "model",
+      "url": "../models/kenney/range-variants/box-long.glb",
+      "forward_axis": "+z",
+      "role": "range_case"
+    },
+    "range_case_v2": {
+      "type": "model",
+      "url": "../models/kenney/range-variants/box-large.glb",
+      "forward_axis": "+z",
+      "role": "range_case"
+    }
+  },
+  "variants": {
+    "range_machine_window": [
+      "range_machine_window",
+      "range_machine_window_v1",
+      "range_machine_window_v2"
+    ],
+    "range_case": [
+      "range_case",
+      "range_case_v1",
+      "range_case_v2"
+    ]
+  },
+  "themes": [
+    {
+      "id": "slate-hall",
+      "palette": {}
+    },
+    {
+      "id": "sandstone-hall",
+      "palette": {
+        "wall": "#d5c1a1",
+        "wallAccent": "#665548",
+        "floor": "#8b806d",
+        "metal": "#5b5651",
+        "darkMetal": "#332f30",
+        "trim": "#ece2cc",
+        "glass": "#6b8f91"
+      },
+      "surfaces": {
+        "floor": "ground",
+        "wall": "tiles"
+      }
+    },
+    {
+      "id": "blue-laboratory",
+      "palette": {
+        "wall": "#a6bfcc",
+        "wallAccent": "#374d68",
+        "floor": "#597584",
+        "metal": "#32445f",
+        "darkMetal": "#192a41",
+        "trim": "#e1e6eb",
+        "glass": "#527797"
+      },
+      "surfaces": {
+        "floor": "grid",
+        "wall": "panels"
+      }
+    }
+  ]
+}

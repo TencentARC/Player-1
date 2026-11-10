@@ -1,0 +1,19 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Push through repeated hazard patterns and reach at least 100 in one run.
+  Use the same jump timing for similar spike groups.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 100
+  metrics_fields:
+    - gameTimeMs
+    - game_state.completion_progress
+    - metrics.distance
+    - metrics.points
+    - metrics.best_score
+    - metrics.deaths
+    - game_state.mode
+    - game_state.player_die

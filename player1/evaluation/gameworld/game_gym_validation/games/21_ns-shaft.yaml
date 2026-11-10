@@ -1,0 +1,40 @@
+profile: game-gym
+game_id: 21_ns-shaft
+
+game_rules: |-
+  You are playing NS-Shaft, a descending platform game.
+  - The character falls automatically and must land on lower platforms.
+  - Hazards reduce life; falling past the bottom or losing all life ends the run.
+
+roles:
+  player:
+    description: |-
+      You steer the falling character horizontally.
+    controls:
+      - Hold arrowleft or arrowright to move sideways.
+      - Wait for one game step to fall without horizontal movement.
+    in_context_examples:
+      control_v0_5:
+        - name: move toward a platform
+          response: |-
+            <think>
+            The next safe platform is below and to the right of the falling character, so I should move right to line up the landing.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowright"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: stay over a safe platform
+          response: |-
+            <think>
+            The character is already centered above a safe platform, so I should wait and fall straight down without drifting past either edge.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

@@ -1,0 +1,12 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Finish maze level 2 by reaching the exit point.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 1.0
+  metrics_fields:
+    - game_state.level
+    - metrics.distance_to_goal

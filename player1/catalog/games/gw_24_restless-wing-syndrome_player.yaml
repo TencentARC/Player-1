@@ -1,0 +1,79 @@
+game_name: gw_24_restless-wing-syndrome_player
+game_rules: 'You are playing Restless Wing Syndrome, a platform game with automatic
+  flaps.
+
+  - Reach the bread-shaped exit while avoiding spikes and other hazards.
+
+  - The flap meter counts down and triggers an automatic upward flap when empty.
+
+  - Gliding slows descent and can be combined with horizontal steering.'
+role_control:
+  role_control_block: 'Role:
+
+    You steer the bird through each level and control its glide.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to steer horizontally.
+
+    - Hold arrowup to glide and descend more slowly.
+
+    - Hold arrowup with arrowleft or arrowright to glide diagonally.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: glide toward a platform
+    response: '<think>
+
+      The safe platform is below and to the right, so I should glide right to slow
+      the fall and approach the landing.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright","arrowup"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: hold course above a platform
+    response: '<think>
+
+      The character is directly above the middle of a safe platform, so I should wait
+      and avoid steering away from the landing.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

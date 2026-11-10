@@ -1,0 +1,57 @@
+task_id: "base_2d_ui_crafting_train"
+game_id: base_2d_ui_crafting
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 3
+max_steps: 100
+task_target_score_field: 50
+continue_on_fail: false
+
+task_prompt: |
+  Complete the given crafting, smelting, and equipment requests.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.primary_score
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.target_crafts
+    - metrics.targets_completed
+    - metrics.crafted_items
+    - metrics.wrong_crafts
+    - metrics.invalid_actions
+    - metrics.transfers
+    - metrics.manual_placements
+    - metrics.recipe_book_opens
+    - metrics.recipe_book_rewards
+    - metrics.correct_material_placements
+    - metrics.correct_material_reward
+    - metrics.recipe_autofills
+    - metrics.recipe_book_category
+    - metrics.furnace_rounds
+    - metrics.equipment_rounds
+    - metrics.correct_equipment_selections
+    - metrics.equipment_equipped
+    - metrics.smelted_items
+    - metrics.furnace_fuel_consumed
+    - metrics.furnace_burning
+    - metrics.furnace_progress
+    - metrics.current_recipe_id
+    - metrics.requested_item
+    - metrics.interface_mode
+    - metrics.recipe_book_open
+    - metrics.cursor_item
+    - metrics.cursor_count
+    - metrics.round_index
+    - metrics.step_count
+    - metrics.best_primary_score
+    - game_state.environment.difficulty
+    - terminal.outcome
+    - terminal.reason
+    - terminal.isTerminal

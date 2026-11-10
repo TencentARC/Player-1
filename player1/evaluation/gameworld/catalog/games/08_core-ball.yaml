@@ -1,0 +1,40 @@
+game_rules: |
+  You are playing Core Ball, a high-speed 2D timing-and-precision game.
+  Shoot numbered balls into a rotating core and attach them to it without collisions.
+
+  ## Game Objective
+  - Attach all balls for the current level to the core.
+  - Complete the level before the queue is exhausted and the core becomes too crowded.
+  - Levels get faster and denser as you progress.
+
+  ## Game Rules
+  - Press Space to shoot one ball toward the center.
+  - A ball collision with another ball fails the run immediately.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control precision ball launches toward the spinning core.
+        Time each shot carefully and keep the path clear.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Do nothing to wait the core to rotate
+        - Space: shoot one ball
+    computer_use_controls:
+      allowed_keys: ["Space"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly and observe target alignment.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: shoot
+        description: Shoot one ball toward the core.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.1
+

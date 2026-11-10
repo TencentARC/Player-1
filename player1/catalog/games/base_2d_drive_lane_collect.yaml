@@ -1,0 +1,50 @@
+game_name: base_2d_drive_lane_collect
+
+game_rules: |-
+  You are playing 2D Drive Lane Collect, a highway lane coin-collection game.
+  - Keep the player car on the road.
+  - Collect as many coins as possible.
+  - Coins spawn across four lanes and scroll toward the player.
+  - Touching a coin collects it and gives reward.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the player car.
+    Controls:
+    - Steer with arrowleft=left and arrowright=right.
+    - Wait for one game step to keep the current lane.
+  game_controls:
+    duration_ms: 200
+    keys: [arrowleft, arrowright]
+
+in_context_examples:
+  original_player1_control:
+    - name: change lanes for a coin
+      response: |-
+        <think>
+        The next coin is in the adjacent lane to my left. I should hold the left arrow now to move the car left.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["arrowleft"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: steer left
+      response: |-
+        <think>
+        The car is traveling in a lane with another lane visible on its left. I should hold the left arrow to steer left.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["arrowleft"]
+        </parameter>
+        </function>
+        </tool_call>

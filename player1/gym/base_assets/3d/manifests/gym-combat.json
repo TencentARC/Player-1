@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "pack_id": "gym-combat",
+  "content_revision": "combat-20260910-1",
+  "visual_profile": "stylized",
+  "palette": {
+    "sky": "#afc6ca", "floor": "#74827f", "floorAccent": "#8c9991", "floorLine": "#c1c8b8",
+    "wall": "#c4cabe", "wallAccent": "#526965", "trim": "#e9e8d5", "metal": "#344b4e",
+    "darkMetal": "#21363c", "glass": "#799998", "cover": "#526b65", "coverAccent": "#d7ac64",
+    "hostile": "#ee6d50", "hostileAccent": "#ffd0a1", "friendly": "#64dccc",
+    "target": "#ee6d50", "goal": "#a3ead9", "neutral": "#e1e9d8",
+    "projectileFriendly": "#8bffeb", "projectileHostile": "#ff8455"
+  },
+  "alternate_palette": { "hostile": "#ed73bc", "hostileAccent": "#f3c6eb", "friendly": "#78d6fb", "goal": "#78d6fb" },
+  "surfaces": { "floor": "tiles", "wall": "panels" },
+  "textures": {},
+  "assets": {
+    "combat_enemy": {
+      "type": "model", "url": "../models/kenney/combat/character-g.glb", "forward_axis": "+z",
+      "visual": {
+        "clips": { "move": "strafe-aim", "aim": "holding-both", "shoot": "holding-both-shoot" },
+        "sockets": { "right_hand": "arm-right" },
+        "material_roles": { "suit": ["texture-g"] }
+      }
+    },
+    "combat_rifle": {
+      "type": "model", "url": "../models/kenney/combat/blaster-f.glb", "forward_axis": "-z",
+      "visual": { "clips": { "reload": "reload" }, "material_roles": { "finish": ["colormap"] } }
+    },
+    "combat_screen": { "type": "model", "url": "../models/kenney/factory/screen-wide.glb" },
+    "combat_pipe": { "type": "model", "url": "../models/kenney/factory/pipe-large-long.glb" }
+  }
+}

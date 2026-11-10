@@ -1,0 +1,10 @@
+task_prompt: |
+  Leave room to combine matching tiles and reach a tile value of at least 128.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.max_tile: 128
+  metrics_fields:
+    - game_state.score
+    - game_state.level

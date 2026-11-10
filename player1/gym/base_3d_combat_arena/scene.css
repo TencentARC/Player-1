@@ -1,0 +1,4 @@
+.combat-crosshair { width: 15px; height: 15px; opacity: 0.95; }
+.combat-crosshair::before, .combat-crosshair::after { background: #f4f4dc; box-shadow: 0 0 2px #16343b; }
+.combat-crosshair::before { left: 7px; top: 0; width: 1px; height: 15px; }
+.combat-crosshair::after { left: 0; top: 7px; width: 15px; height: 1px; }

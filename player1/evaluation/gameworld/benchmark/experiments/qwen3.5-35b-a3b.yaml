@@ -1,0 +1,8 @@
+experiment_name: qwen3.5-35b-a3b_all_games_all_tasks
+headless: true
+
+cases:
+  - game: all
+    tasks: all
+    models: ["qwen3.5-35b-a3b"]
+    repeat: 1

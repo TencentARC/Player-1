@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "pack_id": "gym-chase",
+  "palette": {
+    "sky": "#b7d1d8",
+    "floor": "#b6b49f",
+    "floorAccent": "#d0c8b1",
+    "floorLine": "#eee9d7",
+    "wall": "#d8c7a5",
+    "wallAccent": "#477d77",
+    "trim": "#f2e7ca",
+    "metal": "#2c474b",
+    "darkMetal": "#1f2e40",
+    "glass": "#17384a",
+    "cover": "#b5b59c",
+    "coverAccent": "#cb7050",
+    "hostile": "#ef5b4f",
+    "hostileAccent": "#ffc2b8",
+    "friendly": "#4aa89c",
+    "target": "#f08042",
+    "goal": "#f2af4f",
+    "hazard": "#f97316",
+    "neutral": "#e2e8f0",
+    "interactive": "#ffd37d",
+    "projectileFriendly": "#ffd84d",
+    "projectileHostile": "#ff7a2f",
+    "crate": "#9a6a3a",
+    "support": "#3b82f6",
+    "road": "#303746",
+    "roadEdge": "#e5e7eb",
+    "lane": "#f8fafc",
+    "verge": "#688663",
+    "vehicle": "#f6cf3f",
+    "vehicleAccent": "#ffe993",
+    "coin": "#facc15",
+    "characterTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "hostile": "#b86cf0",
+    "hostileAccent": "#f2d7ff",
+    "friendly": "#00a7a0",
+    "target": "#ff8a3d",
+    "goal": "#00bfa5",
+    "interactive": "#38bdf8",
+    "projectileFriendly": "#22d3ee",
+    "projectileHostile": "#fb7185",
+    "vehicle": "#f06543",
+    "vehicleAccent": "#ff9674",
+    "coin": "#37e0a2",
+    "characterTint": "#b5d7fa"
+  },
+  "surfaces": {
+    "floor": "tiles",
+    "wall": "panels",
+    "road": "asphalt",
+    "verge": "ground"
+  },
+  "textures": {},
+  "assets": {
+    "chase_player": {
+      "type": "model",
+      "role": "chase_player",
+      "url": "../models/kenney/chase-protagonists/criminalMaleA.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "idle",
+          "run": "run"
+        },
+        "material_roles": {
+          "body": [
+            "criminalMaleA_pbr"
+          ]
+        }
+      }
+    },
+    "chase_target": {
+      "type": "model",
+      "role": "chase_target",
+      "url": "../models/kenney/chase-protagonists/skaterMaleA.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "idle",
+          "run": "run"
+        },
+        "material_roles": {
+          "body": [
+            "skaterMaleA_pbr"
+          ]
+        }
+      }
+    },
+    "suburban_building_type_a": {
+      "type": "model",
+      "role": "suburban_building_type_a",
+      "url": "../models/kenney/chase-suburban/building-type-a.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_building_type_j": {
+      "type": "model",
+      "role": "suburban_building_type_j",
+      "url": "../models/kenney/chase-suburban/building-type-j.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_building_type_p": {
+      "type": "model",
+      "role": "suburban_building_type_p",
+      "url": "../models/kenney/chase-suburban/building-type-p.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_fence": {
+      "type": "model",
+      "role": "suburban_fence",
+      "url": "../models/kenney/chase-suburban/fence.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_tree_small": {
+      "type": "model",
+      "role": "suburban_tree_small",
+      "url": "../models/kenney/chase-suburban/tree-small.glb",
+      "forward_axis": "+z"
+    },
+    "nature_tree_small": {
+      "type": "model",
+      "role": "nature_tree_small",
+      "url": "../models/kenney/chase-nature/tree_small.glb",
+      "forward_axis": "+z"
+    },
+    "nature_tree_plateau": {
+      "type": "model",
+      "role": "nature_tree_plateau",
+      "url": "../models/kenney/chase-nature/tree_plateau.glb",
+      "forward_axis": "+z"
+    },
+    "chase_player_alternate": {
+      "type": "model",
+      "role": "chase_player",
+      "url": "../models/kenney/chase-protagonists/cyborgFemaleA.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "idle",
+          "run": "run"
+        },
+        "material_roles": {
+          "body": [
+            "cyborgFemaleA_pbr"
+          ]
+        }
+      }
+    },
+    "chase_target_alternate": {
+      "type": "model",
+      "role": "chase_target",
+      "url": "../models/kenney/chase-protagonists/skaterFemaleA.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "idle",
+          "run": "run"
+        },
+        "material_roles": {
+          "body": [
+            "skaterFemaleA_pbr"
+          ]
+        }
+      }
+    },
+    "suburban_building_type_a_alternate_1": {
+      "type": "model",
+      "role": "suburban_building_type_a",
+      "url": "../models/kenney/chase-suburban/building-type-j.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_building_type_a_alternate_2": {
+      "type": "model",
+      "role": "suburban_building_type_a",
+      "url": "../models/kenney/chase-suburban/building-type-p.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_building_type_j_alternate_1": {
+      "type": "model",
+      "role": "suburban_building_type_j",
+      "url": "../models/kenney/chase-suburban/building-type-p.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_building_type_j_alternate_2": {
+      "type": "model",
+      "role": "suburban_building_type_j",
+      "url": "../models/kenney/chase-suburban/building-type-a.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_building_type_p_alternate_1": {
+      "type": "model",
+      "role": "suburban_building_type_p",
+      "url": "../models/kenney/chase-suburban/building-type-a.glb",
+      "forward_axis": "+z"
+    },
+    "suburban_building_type_p_alternate_2": {
+      "type": "model",
+      "role": "suburban_building_type_p",
+      "url": "../models/kenney/chase-suburban/building-type-j.glb",
+      "forward_axis": "+z"
+    },
+    "nature_tree_small_alternate": {
+      "type": "model",
+      "role": "nature_tree_small",
+      "url": "../models/kenney/chase-nature/tree_plateau.glb",
+      "forward_axis": "+z"
+    },
+    "nature_tree_plateau_alternate": {
+      "type": "model",
+      "role": "nature_tree_plateau",
+      "url": "../models/kenney/chase-nature/tree_small.glb",
+      "forward_axis": "+z"
+    }
+  },
+  "content_revision": "connected-worlds-20260910-3",
+  "visual_profile": "stylized",
+  "variants": {
+    "chase_player": [
+      "chase_player",
+      "chase_player_alternate"
+    ],
+    "chase_target": [
+      "chase_target",
+      "chase_target_alternate"
+    ],
+    "suburban_building_type_a": [
+      "suburban_building_type_a",
+      "suburban_building_type_a_alternate_1",
+      "suburban_building_type_a_alternate_2"
+    ],
+    "suburban_building_type_j": [
+      "suburban_building_type_j",
+      "suburban_building_type_j_alternate_1",
+      "suburban_building_type_j_alternate_2"
+    ],
+    "suburban_building_type_p": [
+      "suburban_building_type_p",
+      "suburban_building_type_p_alternate_1",
+      "suburban_building_type_p_alternate_2"
+    ],
+    "nature_tree_small": [
+      "nature_tree_small",
+      "nature_tree_small_alternate"
+    ],
+    "nature_tree_plateau": [
+      "nature_tree_plateau",
+      "nature_tree_plateau_alternate"
+    ]
+  },
+  "themes": [
+    {
+      "id": "native"
+    },
+    {
+      "id": "limestone",
+      "palette": {
+        "floor": "#b9b6a6",
+        "floorAccent": "#d6d0ba",
+        "wall": "#c8c7bc",
+        "wallAccent": "#526f74",
+        "cover": "#817e71",
+        "coverAccent": "#a5997c",
+        "verge": "#76918b"
+      },
+      "surfaces": {
+        "floor": "tiles",
+        "wall": "stone"
+      }
+    },
+    {
+      "id": "terracotta",
+      "palette": {
+        "floor": "#b4a189",
+        "floorAccent": "#c6b798",
+        "wall": "#d6c0a2",
+        "wallAccent": "#7f5a41",
+        "cover": "#876e52",
+        "coverAccent": "#a55d3a",
+        "verge": "#7c8657"
+      },
+      "surfaces": {
+        "floor": "stone",
+        "wall": "panels"
+      }
+    }
+  ]
+}

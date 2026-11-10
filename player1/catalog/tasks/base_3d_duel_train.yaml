@@ -1,0 +1,61 @@
+task_id: "base_3d_duel_train"
+game_id: base_3d_duel
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 1
+max_steps: 100
+task_target_score_field: 10
+continue_on_fail: false
+
+task_prompt: |
+  Track the opponent as it moves sideways, jumps, and returns after being hit. Hold the left mouse button for at least 400 ms, keep the crosshair on the opponent while charging, then release to score one hit. Dodge when the opponent prepares to attack.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.spear_hits
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.spear_hits
+    - metrics.spear_thrusts
+    - metrics.spear_whiffs
+    - metrics.spear_blocked_thrusts
+    - metrics.charge_state
+    - metrics.charge_starts
+    - metrics.charge_releases
+    - metrics.charged_releases
+    - metrics.undercharged_releases
+    - metrics.charge_interruptions
+    - metrics.charge_held_ms
+    - metrics.charge_progress_ms
+    - metrics.charge_ratio
+    - metrics.charge_ready
+    - metrics.kills
+    - metrics.damage_taken
+    - metrics.hits_after_evade
+    - metrics.enemy_orbits
+    - metrics.enemy_returns
+    - metrics.enemy_jumps
+    - metrics.enemy_attacks_interrupted
+    - metrics.enemy_hold_ms
+    - metrics.opponent_profile
+    - metrics.opponent_locomotion_state
+    - metrics.opponent_airborne
+    - metrics.aim_yaw_error
+    - metrics.aim_pitch_error
+    - metrics.opponent_under_crosshair
+    - metrics.opponent_spear_blocked
+    - metrics.nearest_enemy_distance
+    - metrics.max_enemy_spawn_distance
+    - game_state.environment.difficulty
+    - game_state.environment.fullscreen.active
+    - game_state.environment.fullscreen.width
+    - game_state.environment.fullscreen.height
+    - game_state.environment.fullscreen.fov
+    - terminal.outcome
+    - terminal.isTerminal

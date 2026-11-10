@@ -1,0 +1,767 @@
+{
+  "package": "New Platformer Pack 1.1",
+  "url": "https://kenney.nl/assets/new-platformer-pack",
+  "license": "CC0",
+  "prepared_assets": [
+    {
+      "asset": "runner_idle",
+      "source": "Sprites/Characters/Default/character_green_idle.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        2,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_a",
+      "source": "Sprites/Characters/Default/character_green_walk_a.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        94,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_b",
+      "source": "Sprites/Characters/Default/character_green_walk_b.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        186,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_jump",
+      "source": "Sprites/Characters/Default/character_green_jump.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        278,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_hit",
+      "source": "Sprites/Characters/Default/character_green_hit.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        370,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_duck",
+      "source": "Sprites/Characters/Default/character_green_duck.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        2,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "ground_top",
+      "source": "Sprites/Tiles/Default/terrain_grass_block_top.png",
+      "crop": null,
+      "frame": [
+        94,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ground_body",
+      "source": "Sprites/Tiles/Default/terrain_grass_block_center.png",
+      "crop": null,
+      "frame": [
+        162,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_left",
+      "source": "Sprites/Tiles/Default/terrain_grass_horizontal_left.png",
+      "crop": null,
+      "frame": [
+        230,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_middle",
+      "source": "Sprites/Tiles/Default/terrain_grass_horizontal_middle.png",
+      "crop": null,
+      "frame": [
+        298,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_right",
+      "source": "Sprites/Tiles/Default/terrain_grass_horizontal_right.png",
+      "crop": null,
+      "frame": [
+        366,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "spikes",
+      "source": "Sprites/Tiles/Default/spikes.png",
+      "crop": [
+        0,
+        30,
+        64,
+        64
+      ],
+      "frame": [
+        434,
+        110,
+        64,
+        34
+      ]
+    },
+    {
+      "asset": "coin",
+      "source": "Sprites/Tiles/Default/coin_gold.png",
+      "crop": [
+        13,
+        12,
+        51,
+        52
+      ],
+      "frame": [
+        2,
+        218,
+        38,
+        40
+      ]
+    },
+    {
+      "asset": "coin_edge",
+      "source": "Sprites/Tiles/Default/coin_gold_side.png",
+      "crop": [
+        13,
+        12,
+        51,
+        52
+      ],
+      "frame": [
+        44,
+        218,
+        38,
+        40
+      ]
+    },
+    {
+      "asset": "flag_a",
+      "source": "Sprites/Tiles/Default/flag_green_a.png",
+      "crop": null,
+      "frame": [
+        86,
+        218,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "flag_b",
+      "source": "Sprites/Tiles/Default/flag_green_b.png",
+      "crop": null,
+      "frame": [
+        154,
+        218,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "checkpoint",
+      "source": "Sprites/Tiles/Default/flag_off.png",
+      "crop": [
+        0,
+        0,
+        20,
+        64
+      ],
+      "frame": [
+        222,
+        218,
+        20,
+        64
+      ]
+    },
+    {
+      "asset": "bush",
+      "source": "Sprites/Tiles/Default/bush.png",
+      "crop": [
+        0,
+        24,
+        64,
+        64
+      ],
+      "frame": [
+        246,
+        218,
+        64,
+        40
+      ]
+    },
+    {
+      "asset": "rock",
+      "source": "Sprites/Tiles/Default/rock.png",
+      "crop": [
+        0,
+        20,
+        63,
+        64
+      ],
+      "frame": [
+        314,
+        218,
+        63,
+        44
+      ]
+    },
+    {
+      "asset": "sign",
+      "source": "Sprites/Tiles/Default/sign_right.png",
+      "crop": null,
+      "frame": [
+        381,
+        218,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "clouds",
+      "source": "Sprites/Backgrounds/Default/background_clouds.png",
+      "transform": "extract source silhouette to alpha mask; preserve 256x256 resolution"
+    },
+    {
+      "asset": "forest",
+      "source": "Sprites/Backgrounds/Default/background_fade_trees.png",
+      "transform": "extract source silhouette to alpha mask; preserve 256x256 resolution"
+    },
+    {
+      "asset": "runner_idle_v1",
+      "source": "Sprites/Characters/Default/character_purple_idle.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        2,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_a_v1",
+      "source": "Sprites/Characters/Default/character_purple_walk_a.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        94,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_b_v1",
+      "source": "Sprites/Characters/Default/character_purple_walk_b.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        186,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_jump_v1",
+      "source": "Sprites/Characters/Default/character_purple_jump.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        278,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_hit_v1",
+      "source": "Sprites/Characters/Default/character_purple_hit.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        370,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_duck_v1",
+      "source": "Sprites/Characters/Default/character_purple_duck.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        462,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "ground_top_v1",
+      "source": "Sprites/Tiles/Default/terrain_snow_block_top.png",
+      "crop": null,
+      "frame": [
+        554,
+        2,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ground_body_v1",
+      "source": "Sprites/Tiles/Default/terrain_snow_block_center.png",
+      "crop": null,
+      "frame": [
+        622,
+        2,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_left_v1",
+      "source": "Sprites/Tiles/Default/terrain_snow_horizontal_left.png",
+      "crop": null,
+      "frame": [
+        690,
+        2,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_middle_v1",
+      "source": "Sprites/Tiles/Default/terrain_snow_horizontal_middle.png",
+      "crop": null,
+      "frame": [
+        758,
+        2,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_right_v1",
+      "source": "Sprites/Tiles/Default/terrain_snow_horizontal_right.png",
+      "crop": null,
+      "frame": [
+        826,
+        2,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "runner_idle_v2",
+      "source": "Sprites/Characters/Default/character_yellow_idle.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        894,
+        2,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_a_v2",
+      "source": "Sprites/Characters/Default/character_yellow_walk_a.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        2,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_b_v2",
+      "source": "Sprites/Characters/Default/character_yellow_walk_b.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        94,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_jump_v2",
+      "source": "Sprites/Characters/Default/character_yellow_jump.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        186,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_hit_v2",
+      "source": "Sprites/Characters/Default/character_yellow_hit.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        278,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_duck_v2",
+      "source": "Sprites/Characters/Default/character_yellow_duck.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        370,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "ground_top_v2",
+      "source": "Sprites/Tiles/Default/terrain_sand_block_top.png",
+      "crop": null,
+      "frame": [
+        462,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ground_body_v2",
+      "source": "Sprites/Tiles/Default/terrain_sand_block_center.png",
+      "crop": null,
+      "frame": [
+        530,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_left_v2",
+      "source": "Sprites/Tiles/Default/terrain_sand_horizontal_left.png",
+      "crop": null,
+      "frame": [
+        598,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_middle_v2",
+      "source": "Sprites/Tiles/Default/terrain_sand_horizontal_middle.png",
+      "crop": null,
+      "frame": [
+        666,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_right_v2",
+      "source": "Sprites/Tiles/Default/terrain_sand_horizontal_right.png",
+      "crop": null,
+      "frame": [
+        734,
+        110,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "runner_idle_v3",
+      "source": "Sprites/Characters/Default/character_pink_idle.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        802,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_a_v3",
+      "source": "Sprites/Characters/Default/character_pink_walk_a.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        894,
+        110,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_walk_b_v3",
+      "source": "Sprites/Characters/Default/character_pink_walk_b.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        2,
+        218,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_jump_v3",
+      "source": "Sprites/Characters/Default/character_pink_jump.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        94,
+        218,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_hit_v3",
+      "source": "Sprites/Characters/Default/character_pink_hit.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        186,
+        218,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "runner_duck_v3",
+      "source": "Sprites/Characters/Default/character_pink_duck.png",
+      "crop": [
+        20,
+        24,
+        108,
+        128
+      ],
+      "frame": [
+        278,
+        218,
+        88,
+        104
+      ]
+    },
+    {
+      "asset": "ground_top_v3",
+      "source": "Sprites/Tiles/Default/terrain_stone_block_top.png",
+      "crop": null,
+      "frame": [
+        370,
+        218,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ground_body_v3",
+      "source": "Sprites/Tiles/Default/terrain_stone_block_center.png",
+      "crop": null,
+      "frame": [
+        438,
+        218,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_left_v3",
+      "source": "Sprites/Tiles/Default/terrain_stone_horizontal_left.png",
+      "crop": null,
+      "frame": [
+        506,
+        218,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_middle_v3",
+      "source": "Sprites/Tiles/Default/terrain_stone_horizontal_middle.png",
+      "crop": null,
+      "frame": [
+        574,
+        218,
+        64,
+        64
+      ]
+    },
+    {
+      "asset": "ledge_right_v3",
+      "source": "Sprites/Tiles/Default/terrain_stone_horizontal_right.png",
+      "crop": null,
+      "frame": [
+        642,
+        218,
+        64,
+        64
+      ]
+    }
+  ],
+  "files": {
+    "summit-atlas.png": {
+      "bytes": 44394
+    },
+    "clouds.png": {
+      "bytes": 3103
+    },
+    "forest.png": {
+      "bytes": 3391
+    },
+    "LICENSE.txt": {
+      "bytes": 703
+    },
+    "diversity-atlas.png": {
+      "bytes": 112329
+    }
+  }
+}

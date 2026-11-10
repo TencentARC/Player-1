@@ -1,0 +1,17 @@
+task_prompt: |
+  Reveal at least 68 safe cells without detonating a mine.
+  Read number clues carefully and clear around likely mine zones.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.revealed_safe_cells: 68
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.primary_score
+    - metrics.total_safe_cells
+    - metrics.correct_flags
+    - metrics.total_mines
+    - metrics.remaining_mines

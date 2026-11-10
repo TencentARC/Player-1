@@ -1,0 +1,25 @@
+{
+  "source": "https://kenney.nl/assets/city-kit-roads",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "light-curved.glb",
+      "source_path": "Models/GLB format/light-curved.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    },
+    {
+      "file": "road-sign-warning.glb",
+      "source_path": "Models/GLB format/road-sign-warning.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    }
+  ],
+  "transformations": {}
+}

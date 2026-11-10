@@ -1,0 +1,13 @@
+task_prompt: |
+  Survive at least 6 seconds after the run starts.
+  Make small left-right corrections to stay on safe platforms.
+
+evaluator_config:
+  objective:
+    reach:
+      gameTimeMs: 6000
+  metrics_fields:
+    - game_state.score
+    - metrics.hp
+    - metrics.best_score
+    - metrics.primary_score

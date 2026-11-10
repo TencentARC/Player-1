@@ -1,0 +1,21 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Begin on level 1.
+  Finish level 1 and advance to level 2 or higher.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 1
+        target: 2
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.coins
+    - metrics.primary_score
+    - metrics.coins_total
+    - metrics.distance_to_goal
+    - metrics.level_number

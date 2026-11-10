@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "pack_id": "gym-light-default",
+  "palette": {
+    "background": "#e7edf3", "surface": "#f8fafc", "surfaceAccent": "#d5dee7", "grid": "#b9c6d2",
+    "text": "#17212b", "friendly": "#2878ff", "friendlyAccent": "#9dc6ff",
+    "hostile": "#e5484d", "hostileAccent": "#ffb8b8", "target": "#d92d42", "goal": "#20b868",
+    "hazard": "#ef6c32", "neutral": "#64748b", "interactive": "#f4c430", "projectile": "#ffd84d",
+    "road": "#343b49", "roadEdge": "#f0f3f5", "lane": "#e7ebef", "verge": "#4d8469",
+    "vehicle": "#ffd338", "vehicleAccent": "#ffef8a", "coin": "#f5c542",
+    "sky": "#cfe5f4", "pipe": "#337c55", "platform": "#465668"
+  },
+  "alternate_palette": {
+    "friendly": "#00a7a0", "friendlyAccent": "#95ebe4", "hostile": "#a75bd8",
+    "hostileAccent": "#e7c5f6", "target": "#ec7a2f", "goal": "#00a991", "hazard": "#d95c84",
+    "interactive": "#38a9d0", "projectile": "#2cc9d2", "vehicle": "#f06442",
+    "vehicleAccent": "#ffa080", "coin": "#2fcf9b", "pipe": "#347fc4"
+  },
+  "surfaces": { "background": "panels", "floor": "grid", "road": "asphalt", "platform": "metal" },
+  "assets": {
+    "surface": { "role": "surface", "type": "primitive", "primitive": "surface" },
+    "aim_target": { "role": "aim_target", "type": "primitive", "primitive": "aim_target" },
+    "actor": { "role": "actor", "type": "primitive", "primitive": "actor" },
+    "collectible": { "role": "collectible", "type": "primitive", "primitive": "collectible" },
+    "hazard": { "role": "hazard", "type": "primitive", "primitive": "hazard" },
+    "trail": { "role": "trail", "type": "primitive", "primitive": "trail" },
+    "goal_marker": { "role": "goal_marker", "type": "primitive", "primitive": "goal_marker" },
+    "maze_wall": { "role": "maze_wall", "type": "primitive", "primitive": "maze_wall" },
+    "path_road": { "role": "path_road", "type": "primitive", "primitive": "path_road" },
+    "checkpoint_line": { "role": "checkpoint_line", "type": "primitive", "primitive": "checkpoint_line" },
+    "arena_vehicle": { "role": "arena_vehicle", "type": "primitive", "primitive": "arena_vehicle" },
+    "platform": { "role": "platform", "type": "primitive", "primitive": "platform" },
+    "goal_flag": { "role": "goal_flag", "type": "primitive", "primitive": "goal_flag" },
+    "lane_road": { "role": "lane_road", "type": "primitive", "primitive": "lane_road" },
+    "lane_vehicle": { "role": "lane_vehicle", "type": "primitive", "primitive": "lane_vehicle" }
+  }
+}

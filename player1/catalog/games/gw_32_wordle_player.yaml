@@ -1,0 +1,104 @@
+game_name: gw_32_wordle_player
+game_rules: 'You are playing Wordle, a word guessing game.
+
+  - Guess the hidden five-letter word within six attempts.
+
+  - Green letters are correct and correctly placed, yellow letters occur elsewhere,
+  and gray letters are absent.
+
+  - A valid guess is submitted automatically after its fifth letter is typed.'
+role_control:
+  role_control_block: 'Role:
+
+    You enter guesses and use the color feedback to refine them.
+
+    Controls:
+
+    - Tap letter keys to type a five-letter word in order.
+
+    - Tap backspace to remove the latest letter.
+
+    - Tap enter if the game requests manual submission.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - Backspace
+    - Enter
+    - a
+    - b
+    - c
+    - d
+    - e
+    - f
+    - g
+    - h
+    - i
+    - j
+    - k
+    - l
+    - m
+    - n
+    - o
+    - p
+    - q
+    - r
+    - s
+    - t
+    - u
+    - v
+    - w
+    - x
+    - y
+    - z
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: start with common letters
+    response: '<think>
+
+      I need a broad opening guess with common letters, so I should type CRANE to
+      learn which letters belong and where they go.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["c","r","a","n","e"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: test new letters
+    response: '<think>
+
+      The previous feedback ruled out C, R, and N but kept A and E useful, so I should
+      type PLATE to test new letters and positions.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["p","l","a","t","e"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

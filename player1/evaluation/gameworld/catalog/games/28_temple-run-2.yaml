@@ -1,0 +1,64 @@
+game_rules: |
+  You are playing Temple Run 2, an endless runner.
+
+  ## Game Objective
+  - Survive as long as possible without missing turns and avoid obstacles.
+
+  ## Game Rules
+  - Run along the paths and avoid obstacles.
+  - Fail to turn, jump, or slide and you will die.
+
+game_roles:
+  - name: runner
+    prompt:
+      role_section: |
+        You are the runner.
+        Control the player to turn, jump, and slide to avoid obstacles.
+        You run in Temple Run 2.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - A/D: switch lanes and take turns.
+        - W: jump.
+        - S: slide.
+        - Space: start/continue.
+    computer_use_controls:
+      allowed_keys: ["w", "a", "s", "d", "Space"]
+      allow_clicks: false
+      hold_duration: 0.2
+
+    semantic_controls:
+      - id: wait
+        description: Pause briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: start
+        description: Start or continue the run.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.2
+      - id: turn_left
+        description: Switch left lanes or take a left turn.
+        binding:
+          action: press_key
+          key: "a"
+          duration: 0.2
+      - id: turn_right
+        description: Switch right lanes or take a right turn.
+        binding:
+          action: press_key
+          key: "d"
+          duration: 0.2
+      - id: jump
+        description: Jump over obstacles.
+        binding:
+          action: press_key
+          key: "w"
+          duration: 0.2
+      - id: slide
+        description: Slide under obstacles.
+        binding:
+          action: press_key
+          key: "s"
+          duration: 0.2

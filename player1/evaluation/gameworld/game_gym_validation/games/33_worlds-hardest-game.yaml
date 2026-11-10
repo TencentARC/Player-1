@@ -1,0 +1,42 @@
+profile: game-gym
+game_id: 33_worlds-hardest-game
+
+game_rules: |-
+  You are playing World's Hardest Game, a precision maze and dodge game.
+  - Guide the red square to collect every coin and then reach the green exit zone.
+  - Blue enemies move in fixed cycles and defeat the square on contact.
+  - Checkpoints preserve progress and divide the route into safer segments.
+
+roles:
+  player:
+    description: |-
+      You control the red square through the maze.
+    controls:
+      - Hold arrowup, arrowdown, arrowleft, or arrowright to move.
+      - Hold one vertical and one horizontal key together to move diagonally.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: cross during a safe opening
+          response: |-
+            <think>
+            The safe opening and next coin are above and to the right, so I should move diagonally toward them between enemy passes.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowup","arrowright"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: wait for an enemy cycle
+          response: |-
+            <think>
+            A blue enemy is crossing the narrow opening ahead, so I should wait for its cycle to carry it away before entering the exposed path.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

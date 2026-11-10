@@ -1,0 +1,11 @@
+task_prompt: |
+  Place at least 25 blocks without missing a placement.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.successful_blocks: 25
+  metrics_fields:
+    - game_state.score
+    - metrics.missed_blocks
+    - metrics.deaths

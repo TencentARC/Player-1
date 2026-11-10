@@ -1,0 +1,4 @@
+kimi-k2.5:
+  model: "kimi-k2.5"
+  base_url: "https://api.moonshot.ai/v1"
+  enable_memory: true

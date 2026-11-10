@@ -1,0 +1,60 @@
+game_rules: |
+  You are playing Google Snake, the classic snake game.
+
+  ## Game Objective
+  - Eat apples to grow longer and increase score.
+  - Avoid crashing into walls or your own body.
+
+  ## Game Rules
+  - The snake moves continuously in the chosen direction.
+  - You can turn up, down, left, or right.
+  - The game ends when you hit a wall or your body.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the snake.
+        Use direction keys to guide it toward apples safely.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowUP: Turn upward
+        - ArrowDown: Turn downward
+        - ArrowLeft: Turn left
+        - ArrowRight: Turn right
+        - Wait: Do nothing briefly to keep the direction
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Do nothing briefly to keep the direction.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_up
+        description: Turn upward.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: move_down
+        description: Turn downward.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.1
+      - id: move_left
+        description: Turn left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Turn right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+

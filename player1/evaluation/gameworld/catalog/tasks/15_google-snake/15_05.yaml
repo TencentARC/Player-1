@@ -1,0 +1,14 @@
+task_prompt: |
+  Complete a long survival route and consume at least 15 apples.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.apples_eaten: 15
+  metrics_fields:
+    - game_state.score
+    - gameTimeMs
+    - metrics.snake_length
+    - metrics.speed
+    - metrics.board_width
+    - metrics.board_height

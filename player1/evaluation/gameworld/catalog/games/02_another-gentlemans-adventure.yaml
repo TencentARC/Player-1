@@ -1,0 +1,66 @@
+game_rules: |
+  You are playing Another Gentleman's Adventure, a platformer game.
+
+  ## Game Objective
+  - Navigate through levels, avoiding obstacles and enemies to get coins.
+
+  ## Game Rules
+  - Move left and right to navigate platforms.
+  - Jump (left or right) to avoid obstacles and reach higher platforms.
+  - Jump from below to hit the Golden Question Blocks and reveal items.
+  - Jumping on enemies kills them.
+
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the gentleman character.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Stay still.
+        - Arrow Left/Right: Move horizontally
+        - Arrow Up: Jump
+        - Arrow Left/Right + Arrow Up (key combination): Jump while moving left/rights
+
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowUp"]
+      allow_clicks: false
+      hold_duration: 0.1
+
+    semantic_controls:
+      - id: wait
+        description: Stay still briefly.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Walk left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Walk right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: jump
+        description: Jump vertically.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: jump_left
+        description: Jump while moving left.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowLeft"]
+          duration: 0.1
+      - id: jump_right
+        description: Jump while moving right.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowRight"]
+          duration: 0.1

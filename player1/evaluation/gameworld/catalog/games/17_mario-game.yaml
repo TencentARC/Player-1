@@ -1,0 +1,78 @@
+game_rules: |
+  You are playing Super Mario Bros.
+  Control Mario through platforming levels, collecting coins and defeating enemies.
+
+  ## Game Objective
+  - Reach the flagpole at the end of each level.
+  - Collect coins from question blocks or kill enemies for points.
+
+  ## Game Rules
+  - You have 3 lives and limited time per level.
+  - Touching enemies from the side or below kills Mario. Jump on enemies to kill enemies.
+  - Jumping underneath question blocks will reveal coins or power-ups.
+  - Power-ups: Mushroom make Mario grow big.
+
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control Mario.
+        Navigate through platforming levels by running, jumping, and avoiding hazards.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowLeft: Move left
+        - ArrowRight: Move right
+        - ArrowUp: Jump
+        - ArrowDown: Duck/crouch (when big)
+        - ArrowUp + ArrowLeft/ArrowRight: Jump while moving left/right
+
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]
+      allow_clicks: false
+      hold_duration: 0.1
+
+    semantic_controls:
+      - id: wait
+        description: Stand still and wait.
+        binding:
+          action: wait
+          duration: 0.1
+
+      - id: move_right
+        description: Walk right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: move_left
+        description: Walk left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: jump
+        description: Jump straight up.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: jump_right
+        description: Jump while moving right.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowRight"]
+          duration: 0.1
+      - id: jump_left
+        description: Jump while moving left.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowLeft"]
+          duration: 0.1
+      - id: duck
+        description: Duck/crouch (when big).
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.1
+

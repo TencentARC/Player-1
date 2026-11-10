@@ -1,0 +1,14 @@
+{
+  "source": "https://kenney.nl/assets/particle-pack",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "path": "circle_01.png",
+      "source_path": "PNG (Transparent)/circle_01.png"
+    },
+    {
+      "path": "star_04.png",
+      "source_path": "PNG (Transparent)/star_04.png"
+    }
+  ]
+}

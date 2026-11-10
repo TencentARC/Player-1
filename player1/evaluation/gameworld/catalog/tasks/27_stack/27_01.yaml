@@ -1,0 +1,10 @@
+task_prompt: |
+  Successfully place at least 10 blocks.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.successful_blocks: 10
+  metrics_fields:
+    - game_state.score
+    - metrics.deaths

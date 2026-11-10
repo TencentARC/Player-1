@@ -1,0 +1,109 @@
+{
+  "sources": [
+    {
+      "files": [
+        "ui-pixel-adventure.png"
+      ],
+      "package": "UI Pack - Pixel Adventure",
+      "url": "https://kenney.nl/assets/ui-pack-pixel-adventure",
+      "license": "CC0",
+      "source_path": "Tilesheets/Large tiles/Thin outline/tilemap_packed.png"
+    },
+    {
+      "files": [
+        "recipe-book.png"
+      ],
+      "package": "Generic Items",
+      "url": "https://kenney.nl/assets/generic-items",
+      "license": "CC0",
+      "source_path": "PNG/Colored/genericItem_color_033.png"
+    },
+    {
+      "files": [
+        "items.svg",
+        "cursor.svg",
+        "avatar.svg"
+      ],
+      "author": "Player1 original artwork",
+      "license": "Repository license",
+      "description": "Editable SVG inventory atlas, workbench avatar, and pointer."
+    }
+  ],
+  "items": [
+    "oak_log",
+    "oak_planks",
+    "stick",
+    "coal",
+    "cobblestone",
+    "iron_ingot",
+    "gold_ingot",
+    "leather",
+    "string",
+    "wheat",
+    "redstone",
+    "feather",
+    "iron_ore",
+    "cactus",
+    "potato",
+    "nether_gold_ore",
+    "clay_ball",
+    "beef",
+    "birch_wood",
+    "stone",
+    "green_dye",
+    "baked_potato",
+    "brick",
+    "cooked_beef",
+    "charcoal",
+    "smooth_stone",
+    "wooden_pickaxe",
+    "stone_pickaxe",
+    "iron_pickaxe",
+    "wooden_sword",
+    "stone_sword",
+    "iron_sword",
+    "wooden_axe",
+    "stone_axe",
+    "iron_axe",
+    "wooden_shovel",
+    "stone_shovel",
+    "torch",
+    "crafting_table",
+    "furnace",
+    "chest",
+    "shield",
+    "wooden_helmet",
+    "wooden_chestplate",
+    "wooden_leggings",
+    "wooden_boots",
+    "iron_helmet",
+    "iron_chestplate",
+    "iron_leggings",
+    "iron_boots",
+    "bread",
+    "bucket"
+  ],
+  "files": {
+    "KENNEY-UI-LICENSE.txt": {
+      "bytes": 716
+    },
+    "items.svg": {
+      "bytes": 30955
+    },
+    "cursor.svg": {
+      "bytes": 211
+    },
+    "ui-pixel-adventure.png": {
+      "bytes": 4116
+    },
+    "recipe-book.png": {
+      "bytes": 1638
+    },
+    "KENNEY-ITEMS-LICENSE.txt": {
+      "bytes": 488
+    },
+    "avatar.svg": {
+      "bytes": 1865
+    }
+  }
+}

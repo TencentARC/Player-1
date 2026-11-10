@@ -1,0 +1,25 @@
+{
+  "source": "https://kenney.nl/assets/city-kit-suburban",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "building-type-a.glb",
+      "source_path": "Models/GLB format/building-type-a.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    },
+    {
+      "file": "building-type-f.glb",
+      "source_path": "Models/GLB format/building-type-f.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    }
+  ],
+  "transformations": {}
+}

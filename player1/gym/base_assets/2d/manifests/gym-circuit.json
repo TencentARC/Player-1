@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "pack_id": "gym-circuit",
+  "palette": {
+    "background": "#719576",
+    "surface": "#6d906f",
+    "surfaceAccent": "#88a37c",
+    "grid": "#b9c6d2",
+    "text": "#e8f0e8",
+    "friendly": "#71c8f0",
+    "friendlyAccent": "#9dc6ff",
+    "hostile": "#e5484d",
+    "hostileAccent": "#ffb8b8",
+    "target": "#d92d42",
+    "goal": "#ffdb67",
+    "hazard": "#ef6c32",
+    "neutral": "#a3b5aa",
+    "interactive": "#f4c430",
+    "projectile": "#ffd84d",
+    "road": "#414d53",
+    "roadEdge": "#f4e9c8",
+    "lane": "#e4e6da",
+    "verge": "#62917b",
+    "vehicle": "#ffd338",
+    "vehicleAccent": "#ffef8a",
+    "coin": "#ffd351",
+    "sky": "#cfe5f4",
+    "pipe": "#337c55",
+    "platform": "#465668",
+    "spriteTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "friendly": "#00a7a0",
+    "friendlyAccent": "#95ebe4",
+    "hostile": "#a75bd8",
+    "hostileAccent": "#e7c5f6",
+    "target": "#ec7a2f",
+    "goal": "#00a991",
+    "hazard": "#d95c84",
+    "interactive": "#38a9d0",
+    "projectile": "#2cc9d2",
+    "vehicle": "#f06442",
+    "vehicleAccent": "#ffa080",
+    "coin": "#2fcf9b",
+    "pipe": "#347fc4"
+  },
+  "surfaces": {
+    "background": "panels",
+    "floor": "grid",
+    "road": "asphalt",
+    "platform": "metal"
+  },
+  "assets": {
+    "racing_car": {
+      "type": "image",
+      "url": "../images/kenney/racing/car_blue_1.png",
+      "filter": "linear"
+    },
+    "racing_tree": {
+      "type": "image",
+      "url": "../images/kenney/racing/tree_large.png",
+      "filter": "linear"
+    },
+    "racing_tree_small": {
+      "type": "image",
+      "url": "../images/kenney/racing/tree_small.png",
+      "filter": "linear"
+    },
+    "racing_rock": {
+      "type": "image",
+      "url": "../images/kenney/racing/rock1.png",
+      "filter": "linear"
+    },
+    "racing_tent": {
+      "type": "image",
+      "url": "../images/kenney/driving-variants/tent_blue.png",
+      "filter": "linear"
+    },
+    "path_road": {
+      "type": "primitive",
+      "primitive": "path_road"
+    },
+    "checkpoint_line": {
+      "type": "primitive",
+      "primitive": "checkpoint_line"
+    },
+    "racing_car_v1": {
+      "type": "image",
+      "url": "../images/kenney/driving-variants/car_red_2.png",
+      "filter": "linear",
+      "role": "racing_car"
+    },
+    "racing_car_v2": {
+      "type": "image",
+      "url": "../images/kenney/driving-variants/car_yellow_5.png",
+      "filter": "linear",
+      "role": "racing_car"
+    },
+    "racing_car_v3": {
+      "type": "image",
+      "url": "../images/kenney/driving-variants/car_green_3.png",
+      "filter": "linear",
+      "role": "racing_car"
+    },
+    "racing_tent_v1": {
+      "type": "image",
+      "url": "../images/kenney/driving-variants/tent_red.png",
+      "filter": "linear",
+      "role": "racing_tent"
+    },
+    "racing_rock_v1": {
+      "type": "image",
+      "url": "../images/kenney/driving-variants/rock2.png",
+      "filter": "linear",
+      "role": "racing_rock"
+    },
+    "racing_rock_v2": {
+      "type": "image",
+      "url": "../images/kenney/driving-variants/rock3.png",
+      "filter": "linear",
+      "role": "racing_rock"
+    },
+    "racing_tree_v1": {
+      "type": "image",
+      "url": "../images/kenney/racing/tree_small.png",
+      "filter": "linear",
+      "role": "racing_tree"
+    },
+    "racing_tree_small_v1": {
+      "type": "image",
+      "url": "../images/kenney/racing/tree_large.png",
+      "filter": "linear",
+      "role": "racing_tree_small"
+    }
+  },
+  "content_revision": "driving-diversity-2",
+  "variants": {
+    "racing_car": [
+      "racing_car",
+      "racing_car_v1",
+      "racing_car_v2",
+      "racing_car_v3"
+    ],
+    "racing_tent": [
+      "racing_tent",
+      "racing_tent_v1"
+    ],
+    "racing_rock": [
+      "racing_rock",
+      "racing_rock_v1",
+      "racing_rock_v2"
+    ],
+    "racing_tree": [
+      "racing_tree",
+      "racing_tree_v1"
+    ],
+    "racing_tree_small": [
+      "racing_tree_small",
+      "racing_tree_small_v1"
+    ]
+  },
+  "themes": [
+    {
+      "id": "meadow",
+      "palette": {}
+    },
+    {
+      "id": "desert",
+      "palette": {
+        "background": "#bfad81",
+        "verge": "#bca878",
+        "surface": "#cabc91",
+        "surfaceAccent": "#ad9565",
+        "road": "#665b51",
+        "roadEdge": "#f0dec2",
+        "lane": "#f4e3c4"
+      }
+    },
+    {
+      "id": "highland",
+      "palette": {
+        "background": "#748e92",
+        "verge": "#66848a",
+        "surface": "#829f9d",
+        "surfaceAccent": "#5d7c81",
+        "road": "#3d4759",
+        "roadEdge": "#d2dedb",
+        "lane": "#d6ded4"
+      }
+    }
+  ]
+}

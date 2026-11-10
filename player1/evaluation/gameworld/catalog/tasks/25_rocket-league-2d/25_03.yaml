@@ -1,0 +1,14 @@
+game_url_suffix: "?player=1"
+
+task_prompt: |
+  Score at least 3 goals without conceding a goal.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.goals_for: 3
+  metrics_fields:
+    - metrics.goals_against
+    - metrics.primary_score
+    - metrics.distance_to_goal
+    - game_state.score

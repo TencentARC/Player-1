@@ -1,0 +1,38 @@
+task_id: "base_3d_navigate_chase_train"
+game_id: base_3d_navigate_chase
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 1
+max_steps: 100
+task_target_score_field: 10
+continue_on_fail: false
+
+task_prompt: |
+  Chase and catch the moving target character.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.primary_score
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.targets_reached
+    - metrics.distance_to_target
+    - metrics.start_distance
+    - metrics.yaw_error
+    - metrics.target_visible
+    - metrics.line_of_sight
+    - metrics.target_spawn_serial
+    - metrics.target_speed
+    - metrics.collisions
+    - metrics.best_primary_score
+    - metrics.step_count
+    - game_state.environment.difficulty
+    - terminal.outcome
+    - terminal.reason
+    - terminal.isTerminal

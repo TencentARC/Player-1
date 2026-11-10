@@ -1,0 +1,21 @@
+game_url_suffix: "?level=3"
+
+task_prompt: |
+  Without breaking the run, clear level 3 and get to level 4 or higher.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 3
+        target: 4
+      metrics.levels_completed_this_episode: 1
+  metrics_fields:
+    - game_state.completion_progress
+    - metrics.coins
+    - metrics.coins_total
+    - metrics.checkpoints_passed
+    - metrics.checkpoints_total
+    - metrics.deaths
+    - metrics.deaths_this_episode
+    - metrics.uninterrupted

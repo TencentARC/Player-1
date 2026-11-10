@@ -1,0 +1,116 @@
+{
+  "source": "https://kenney.nl/assets/topdown-tanks-redux",
+  "license": "CC0 1.0",
+  "revision": "arena-rovers-1",
+  "files": [
+    {
+      "file": "tankBody_blue.png",
+      "source_file": "PNG/Default size/tankBody_blue.png"
+    },
+    {
+      "file": "tankBody_red.png",
+      "source_file": "PNG/Default size/tankBody_red.png"
+    },
+    {
+      "file": "tankBlue_barrel1.png",
+      "source_file": "PNG/Default size/tankBlue_barrel1.png"
+    },
+    {
+      "file": "tankRed_barrel1.png",
+      "source_file": "PNG/Default size/tankRed_barrel1.png"
+    },
+    {
+      "file": "crateMetal.png",
+      "source_file": "PNG/Default size/crateMetal.png"
+    },
+    {
+      "file": "tileSand1.png",
+      "source_file": "PNG/Default size/tileSand1.png"
+    },
+    {
+      "file": "explosion1.png",
+      "source_file": "PNG/Default size/explosion1.png"
+    },
+    {
+      "file": "explosion3.png",
+      "source_file": "PNG/Default size/explosion3.png"
+    },
+    {
+      "file": "explosion5.png",
+      "source_file": "PNG/Default size/explosion5.png"
+    },
+    {
+      "file": "tankBody_huge.png",
+      "source_file": "PNG/Default size/tankBody_huge.png",
+      "bytes": 15113,
+      "crc32": "a5626af1"
+    },
+    {
+      "file": "tankBody_bigRed.png",
+      "source_file": "PNG/Default size/tankBody_bigRed.png",
+      "bytes": 14999,
+      "crc32": "ebfa2898"
+    },
+    {
+      "file": "tankBody_green.png",
+      "source_file": "PNG/Default size/tankBody_green.png",
+      "bytes": 14903,
+      "crc32": "57d04f79"
+    },
+    {
+      "file": "tankBody_dark.png",
+      "source_file": "PNG/Default size/tankBody_dark.png",
+      "bytes": 14833,
+      "crc32": "101c8199"
+    },
+    {
+      "file": "tankBlue_barrel2.png",
+      "source_file": "PNG/Default size/tankBlue_barrel2.png",
+      "bytes": 14580,
+      "crc32": "afccc270"
+    },
+    {
+      "file": "tankRed_barrel2.png",
+      "source_file": "PNG/Default size/tankRed_barrel2.png",
+      "bytes": 14581,
+      "crc32": "662bcde4"
+    },
+    {
+      "file": "tankGreen_barrel3.png",
+      "source_file": "PNG/Default size/tankGreen_barrel3.png",
+      "bytes": 14579,
+      "crc32": "c00e4cbe"
+    },
+    {
+      "file": "tankDark_barrel3.png",
+      "source_file": "PNG/Default size/tankDark_barrel3.png",
+      "bytes": 14581,
+      "crc32": "f85bd237"
+    },
+    {
+      "file": "crateWood.png",
+      "source_file": "PNG/Default size/crateWood.png",
+      "bytes": 14720,
+      "crc32": "251ec7d8"
+    },
+    {
+      "file": "tileGrass1.png",
+      "source_file": "PNG/Default size/tileGrass1.png",
+      "bytes": 15364,
+      "crc32": "c653c070"
+    },
+    {
+      "file": "tileSand2.png",
+      "source_file": "PNG/Default size/tileSand2.png",
+      "bytes": 15358,
+      "crc32": "df1b276f"
+    },
+    {
+      "file": "barricadeWood.png",
+      "source_file": "PNG/Default size/barricadeWood.png",
+      "bytes": 16170,
+      "crc32": "a86736d1"
+    }
+  ],
+  "diversity_revision": "2026-09-10"
+}

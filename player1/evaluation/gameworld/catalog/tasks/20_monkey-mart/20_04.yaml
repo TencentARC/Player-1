@@ -1,0 +1,14 @@
+task_prompt: |
+  Harvest bananas and corn, refill the stands, and keep operating until you have
+  earned 100 coins in this run.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.money_total_earned: 100
+  metrics_fields:
+    - gameTimeMs
+    - game_state.score
+    - game_state.money
+    - metrics.primary_score
+    - game_state.money_scan_status

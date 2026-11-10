@@ -1,0 +1,9 @@
+task_prompt: |
+  Merge steadily and push total score to at least 1024.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 1024
+  metrics_fields:
+    - game_state.level

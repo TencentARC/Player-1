@@ -1,0 +1,50 @@
+game_name: base_2d_platform
+
+game_rules: |-
+  You are playing 2D Platform, an endless side-scrolling running and jumping game.
+  - Run across hills, valleys, gaps, and upper or lower routes.
+  - Jump onto raised terrain and over pits and spikes.
+  - Collect coins along the paths as you run and jump.
+  - A fall or spike hit respawns you.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the runner.
+    Controls:
+    - Move with a=left and d=right; use space to jump and shift to sprint.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    keys: [d, space, shift, arrowleft, arrowright, arrowup, a, w]
+
+in_context_examples:
+  original_player1_control:
+    - name: jump over a pit
+      response: |-
+        <think>
+        A pit is immediately ahead while my existing momentum carries me right. I should press Space now to jump before reaching the dangerous edge.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["space"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: move right
+      response: |-
+        <think>
+        The runner is standing on a flat section with more ground visible to the right. I should hold D to move along this section.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["d"]
+        </parameter>
+        </function>
+        </tool_call>

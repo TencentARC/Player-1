@@ -1,0 +1,334 @@
+{
+  "version": 1,
+  "pack_id": "gym-dispatch",
+  "palette": {
+    "background": "#282633",
+    "surface": "#584955",
+    "surfaceAccent": "#968180",
+    "grid": "#b28d70",
+    "text": "#f3dec0",
+    "friendly": "#9bf4dc",
+    "friendlyAccent": "#369bb3",
+    "hostile": "#e5484d",
+    "hostileAccent": "#ffb8b8",
+    "target": "#d92d42",
+    "goal": "#20b868",
+    "hazard": "#f78961",
+    "neutral": "#64748b",
+    "interactive": "#f4c430",
+    "projectile": "#ffd84d",
+    "road": "#343b49",
+    "roadEdge": "#f0f3f5",
+    "lane": "#e7ebef",
+    "verge": "#4d8469",
+    "vehicle": "#ffd338",
+    "vehicleAccent": "#ffef8a",
+    "coin": "#ffd45e",
+    "sky": "#cfe5f4",
+    "pipe": "#337c55",
+    "platform": "#465668",
+    "spriteTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "friendly": "#00a7a0",
+    "friendlyAccent": "#95ebe4",
+    "hostile": "#a75bd8",
+    "hostileAccent": "#e7c5f6",
+    "target": "#ec7a2f",
+    "goal": "#00a991",
+    "hazard": "#d95c84",
+    "interactive": "#38a9d0",
+    "projectile": "#2cc9d2",
+    "vehicle": "#f06442",
+    "vehicleAccent": "#ffa080",
+    "coin": "#2fcf9b",
+    "pipe": "#347fc4"
+  },
+  "surfaces": {
+    "background": "panels",
+    "floor": "grid",
+    "road": "asphalt",
+    "platform": "metal"
+  },
+  "assets": {
+    "factory_floor": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        48,
+        0,
+        16,
+        16
+      ],
+      "variant_group": "dispatch"
+    },
+    "factory_floor_worn": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        128,
+        32,
+        16,
+        16
+      ],
+      "variant_group": "dispatch"
+    },
+    "factory_robot": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        160,
+        16,
+        16,
+        16
+      ],
+      "variant_group": "dispatch"
+    },
+    "factory_hazard": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        96,
+        112,
+        16,
+        16
+      ],
+      "variant_group": "dispatch"
+    },
+    "factory_hatch": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        32,
+        96,
+        16,
+        16
+      ],
+      "variant_group": "dispatch"
+    },
+    "factory_vent": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        0,
+        96,
+        16,
+        16
+      ],
+      "variant_group": "dispatch"
+    },
+    "factory_coin": {
+      "type": "image",
+      "url": "../images/coastal/coin.svg",
+      "filter": "nearest"
+    },
+    "factory_floor_variant_1": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "role": "factory_floor"
+    },
+    "factory_floor_variant_2": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        16,
+        0,
+        16,
+        16
+      ],
+      "role": "factory_floor"
+    },
+    "factory_floor_worn_variant_1": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        16,
+        0,
+        16,
+        16
+      ],
+      "role": "factory_floor_worn"
+    },
+    "factory_floor_worn_variant_2": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        32,
+        0,
+        16,
+        16
+      ],
+      "role": "factory_floor_worn"
+    },
+    "factory_robot_variant_1": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        32,
+        128,
+        16,
+        16
+      ],
+      "role": "factory_robot"
+    },
+    "factory_robot_variant_2": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        0,
+        160,
+        16,
+        16
+      ],
+      "role": "factory_robot"
+    },
+    "factory_hazard_variant_1": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        96,
+        144,
+        16,
+        16
+      ],
+      "role": "factory_hazard"
+    },
+    "factory_hazard_variant_2": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        128,
+        160,
+        16,
+        16
+      ],
+      "role": "factory_hazard"
+    },
+    "factory_hatch_variant_1": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        128,
+        96,
+        16,
+        16
+      ],
+      "role": "factory_hatch"
+    },
+    "factory_hatch_variant_2": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        128,
+        112,
+        16,
+        16
+      ],
+      "role": "factory_hatch"
+    },
+    "factory_vent_variant_1": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        96,
+        96,
+        16,
+        16
+      ],
+      "role": "factory_vent"
+    },
+    "factory_vent_variant_2": {
+      "type": "atlas",
+      "url": "../images/kenney/tiny-factory/tilemap_packed.png",
+      "filter": "nearest",
+      "frame": [
+        0,
+        112,
+        16,
+        16
+      ],
+      "role": "factory_vent"
+    }
+  },
+  "content_revision": "gym-dispatch-diversity-2",
+  "variants": {
+    "factory_floor": [
+      "factory_floor",
+      "factory_floor_variant_1",
+      "factory_floor_variant_2"
+    ],
+    "factory_floor_worn": [
+      "factory_floor_worn",
+      "factory_floor_worn_variant_1",
+      "factory_floor_worn_variant_2"
+    ],
+    "factory_robot": [
+      "factory_robot",
+      "factory_robot_variant_1",
+      "factory_robot_variant_2"
+    ],
+    "factory_hazard": [
+      "factory_hazard",
+      "factory_hazard_variant_1",
+      "factory_hazard_variant_2"
+    ],
+    "factory_hatch": [
+      "factory_hatch",
+      "factory_hatch_variant_1",
+      "factory_hatch_variant_2"
+    ],
+    "factory_vent": [
+      "factory_vent",
+      "factory_vent_variant_1",
+      "factory_vent_variant_2"
+    ]
+  },
+  "theme_group": "dispatch",
+  "themes": [
+    {
+      "id": "foundry",
+      "palette": {}
+    },
+    {
+      "id": "assembly",
+      "palette": {
+        "background": "#263d43",
+        "surface": "#7c948e",
+        "surfaceAccent": "#c2d8c3",
+        "grid": "#e0c79b"
+      }
+    },
+    {
+      "id": "service",
+      "palette": {
+        "background": "#373547",
+        "surface": "#807497",
+        "surfaceAccent": "#c3afd1",
+        "grid": "#b6d7d9"
+      }
+    }
+  ]
+}

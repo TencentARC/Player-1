@@ -1,0 +1,111 @@
+{
+  "revision": "industrial-depot-20260910-1",
+  "license": "CC0-1.0",
+  "retrieved": "2026-09-10",
+  "sources": [
+    {
+      "url": "https://kenney.nl/assets/blocky-characters"
+    },
+    {
+      "url": "https://kenney.nl/assets/blaster-kit"
+    },
+    {
+      "url": "https://kenney.nl/assets/factory-kit"
+    }
+  ],
+  "adaptations": [
+    "Blocky actor materials use the fixed PBR profile; strafe-aim combines original walking legs with rifle-ready arms.",
+    "Both rifle variants animate their named magazine over the existing 0.75 s reload.",
+    "Equipment geometry and textures are original Kenney assets; runtime dimensions come from the physical level descriptor."
+  ],
+  "files": [
+    {
+      "file": "characters/character-h.glb",
+      "source_package": "blocky-characters",
+      "source_file": "Models/GLB format/character-h.glb",
+      "source_crc32": "be879e0c",
+      "bytes": 113944,
+      "crc32": "7821f6bd"
+    },
+    {
+      "file": "characters/character-j.glb",
+      "source_package": "blocky-characters",
+      "source_file": "Models/GLB format/character-j.glb",
+      "source_crc32": "0ea95dc0",
+      "bytes": 113924,
+      "crc32": "d61251ac"
+    },
+    {
+      "file": "characters/Textures/texture-h.png",
+      "source_package": "blocky-characters",
+      "source_file": "Models/GLB format/Textures/texture-h.png",
+      "source_crc32": "be03f9cb",
+      "bytes": 16215,
+      "crc32": "be03f9cb"
+    },
+    {
+      "file": "characters/Textures/texture-j.png",
+      "source_package": "blocky-characters",
+      "source_file": "Models/GLB format/Textures/texture-j.png",
+      "source_crc32": "fe666b70",
+      "bytes": 17576,
+      "crc32": "fe666b70"
+    },
+    {
+      "file": "weapons/blaster-e.glb",
+      "source_package": "blaster-kit",
+      "source_file": "Models/GLB format/blaster-e.glb",
+      "source_crc32": "5956674b",
+      "bytes": 75920,
+      "crc32": "d2895283"
+    },
+    {
+      "file": "weapons/blaster-j.glb",
+      "source_package": "blaster-kit",
+      "source_file": "Models/GLB format/blaster-j.glb",
+      "source_crc32": "72399a8b",
+      "bytes": 51116,
+      "crc32": "94b7a449"
+    },
+    {
+      "file": "weapons/Textures/colormap.png",
+      "source_package": "blaster-kit",
+      "source_file": "Models/GLB format/Textures/colormap.png",
+      "source_crc32": "49ba150a",
+      "bytes": 10223,
+      "crc32": "49ba150a"
+    },
+    {
+      "file": "equipment/machine-fortified.glb",
+      "source_package": "factory-kit",
+      "source_file": "Models/GLB format/machine-fortified.glb",
+      "source_crc32": "9a40516d",
+      "bytes": 29828,
+      "crc32": "9a40516d"
+    },
+    {
+      "file": "equipment/box-wide.glb",
+      "source_package": "factory-kit",
+      "source_file": "Models/GLB format/box-wide.glb",
+      "source_crc32": "8b038e87",
+      "bytes": 7496,
+      "crc32": "8b038e87"
+    },
+    {
+      "file": "equipment/box-long.glb",
+      "source_package": "factory-kit",
+      "source_file": "Models/GLB format/box-long.glb",
+      "source_crc32": "3978a2ac",
+      "bytes": 7492,
+      "crc32": "3978a2ac"
+    },
+    {
+      "file": "equipment/Textures/colormap.png",
+      "source_package": "factory-kit",
+      "source_file": "Models/GLB format/Textures/colormap.png",
+      "source_crc32": "7d399039",
+      "bytes": 11813,
+      "crc32": "7d399039"
+    }
+  ]
+}

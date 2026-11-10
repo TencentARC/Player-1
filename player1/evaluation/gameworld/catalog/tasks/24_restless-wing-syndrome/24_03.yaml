@@ -1,0 +1,20 @@
+game_url_suffix: "?level=3"
+
+task_prompt: |
+  Reach the bread as the exit of the level.
+  Maintain steady rhythm, avoid spike contact, and leave room to steer after each flap.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 3
+        target: 4
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.deaths
+    - metrics.spike_hits
+    - metrics.flap_max
+    - metrics.flap_target

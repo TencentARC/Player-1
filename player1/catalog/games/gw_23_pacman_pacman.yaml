@@ -1,0 +1,75 @@
+game_name: gw_23_pacman_pacman
+game_rules: 'You are playing Pac-Man, a maze chase game.
+
+  - Eat every dot while avoiding ghosts.
+
+  - Large dots temporarily let Pac-Man eat ghosts.
+
+  - Use maze corridors and intersections to maintain safe routes.'
+role_control:
+  role_control_block: 'Role:
+
+    You choose Pac-Man''s direction through the maze.
+
+    Controls:
+
+    - Tap arrowup, arrowdown, arrowleft, or arrowright to turn at an available path.
+
+    - Wait for one game step to continue in the current direction.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: turn into the open corridor
+    response: '<think>
+
+      The corridor to the left contains small dots and no nearby ghost, so I should
+      turn left at this intersection and collect them.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["arrowleft"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: continue down a clear corridor
+    response: '<think>
+
+      Pac-Man is already moving through a clear straight corridor, so I should wait
+      and keep the current direction until the next intersection.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

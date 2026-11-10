@@ -1,0 +1,10 @@
+{
+  "name": "three",
+  "npm_version": "0.185.0",
+  "three_revision": "185",
+  "source": "https://registry.npmjs.org/three/-/three-0.185.0.tgz",
+  "bundle_entry": "player1/gym/base_common/three-js/three-r185-assets-entry.js",
+  "bundle_format": "iife",
+  "global_name": "THREE",
+  "addons": ["GLTFLoader", "cloneSkinned"]
+}

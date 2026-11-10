@@ -1,0 +1,50 @@
+game_name: vizdoom_defend_center
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom Defend the Center from a fixed position.
+  - Maximize reward by defeating monsters approaching from every direction while staying alive.
+  - You cannot move away from the center; only horizontal turning and firing affect the game.
+  - Monsters keep returning, and ammunition is limited, so avoid wasting shots.
+  - The weapon aims only horizontally; vertical camera movement has no effect.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the ViZDoom player from the center of the arena.
+    Controls:
+    - Hold a or d to turn left or right.
+    Turn the camera horizontally with dx in [-1000, 1000], and always set dy=0.
+
+    dx=1000 represents one full visible game width.
+    Positive dx turns right, and negative dx turns left.
+
+    Larger dx values do not make you turn faster.
+    - Left-click or hold the left mouse button to fire.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [a, d]
+    mouse_move: true
+    mouse_click: [left]
+    mouse_hold: [left]
+
+in_context_examples:
+  player1_control:
+    - name: turn and fire
+      response: |-
+        <think>
+        A monster is approaching from the right edge of the arena. I should turn right while firing at its body before it reaches me.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>

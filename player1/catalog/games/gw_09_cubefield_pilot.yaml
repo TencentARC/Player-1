@@ -1,0 +1,71 @@
+game_name: gw_09_cubefield_pilot
+game_rules: 'You are playing Cubefield, a 3D endless obstacle game.
+
+  - The triangular ship moves forward automatically through a field of cubes.
+
+  - Colliding with any cube ends the run.'
+role_control:
+  role_control_block: 'Role:
+
+    You steer the triangular ship around cube obstacles.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to steer sideways.
+
+    - Wait for one game step to continue straight.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowLeft
+    - ArrowRight
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: steer away from a block
+    response: '<think>
+
+      A cube blocks the center while the left side is open, so I should steer left
+      early to pass around it safely.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowleft"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: continue through a clear lane
+    response: '<think>
+
+      The lane directly ahead is clear and the nearest cubes remain far to both sides,
+      so I should wait and continue straight.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

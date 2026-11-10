@@ -1,0 +1,5 @@
+-r base.txt
+pyarrow>=17,<26
+filelock>=3.13
+huggingface-hub>=0.26
+protobuf>=5

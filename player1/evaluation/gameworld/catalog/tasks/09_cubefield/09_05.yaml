@@ -1,0 +1,15 @@
+task_prompt: |
+  Sustain accurate high-speed dodging for an extended run and reach at least 100000 points.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 100000
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.distance
+    - metrics.speed_forward
+    - metrics.speed_side
+    - metrics.cubes_alive
+    - metrics.high_score

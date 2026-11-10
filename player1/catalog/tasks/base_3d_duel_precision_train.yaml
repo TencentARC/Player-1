@@ -1,0 +1,49 @@
+task_id: "base_3d_duel_precision_train"
+game_id: base_3d_duel_precision
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 1.5
+max_steps: 100
+task_target_score_field: 50
+continue_on_fail: false
+
+task_prompt: |
+  Find and approach the opponent, aim the center crosshair at it, and defeat it.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.kills
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.kills
+    - metrics.damage_taken
+    - metrics.attack_accuracy
+    - metrics.hits_after_evade
+    - metrics.enemy_orbits
+    - metrics.enemy_retreats
+    - metrics.enemy_diagonal_retreats
+    - metrics.enemy_jumps
+    - metrics.enemy_attacks_interrupted
+    - metrics.enemy_hold_ms
+    - metrics.opponent_profile
+    - metrics.opponent_locomotion_state
+    - metrics.opponent_airborne
+    - metrics.aim_yaw_error
+    - metrics.aim_pitch_error
+    - metrics.opponent_under_crosshair
+    - metrics.crosshair_blocked
+    - metrics.nearest_enemy_distance
+    - metrics.max_enemy_spawn_distance
+    - game_state.environment.difficulty
+    - game_state.environment.fullscreen.active
+    - game_state.environment.fullscreen.width
+    - game_state.environment.fullscreen.height
+    - game_state.environment.fullscreen.fov
+    - terminal.outcome
+    - terminal.isTerminal

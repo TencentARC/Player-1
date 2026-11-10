@@ -1,0 +1,178 @@
+game_rules: |
+  You are playing a Minecraft-style first-person sandbox survival game.
+
+  ## Game Objective
+  - Gather resources by breaking blocks.
+  - Move around and mine nearby blocks efficiently.
+
+  ## Game Rules
+  - Hold the left mouse button on the targeted block to mine it. Hold-mining is accelerated in benchmark mode.
+  - Place blocks with the right mouse button. A short left click can also place, but right click is the reliable placement action for this benchmark.
+  - Move around and jump to navigate the terrain.
+  - Aim at different targeting blocks and get close to them to mine them.
+  - The starting hotbar is: slot 1 wood logs, slot 2 wood planks, slot 3 cobblestone, slot 4 torches, slot 5 dirt. Newly collected items can fill later hotbar slots.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the player character.
+        Prioritize efficient nearby resource collection by moving to blocks and mining them.
+        Track your held item carefully: the starting hotbar is 1=wood_log, 2=wood_plank, 3=cobblestone, 4=torch, 5=dirt, and later resources may appear in slots 6-9.
+        You cannot craft any tools in this game.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowUp: move forward
+        - ArrowDown: move backward
+        - ArrowLeft: move left
+        - ArrowRight: move right
+        - Space: jump
+        - Mouse move: look around / turn camera
+        - Left click and hold: mine the targeted block
+        - Right click: place the selected block
+        - 1-9: select tool/item slot
+    computer_use_controls:
+      allowed_keys: [
+        "ArrowUp", "ArrowLeft", "ArrowDown", "ArrowRight",
+        "Space",
+        "1", "2", "3", "4", "5", "6", "7", "8", "9"
+      ]
+      hold_duration: 0.2
+      key_durations:
+        ArrowUp: 0.2
+        ArrowLeft: 0.2
+        ArrowDown: 0.2
+        ArrowRight: 0.2
+        Space: 0.1
+      allow_clicks: true
+    semantic_controls:
+      - id: wait
+        description: Wait briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_forward
+        description: Move forward briefly.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.2
+      - id: move_backward
+        description: Move backward briefly.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.2
+      - id: move_left
+        description: Move left briefly.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.2
+      - id: move_right
+        description: Move right briefly.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.2
+      - id: jump
+        description: Jump once.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.1
+      - id: look_left
+        description: Turn camera left.
+        binding:
+          action: mouse_move
+          from_x: 640
+          from_y: 360
+          x: 540
+          y: 360
+          duration: 0.05
+      - id: look_right
+        description: Turn camera right.
+        binding:
+          action: mouse_move
+          from_x: 640
+          from_y: 360
+          x: 740
+          y: 360
+          duration: 0.05
+      - id: look_up
+        description: Tilt camera up.
+        binding:
+          action: mouse_move
+          from_x: 640
+          from_y: 360
+          x: 640
+          y: 260
+          duration: 0.05
+      - id: look_down
+        description: Tilt camera down.
+        binding:
+          action: mouse_move
+          from_x: 640
+          from_y: 360
+          x: 640
+          y: 460
+          duration: 0.05
+      - id: mine_target
+        description: Hold left click at center to mine the targeted block.
+        binding:
+          action: click_hold
+          x: 640
+          y: 360
+          duration: 0.5
+      - id: place_block
+        description: Place the selected block at center.
+        binding:
+          action: click
+          x: 640
+          y: 360
+          button: right
+      - id: select_slot_1
+        description: Select hotbar slot 1.
+        binding:
+          action: press_key
+          key: "1"
+      - id: select_slot_2
+        description: Select hotbar slot 2.
+        binding:
+          action: press_key
+          key: "2"
+      - id: select_slot_3
+        description: Select hotbar slot 3.
+        binding:
+          action: press_key
+          key: "3"
+      - id: select_slot_4
+        description: Select hotbar slot 4.
+        binding:
+          action: press_key
+          key: "4"
+      - id: select_slot_5
+        description: Select hotbar slot 5.
+        binding:
+          action: press_key
+          key: "5"
+      - id: select_slot_6
+        description: Select hotbar slot 6.
+        binding:
+          action: press_key
+          key: "6"
+      - id: select_slot_7
+        description: Select hotbar slot 7.
+        binding:
+          action: press_key
+          key: "7"
+      - id: select_slot_8
+        description: Select hotbar slot 8.
+        binding:
+          action: press_key
+          key: "8"
+      - id: select_slot_9
+        description: Select hotbar slot 9.
+        binding:
+          action: press_key
+          key: "9"

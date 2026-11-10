@@ -1,0 +1,15 @@
+task_prompt: |
+  Reach at least 6000 points in one run with no stumbles, deaths, or revivals.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.score: 6000
+  metrics_fields:
+    - game_state.score
+    - game_state.distance
+    - metrics.distance
+    - metrics.coins
+    - metrics.stumbles_this_run
+    - metrics.resurrects_this_run
+    - metrics.deaths

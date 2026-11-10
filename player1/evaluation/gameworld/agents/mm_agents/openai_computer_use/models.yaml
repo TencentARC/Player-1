@@ -1,0 +1,3 @@
+openai-computer-use:
+  model: "computer-use-preview"
+  enable_memory: false

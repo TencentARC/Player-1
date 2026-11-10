@@ -1,0 +1,48 @@
+game_name: vizdoom_basic
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom Basic, a short shooting task in one room.
+  - Eliminate the single monster across the room before time runs out.
+  - The monster moves sideways but does not attack.
+  - Line up the weapon with the monster before firing.
+  - Missing a shot and taking extra time both reduce the episode reward.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the ViZDoom player facing a single moving target.
+    Controls:
+    - Hold a or d to move left or right.
+    - Left-click or hold the left mouse button to fire.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [a, d]
+    mouse_move: false
+    mouse_click: [left]
+    mouse_hold: [left]
+
+in_context_examples:
+  player1_control:
+    - name: move sideways and fire
+      response: |-
+        <think>
+        The monster is slightly right of the weapon. I should move right while firing to bring it into the shot.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["d"]
+        </parameter>
+        </function>
+        </tool_call>

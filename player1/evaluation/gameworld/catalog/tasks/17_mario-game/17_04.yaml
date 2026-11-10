@@ -1,0 +1,15 @@
+task_prompt: |
+  Push to at least 2500 points in one attempt.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.score_earned: 2500
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - game_state.level
+    - metrics.coins
+    - metrics.lives
+    - metrics.time_left_s
+    - metrics.level_progress_percent

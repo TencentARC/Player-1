@@ -1,0 +1,13 @@
+task_prompt: |
+  Reach at least 6 cleared pipes before crashing.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.pipes_passed: 6
+  metrics_fields:
+    - game_state.score
+    - gameTimeMs
+    - metrics.distance
+    - metrics.pipes_visible
+    - metrics.best_score

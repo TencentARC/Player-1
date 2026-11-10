@@ -1,0 +1,19 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Beat level 1 and make it into level 2 or beyond.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 1
+        target: 2
+      metrics.levels_completed_this_episode: 1
+  metrics_fields:
+    - game_state.completion_progress
+    - metrics.coins
+    - metrics.coins_total
+    - metrics.checkpoints_passed
+    - metrics.checkpoints_total
+    - metrics.deaths

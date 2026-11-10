@@ -1,0 +1,16 @@
+game_url_suffix: "?level=infinite"
+
+task_prompt: |
+  Start the run.
+  Reach at least 300 distance without falling.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.distance: 300
+  metrics_fields:
+    - metrics.primary_score
+    - game_state.level
+    - metrics.deaths
+    - metrics.coins
+    - metrics.stars

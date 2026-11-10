@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "pack_id": "gym-country-drive",
+  "palette": {
+    "sky": "#c5d9e0",
+    "floor": "#71906b",
+    "floorAccent": "#677786",
+    "floorLine": "#b0b0b0",
+    "wall": "#b9c5cd",
+    "wallAccent": "#3d5569",
+    "trim": "#dce6e5",
+    "metal": "#536777",
+    "darkMetal": "#1f2e40",
+    "glass": "#17384a",
+    "cover": "#59778a",
+    "coverAccent": "#f4aa53",
+    "hostile": "#ef5b4f",
+    "hostileAccent": "#ffc2b8",
+    "friendly": "#2f80ed",
+    "target": "#ff4f64",
+    "goal": "#ffe189",
+    "hazard": "#f97316",
+    "neutral": "#d3d9d9",
+    "interactive": "#ffd37d",
+    "projectileFriendly": "#ffd84d",
+    "projectileHostile": "#ff7a2f",
+    "crate": "#9a6a3a",
+    "support": "#3b82f6",
+    "road": "#444c53",
+    "roadEdge": "#eee3cb",
+    "lane": "#e8d78b",
+    "verge": "#7a9768",
+    "vehicle": "#4cb2cb",
+    "vehicleAccent": "#ffe993",
+    "coin": "#facc15",
+    "vergeDark": "#6a875f",
+    "vergeDarkAccent": "#82976d"
+  },
+  "alternate_palette": {
+    "hostile": "#b86cf0",
+    "hostileAccent": "#f2d7ff",
+    "friendly": "#00a7a0",
+    "target": "#ff8a3d",
+    "goal": "#00bfa5",
+    "interactive": "#38bdf8",
+    "projectileFriendly": "#22d3ee",
+    "projectileHostile": "#fb7185",
+    "vehicle": "#f06543",
+    "vehicleAccent": "#ff9674",
+    "coin": "#37e0a2"
+  },
+  "surfaces": {
+    "floor": "tiles",
+    "wall": "panels",
+    "road": "asphalt",
+    "verge": "ground"
+  },
+  "textures": {},
+  "assets": {
+    "car_sport": {
+      "type": "model",
+      "url": "../models/kenney/drive-cars/sedan-sports.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "roll": "wheel-spin"
+        },
+        "material_roles": {
+          "paint": [
+            "body-paint"
+          ]
+        }
+      }
+    },
+    "cone": {
+      "type": "model",
+      "url": "../models/kenney/drive-cars/cone.glb",
+      "forward_axis": "+z"
+    },
+    "tree_oak": {
+      "type": "model",
+      "url": "../models/kenney/drive-nature/tree_oak.glb",
+      "forward_axis": "+z"
+    },
+    "tree_pine": {
+      "type": "model",
+      "url": "../models/kenney/drive-nature/tree_pineRoundA.glb",
+      "forward_axis": "+z"
+    },
+    "rock": {
+      "type": "model",
+      "url": "../models/kenney/drive-nature/rock_largeA.glb",
+      "forward_axis": "+z"
+    },
+    "street_lamp": {
+      "type": "model",
+      "url": "../models/kenney/drive-roadside/light-curved.glb",
+      "forward_axis": "+z"
+    },
+    "road_sign": {
+      "type": "model",
+      "url": "../models/kenney/drive-roadside/road-sign-warning.glb",
+      "forward_axis": "+z"
+    },
+    "house_a": {
+      "type": "model",
+      "url": "../models/kenney/drive-suburban/building-type-a.glb",
+      "forward_axis": "+z"
+    },
+    "house_f": {
+      "type": "model",
+      "url": "../models/kenney/drive-suburban/building-type-f.glb",
+      "forward_axis": "+z"
+    },
+    "grass": {
+      "type": "model",
+      "url": "../models/kenney/drive-nature/grass.glb",
+      "forward_axis": "+z"
+    },
+    "bush": {
+      "type": "model",
+      "url": "../models/kenney/drive-nature/plant_bushSmall.glb",
+      "forward_axis": "+z"
+    },
+    "car_sport_v1": {
+      "type": "model",
+      "url": "../models/kenney/lane-cars/hatchback-sports.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "roll": "wheel-spin"
+        },
+        "material_roles": {
+          "paint": [
+            "body-paint"
+          ]
+        }
+      },
+      "role": "car_sport"
+    },
+    "tree_pine_v1": {
+      "type": "model",
+      "url": "../models/kenney/driving-nature-variants/tree_pineRoundB.glb",
+      "forward_axis": "+z",
+      "role": "tree_pine"
+    },
+    "tree_pine_v2": {
+      "type": "model",
+      "url": "../models/kenney/driving-nature-variants/tree_pineRoundC.glb",
+      "forward_axis": "+z",
+      "role": "tree_pine"
+    },
+    "rock_v1": {
+      "type": "model",
+      "url": "../models/kenney/driving-nature-variants/rock_largeB.glb",
+      "forward_axis": "+z",
+      "role": "rock"
+    },
+    "rock_v2": {
+      "type": "model",
+      "url": "../models/kenney/driving-nature-variants/rock_largeC.glb",
+      "forward_axis": "+z",
+      "role": "rock"
+    },
+    "bush_v1": {
+      "type": "model",
+      "url": "../models/kenney/driving-nature-variants/plant_bushLarge.glb",
+      "forward_axis": "+z",
+      "role": "bush"
+    },
+    "house_a_v1": {
+      "type": "model",
+      "url": "../models/kenney/driving-house-variants/building-type-b.glb",
+      "forward_axis": "+z",
+      "role": "house_a"
+    },
+    "house_a_v2": {
+      "type": "model",
+      "url": "../models/kenney/driving-house-variants/building-type-c.glb",
+      "forward_axis": "+z",
+      "role": "house_a"
+    },
+    "house_f_v1": {
+      "type": "model",
+      "url": "../models/kenney/driving-house-variants/building-type-d.glb",
+      "forward_axis": "+z",
+      "role": "house_f"
+    },
+    "tree_oak_v1": {
+      "type": "model",
+      "url": "../models/kenney/driving-nature-variants/tree_palm.glb",
+      "forward_axis": "+z",
+      "role": "tree_oak"
+    }
+  },
+  "content_revision": "driving-diversity-2",
+  "visual_profile": "stylized",
+  "variants": {
+    "car_sport": [
+      "car_sport",
+      "car_sport_v1"
+    ],
+    "tree_pine": [
+      "tree_pine",
+      "tree_pine_v1",
+      "tree_pine_v2"
+    ],
+    "rock": [
+      "rock",
+      "rock_v1",
+      "rock_v2"
+    ],
+    "bush": [
+      "bush",
+      "bush_v1"
+    ],
+    "house_a": [
+      "house_a",
+      "house_a_v1",
+      "house_a_v2"
+    ],
+    "house_f": [
+      "house_f",
+      "house_f_v1"
+    ],
+    "tree_oak": [
+      "tree_oak",
+      "tree_oak_v1"
+    ]
+  },
+  "themes": [
+    {
+      "id": "countryside",
+      "palette": {}
+    },
+    {
+      "id": "dry-valley",
+      "palette": {
+        "sky": "#d6c9b1",
+        "floor": "#a99a70",
+        "verge": "#aaa170",
+        "vergeDark": "#8b895c",
+        "vergeDarkAccent": "#b2a570",
+        "sea": "#739299",
+        "sand": "#d5c39c",
+        "road": "#5a554f"
+      },
+      "surfaces": {
+        "floor": "ground",
+        "verge": "ground"
+      }
+    },
+    {
+      "id": "cool-upland",
+      "palette": {
+        "sky": "#b7ceda",
+        "floor": "#637f79",
+        "verge": "#728a85",
+        "vergeDark": "#506f6f",
+        "vergeDarkAccent": "#7c9690",
+        "sea": "#416f86",
+        "sand": "#a7b4ab",
+        "road": "#394952"
+      },
+      "surfaces": {
+        "floor": "grid",
+        "verge": "tiles"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+task_prompt: |
+  Keep momentum through mixed platforms and push the run to at least 500 points.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 500
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.platforms_visible

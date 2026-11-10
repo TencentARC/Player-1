@@ -1,0 +1,16 @@
+task_prompt: |
+  Score at least 1000 points in one run.
+  Use large dots to create safer routes and avoid getting cornered.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 1000
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.primary_score
+    - metrics.high_score
+    - metrics.lives
+    - metrics.deaths
+    - metrics.maze_index

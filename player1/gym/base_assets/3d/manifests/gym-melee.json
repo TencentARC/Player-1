@@ -1,0 +1,408 @@
+{
+  "version": 1,
+  "pack_id": "gym-melee",
+  "content_revision": "monastery-20260910-1",
+  "visual_profile": "stylized",
+  "palette": {
+    "sky": "#b9d5cf",
+    "floor": "#b1b29c",
+    "floorAccent": "#bec0a8",
+    "floorLine": "#e0dcc6",
+    "wall": "#d2c4a3",
+    "wallAccent": "#758c77",
+    "trim": "#ece3c9",
+    "metal": "#47625c",
+    "darkMetal": "#263e3b",
+    "cover": "#a6a98d",
+    "coverAccent": "#527d73",
+    "hostile": "#d85b46",
+    "hostileAccent": "#ef986b",
+    "friendly": "#62ac8d",
+    "target": "#e1a657",
+    "goal": "#86d5b3",
+    "neutral": "#e8e6d0",
+    "verge": "#6e8b60",
+    "road": "#a58763",
+    "roadEdge": "#babaa8",
+    "characterTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "hostile": "#a975d4",
+    "hostileAccent": "#ceace8",
+    "friendly": "#489fc2",
+    "goal": "#7bd7e2",
+    "target": "#e2ab5c",
+    "characterTint": "#b5d7fa"
+  },
+  "surfaces": {
+    "floor": "tiles",
+    "wall": "panels",
+    "verge": "ground",
+    "road": "wood",
+    "floorAccent": "panels",
+    "roadEdge": "concrete"
+  },
+  "textures": {},
+  "assets": {
+    "melee_player": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-l.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-l"
+          ]
+        }
+      },
+      "role": "melee_player"
+    },
+    "melee_raider": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-g.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-g"
+          ]
+        }
+      },
+      "role": "melee_raider"
+    },
+    "melee_skirmisher": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-h.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-h"
+          ]
+        }
+      },
+      "role": "melee_skirmisher"
+    },
+    "melee_brute": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-r.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-r"
+          ]
+        }
+      },
+      "role": "melee_brute"
+    },
+    "melee_sword": {
+      "type": "model",
+      "url": "../models/kenney/duel-armory/weapon-sword.glb",
+      "forward_axis": "+z"
+    },
+    "melee_oak": {
+      "type": "model",
+      "url": "../models/kenney/duel-nature/tree_oak.glb",
+      "forward_axis": "+z",
+      "role": "tree"
+    },
+    "melee_tree": {
+      "type": "model",
+      "url": "../models/kenney/duel-nature/tree_detailed.glb",
+      "forward_axis": "+z",
+      "role": "tree"
+    },
+    "melee_player_k": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-k.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-k"
+          ]
+        }
+      },
+      "role": "melee_player"
+    },
+    "melee_player_m": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-m.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-m"
+          ]
+        }
+      },
+      "role": "melee_player"
+    },
+    "melee_raider_h": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-h.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-h"
+          ]
+        }
+      },
+      "role": "melee_raider"
+    },
+    "melee_raider_r": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-r.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-r"
+          ]
+        }
+      },
+      "role": "melee_raider"
+    },
+    "melee_skirmisher_r": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-r.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-r"
+          ]
+        }
+      },
+      "role": "melee_skirmisher"
+    },
+    "melee_skirmisher_g": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-g.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-g"
+          ]
+        }
+      },
+      "role": "melee_skirmisher"
+    },
+    "melee_brute_g": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-g.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-g"
+          ]
+        }
+      },
+      "role": "melee_brute"
+    },
+    "melee_brute_h": {
+      "type": "model",
+      "url": "../models/kenney/melee-blocky/character-h.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk-guard",
+          "dodge": "sprint-guard",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-h"
+          ]
+        }
+      },
+      "role": "melee_brute"
+    }
+  },
+  "variants": {
+    "melee_player": [
+      "melee_player",
+      "melee_player_k",
+      "melee_player_m"
+    ],
+    "melee_raider": [
+      "melee_raider",
+      "melee_raider_h",
+      "melee_raider_r"
+    ],
+    "melee_skirmisher": [
+      "melee_skirmisher",
+      "melee_skirmisher_r",
+      "melee_skirmisher_g"
+    ],
+    "melee_brute": [
+      "melee_brute",
+      "melee_brute_g",
+      "melee_brute_h"
+    ],
+    "melee_oak": [
+      "melee_oak",
+      "melee_tree"
+    ],
+    "melee_tree": [
+      "melee_tree",
+      "melee_oak"
+    ]
+  },
+  "themes": [
+    {
+      "id": "jade_stone",
+      "palette": {},
+      "surfaces": {}
+    },
+    {
+      "id": "cedar_ochre",
+      "palette": {
+        "wall": "#c7b393",
+        "wallAccent": "#95694d",
+        "floor": "#a29883",
+        "floorAccent": "#b3a28c",
+        "verge": "#85905e",
+        "coverAccent": "#815c48"
+      },
+      "surfaces": {
+        "floor": "wood",
+        "wall": "bricks"
+      }
+    },
+    {
+      "id": "slate_court",
+      "palette": {
+        "wall": "#b0bdc5",
+        "wallAccent": "#61747c",
+        "floor": "#8a959e",
+        "floorAccent": "#a1aeb4",
+        "cover": "#8f999e",
+        "coverAccent": "#587081"
+      },
+      "surfaces": {
+        "floor": "panels",
+        "wall": "stone"
+      }
+    }
+  ]
+}

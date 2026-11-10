@@ -1,0 +1,85 @@
+game_name: gw_22_ovo_runner
+game_rules: 'You are playing OVO, a fast platform game with traps.
+
+  - Reach each level''s exit while collecting coins and avoiding hazards.
+
+  - Jump next to a wall to gain extra height.
+
+  - Ground smashes and slides help pass low or descending sections.'
+role_control:
+  role_control_block: 'Role:
+
+    You control the OVO runner through the level.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to move horizontally.
+
+    - Hold arrowup to jump or arrowdown to smash downward.
+
+    - Hold a vertical key with arrowleft or arrowright to jump or slide while moving.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: jump across a hazard
+    response: '<think>
+
+      The next platform is across the gap on the right, so I should move right and
+      jump together to cross the gap safely.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright","arrowup"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: slide under an obstacle
+    response: '<think>
+
+      A low barrier blocks the route ahead on the right, so I should keep moving right
+      and slide underneath it without jumping.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright","arrowdown"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

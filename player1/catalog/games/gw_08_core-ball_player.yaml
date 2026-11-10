@@ -1,0 +1,72 @@
+game_name: gw_08_core-ball_player
+game_rules: 'You are playing Core Ball, a timing game built around a rotating core.
+
+  - Attach every queued ball to the core to complete the level.
+
+  - A launched ball must not collide with a ball already attached to the core.
+
+  - Later levels rotate faster and leave less open space.'
+role_control:
+  role_control_block: 'Role:
+
+    You control when each numbered ball is launched.
+
+    Controls:
+
+    - Tap space to launch one ball toward the core.
+
+    - Wait for one game step to let the core rotate.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - Space
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: shoot into a clear gap
+    response: '<think>
+
+      The launch path to the core is clear between two attached balls, so I should
+      shoot one ball before the gap rotates away.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["space"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: wait for a clear launch line
+    response: '<think>
+
+      An attached ball currently blocks the launch line, so I should wait for the
+      core to rotate a clear gap into position.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

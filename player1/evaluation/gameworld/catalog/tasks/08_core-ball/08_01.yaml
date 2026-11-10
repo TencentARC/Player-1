@@ -1,0 +1,20 @@
+game_url_suffix: "?level=1"
+
+
+task_prompt: |
+  Clear level 1 without collisions.
+  Shoot all remaining balls into free gaps without hitting attached balls.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 8
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.queue_remaining
+    - metrics.queue_total
+    - metrics.attached_count
+    - metrics.initial_attached
+    - metrics.total_required
+    - metrics.attempts

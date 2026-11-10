@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "pack_id": "gym-rover-arena",
+  "palette": {
+    "background": "#18252e",
+    "surface": "#3d5360",
+    "surfaceAccent": "#8aa1ac",
+    "grid": "#b9a879",
+    "text": "#eaf3f6",
+    "friendly": "#52daff",
+    "friendlyAccent": "#9dc6ff",
+    "hostile": "#ff645a",
+    "hostileAccent": "#ffb8b8",
+    "target": "#d92d42",
+    "goal": "#20b868",
+    "hazard": "#ef6c32",
+    "neutral": "#8195a0",
+    "interactive": "#f4c430",
+    "projectile": "#ffdd80",
+    "road": "#384756",
+    "roadEdge": "#f4e9c8",
+    "lane": "#e4e6da",
+    "verge": "#62917b",
+    "vehicle": "#ffd338",
+    "vehicleAccent": "#ffef8a",
+    "coin": "#ffd351",
+    "sky": "#cfe5f4",
+    "pipe": "#337c55",
+    "platform": "#465668",
+    "spriteTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "friendly": "#00a7a0",
+    "friendlyAccent": "#95ebe4",
+    "hostile": "#a75bd8",
+    "hostileAccent": "#e7c5f6",
+    "target": "#ec7a2f",
+    "goal": "#00a991",
+    "hazard": "#d95c84",
+    "interactive": "#38a9d0",
+    "projectile": "#2cc9d2",
+    "vehicle": "#f06442",
+    "vehicleAccent": "#ffa080",
+    "coin": "#2fcf9b",
+    "pipe": "#347fc4"
+  },
+  "surfaces": {
+    "background": "panels",
+    "floor": "grid",
+    "road": "asphalt",
+    "platform": "metal"
+  },
+  "assets": {
+    "rover_player": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBody_blue.png",
+      "filter": "linear",
+      "variant_group": "rover"
+    },
+    "rover_enemy": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBody_red.png",
+      "filter": "linear",
+      "variant_group": "rover"
+    },
+    "barrel_player": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBlue_barrel1.png",
+      "filter": "linear",
+      "variant_group": "rover"
+    },
+    "barrel_enemy": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankRed_barrel1.png",
+      "filter": "linear",
+      "variant_group": "rover"
+    },
+    "cover": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/crateMetal.png",
+      "filter": "linear",
+      "variant_group": "rover"
+    },
+    "floor": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tileSand1.png",
+      "filter": "linear",
+      "variant_group": "rover"
+    },
+    "burst_0": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/explosion1.png",
+      "filter": "linear"
+    },
+    "burst_1": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/explosion3.png",
+      "filter": "linear"
+    },
+    "burst_2": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/explosion5.png",
+      "filter": "linear"
+    },
+    "rover_player_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBody_huge.png",
+      "filter": "linear",
+      "role": "rover_player"
+    },
+    "rover_player_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBody_green.png",
+      "filter": "linear",
+      "role": "rover_player"
+    },
+    "rover_enemy_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBody_bigRed.png",
+      "filter": "linear",
+      "role": "rover_enemy"
+    },
+    "rover_enemy_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBody_dark.png",
+      "filter": "linear",
+      "role": "rover_enemy"
+    },
+    "barrel_player_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankBlue_barrel2.png",
+      "filter": "linear",
+      "role": "barrel_player"
+    },
+    "barrel_player_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankGreen_barrel3.png",
+      "filter": "linear",
+      "role": "barrel_player"
+    },
+    "barrel_enemy_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankRed_barrel2.png",
+      "filter": "linear",
+      "role": "barrel_enemy"
+    },
+    "barrel_enemy_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tankDark_barrel3.png",
+      "filter": "linear",
+      "role": "barrel_enemy"
+    },
+    "cover_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/crateWood.png",
+      "filter": "linear",
+      "role": "cover"
+    },
+    "cover_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/barricadeWood.png",
+      "filter": "linear",
+      "role": "cover"
+    },
+    "floor_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tileGrass1.png",
+      "filter": "linear",
+      "role": "floor"
+    },
+    "floor_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/arena-tanks/tileSand2.png",
+      "filter": "linear",
+      "role": "floor"
+    }
+  },
+  "content_revision": "gym-rover-arena-diversity-2",
+  "variants": {
+    "rover_player": [
+      "rover_player",
+      "rover_player_variant_1",
+      "rover_player_variant_2"
+    ],
+    "rover_enemy": [
+      "rover_enemy",
+      "rover_enemy_variant_1",
+      "rover_enemy_variant_2"
+    ],
+    "barrel_player": [
+      "barrel_player",
+      "barrel_player_variant_1",
+      "barrel_player_variant_2"
+    ],
+    "barrel_enemy": [
+      "barrel_enemy",
+      "barrel_enemy_variant_1",
+      "barrel_enemy_variant_2"
+    ],
+    "cover": [
+      "cover",
+      "cover_variant_1",
+      "cover_variant_2"
+    ],
+    "floor": [
+      "floor",
+      "floor_variant_1",
+      "floor_variant_2"
+    ]
+  },
+  "theme_group": "rover",
+  "themes": [
+    {
+      "id": "hangar",
+      "palette": {}
+    },
+    {
+      "id": "yard",
+      "palette": {
+        "background": "#234131",
+        "surface": "#6c9255",
+        "neutral": "#b09263"
+      }
+    },
+    {
+      "id": "quarry",
+      "palette": {
+        "background": "#403735",
+        "surface": "#ac9b82",
+        "neutral": "#acb5b7"
+      }
+    }
+  ]
+}

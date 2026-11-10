@@ -1,0 +1,66 @@
+game_name: gw_27_stack_player
+game_rules: 'You are playing Stack, a timing-based block stacking game.
+
+  - Drop each moving block so it overlaps the tower below.
+
+  - Any overhanging section is removed, making later placements narrower.
+
+  - A drop with no overlap ends the game.'
+role_control:
+  role_control_block: 'Role:
+
+    You choose when the moving block is dropped.
+
+    Controls:
+
+    - Tap space to drop the current block.
+
+    - Wait for one game step to let the block continue moving.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - Space
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: wait for better alignment
+    response: '<think>
+
+      The moving block is still away from the center of the tower, so I should wait
+      for it to move closer before dropping it.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  - name: drop at maximum overlap
+    response: '<think>
+
+      The moving block now has its widest overlap with the tower below, so I should
+      drop it immediately before it travels past the center.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["space"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

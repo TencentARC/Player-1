@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>3D Shooting · Player-1</title>
+  <link rel="stylesheet" href="../base_common/game_shell.css">
+  <link rel="stylesheet" href="scene.css">
+</head>
+<body>
+  <main id="app" class="game-cursor-hidden" tabindex="0" aria-label="Game">
+    <div class="shell">
+      <section class="stage">
+        <canvas id="display" width="960" height="540" aria-label="Game scene"></canvas>
+        <div class="crosshair combat-crosshair" aria-hidden="true"></div>
+      </section>
+    </div>
+  </main>
+  <script src="../base_common/three-js/three-r185.global.min.js"></script>
+  <script src="../base_common/game_engine.js"></script>
+  <script src="../base_common/game_engine_core.js"></script>
+  <script src="../base_common/game_shell.js"></script>
+  <script src="../base_common/3d_asset_engine.js"></script>
+  <script src="../base_common/3d_three_js_engine.js"></script>
+  <script src="reward_config.js"></script>
+  <script src="../base_common/connected_layout.js"></script>
+  <script src="level.js"></script>
+  <script src="scene.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

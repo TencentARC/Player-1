@@ -1,0 +1,22 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Level 2 target task.
+  Requirements (both required):
+  - Fireboy collects at least 8 red diamonds.
+  - Watergirl collects at least 8 blue diamonds.
+  Both characters must collect their required diamonds in the same run.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.diamonds.fireboy.collected: 8
+      game_state.diamonds.watergirl.collected: 8
+  metrics_fields:
+    - game_state.level
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.diamonds.fireboy.total
+    - game_state.diamonds.watergirl.total
+    - metrics.coins
+    - metrics.coins_total

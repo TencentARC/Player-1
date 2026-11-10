@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "pack_id": "gym-depot",
+  "content_revision": "industrial-depot-20260910-1",
+  "visual_profile": "stylized",
+  "palette": {
+    "sky": "#afc6ca",
+    "floor": "#819b95",
+    "floorAccent": "#8d8572",
+    "floorLine": "#c1c8b8",
+    "wall": "#c4cabe",
+    "wallAccent": "#526965",
+    "trim": "#e9e8d5",
+    "metal": "#344b4e",
+    "darkMetal": "#21363c",
+    "glass": "#799998",
+    "cover": "#526b65",
+    "coverAccent": "#d7ac64",
+    "hostile": "#ee6d50",
+    "hostileAccent": "#ffd0a1",
+    "friendly": "#64dccc",
+    "target": "#ee6d50",
+    "goal": "#a3ead9",
+    "neutral": "#e1e9d8",
+    "projectileFriendly": "#8bffeb",
+    "projectileHostile": "#ff8455",
+    "road": "#677c7f",
+    "vergeAccent": "#748b83",
+    "roadEdge": "#b5bba4",
+    "verge": "#58716b"
+  },
+  "alternate_palette": {
+    "hostile": "#ed73bc",
+    "hostileAccent": "#f3c6eb",
+    "friendly": "#78d6fb",
+    "goal": "#78d6fb"
+  },
+  "surfaces": {
+    "floor": "tiles",
+    "wall": "panels",
+    "road": "asphalt",
+    "floorAccent": "panels",
+    "vergeAccent": "concrete",
+    "roadEdge": "tiles"
+  },
+  "textures": {},
+  "assets": {
+    "combat_enemy": {
+      "type": "model",
+      "url": "../models/kenney/combat/character-g.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "move": "strafe-aim",
+          "aim": "holding-both",
+          "shoot": "holding-both-shoot"
+        },
+        "sockets": {
+          "right_hand": "arm-right"
+        },
+        "material_roles": {
+          "suit": [
+            "texture-g"
+          ]
+        }
+      },
+      "variant_group": "depot",
+      "role": "combat_enemy"
+    },
+    "combat_rifle": {
+      "type": "model",
+      "url": "../models/kenney/combat/blaster-f.glb",
+      "forward_axis": "-z",
+      "visual": {
+        "clips": {
+          "reload": "reload"
+        },
+        "material_roles": {
+          "finish": [
+            "colormap"
+          ]
+        }
+      },
+      "variant_group": "depot",
+      "role": "combat_rifle"
+    },
+    "combat_screen": {
+      "type": "model",
+      "url": "../models/kenney/factory/screen-wide.glb"
+    },
+    "combat_pipe": {
+      "type": "model",
+      "url": "../models/kenney/factory/pipe-large-long.glb"
+    },
+    "combat_enemy_h": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/characters/character-h.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "move": "strafe-aim",
+          "aim": "holding-both",
+          "shoot": "holding-both-shoot"
+        },
+        "sockets": {
+          "right_hand": "arm-right"
+        },
+        "material_roles": {
+          "suit": [
+            "texture-h"
+          ]
+        }
+      },
+      "role": "combat_enemy"
+    },
+    "combat_enemy_j": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/characters/character-j.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "move": "strafe-aim",
+          "aim": "holding-both",
+          "shoot": "holding-both-shoot"
+        },
+        "sockets": {
+          "right_hand": "arm-right"
+        },
+        "material_roles": {
+          "suit": [
+            "texture-j"
+          ]
+        }
+      },
+      "role": "combat_enemy"
+    },
+    "combat_rifle_e": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/weapons/blaster-e.glb",
+      "forward_axis": "-z",
+      "visual": {
+        "clips": {
+          "reload": "reload"
+        },
+        "material_roles": {
+          "finish": [
+            "colormap"
+          ]
+        }
+      },
+      "role": "combat_rifle"
+    },
+    "combat_rifle_j": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/weapons/blaster-j.glb",
+      "forward_axis": "-z",
+      "visual": {
+        "clips": {
+          "reload": "reload"
+        },
+        "material_roles": {
+          "finish": [
+            "colormap"
+          ]
+        }
+      },
+      "role": "combat_rifle"
+    },
+    "combat_machine": {
+      "type": "model",
+      "url": "../models/kenney/factory/machine.glb",
+      "variant_group": "depot",
+      "role": "combat_machine"
+    },
+    "combat_machine_window": {
+      "type": "model",
+      "url": "../models/kenney/factory/machine-window.glb",
+      "role": "combat_machine"
+    },
+    "combat_machine_fortified": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/equipment/machine-fortified.glb",
+      "role": "combat_machine"
+    },
+    "combat_cargo": {
+      "type": "model",
+      "url": "../models/kenney/factory/box-large.glb",
+      "variant_group": "depot",
+      "role": "combat_cargo"
+    },
+    "combat_cargo_wide": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/equipment/box-wide.glb",
+      "role": "combat_cargo"
+    },
+    "combat_cargo_long": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/equipment/box-long.glb",
+      "role": "combat_cargo"
+    }
+  },
+  "variants": {
+    "combat_enemy": [
+      "combat_enemy",
+      "combat_enemy_h",
+      "combat_enemy_j"
+    ],
+    "combat_rifle": [
+      "combat_rifle",
+      "combat_rifle_e",
+      "combat_rifle_j"
+    ],
+    "combat_machine": [
+      "combat_machine",
+      "combat_machine_window",
+      "combat_machine_fortified"
+    ],
+    "combat_cargo": [
+      "combat_cargo",
+      "combat_cargo_wide",
+      "combat_cargo_long"
+    ]
+  },
+  "theme_group": "depot",
+  "themes": [
+    {
+      "id": "coastal_steel"
+    },
+    {
+      "id": "copper_foundry",
+      "palette": {
+        "sky": "#dbc6b2",
+        "floor": "#b59671",
+        "floorAccent": "#81716d",
+        "wall": "#c9b59d",
+        "wallAccent": "#6d665d",
+        "trim": "#edd9b8",
+        "metal": "#674f42",
+        "darkMetal": "#382f2b",
+        "cover": "#aa7553",
+        "coverAccent": "#e6bb76",
+        "road": "#937e70",
+        "vergeAccent": "#b3a58b",
+        "roadEdge": "#d1b798",
+        "verge": "#867e6d"
+      },
+      "surfaces": {
+        "road": "concrete",
+        "floor": "panels",
+        "floorAccent": "tiles",
+        "vergeAccent": "tiles",
+        "roadEdge": "panels"
+      }
+    },
+    {
+      "id": "night_research",
+      "palette": {
+        "sky": "#becbd7",
+        "floor": "#7488a3",
+        "floorAccent": "#8d879e",
+        "wall": "#c4ccdb",
+        "wallAccent": "#536079",
+        "trim": "#e3e8ef",
+        "metal": "#354257",
+        "darkMetal": "#222b41",
+        "cover": "#586a84",
+        "coverAccent": "#a3c9d6",
+        "road": "#68768d",
+        "vergeAccent": "#a1a6b6",
+        "roadEdge": "#c2c8db",
+        "verge": "#617275"
+      },
+      "surfaces": {
+        "road": "tiles",
+        "floor": "concrete",
+        "floorAccent": "panels",
+        "vergeAccent": "asphalt",
+        "roadEdge": "tiles"
+      }
+    }
+  ]
+}

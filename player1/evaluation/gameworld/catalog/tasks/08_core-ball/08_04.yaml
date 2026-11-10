@@ -1,0 +1,19 @@
+game_url_suffix: "?level=4"
+
+task_prompt: |
+  Clear level 4 under faster rotation.
+  Time each shot to pass through a moving gap and finish the level.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 12
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.queue_remaining
+    - metrics.queue_total
+    - metrics.attached_count
+    - metrics.initial_attached
+    - metrics.total_required
+    - metrics.attempts

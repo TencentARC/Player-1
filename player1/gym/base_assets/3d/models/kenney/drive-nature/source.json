@@ -1,0 +1,34 @@
+{
+  "source": "https://kenney.nl/assets/nature-kit",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "tree_oak.glb",
+      "source_path": "Models/GLTF format/tree_oak.glb",
+      "dependencies": []
+    },
+    {
+      "file": "tree_pineRoundA.glb",
+      "source_path": "Models/GLTF format/tree_pineRoundA.glb",
+      "dependencies": []
+    },
+    {
+      "file": "rock_largeA.glb",
+      "source_path": "Models/GLTF format/rock_largeA.glb",
+      "dependencies": []
+    },
+    {
+      "file": "plant_bushSmall.glb",
+      "source_path": "Models/GLTF format/plant_bushSmall.glb",
+      "dependencies": []
+    },
+    {
+      "file": "grass.glb",
+      "source_path": "Models/GLTF format/grass.glb",
+      "dependencies": []
+    }
+  ],
+  "transformations": {
+    "all": "Calibrate nature surfaces to a foliage/bark palette in linear RGB, metallic=0, roughness=0.93. Geometry is unchanged."
+  }
+}

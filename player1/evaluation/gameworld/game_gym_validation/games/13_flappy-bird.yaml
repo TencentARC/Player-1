@@ -1,0 +1,41 @@
+profile: game-gym
+game_id: 13_flappy-bird
+
+game_rules: |-
+  You are playing Flappy Bird, a one-button flying game.
+  - Pass through pipe gaps to increase the score.
+  - Gravity pulls the bird downward between flaps.
+  - Contact with a pipe or the ground ends the run.
+
+roles:
+  player:
+    description: |-
+      You control the bird's upward flaps.
+    controls:
+      - Tap space to flap upward.
+      - Wait for one game step to let the bird descend.
+    in_context_examples:
+      control_v0_5:
+        - name: hold altitude above the gap
+          response: |-
+            <think>
+            The bird is above the center of the next pipe gap, so I should wait and let gravity lower its path toward the opening.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>
+        - name: flap toward the gap
+          response: |-
+            <think>
+            The bird is below the center of the next pipe gap and still descending, so I should flap now to raise its path.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["space"]
+            </parameter>
+            </function>
+            </tool_call>

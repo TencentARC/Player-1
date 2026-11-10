@@ -1,0 +1,43 @@
+{
+  "source": "https://kenney.nl/assets/factory-kit",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "machine-fortified.glb",
+      "source_path": "Models/GLB format/machine-fortified.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    },
+    {
+      "file": "machine-window-bar.glb",
+      "source_path": "Models/GLB format/machine-window-bar.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    },
+    {
+      "file": "box-long.glb",
+      "source_path": "Models/GLB format/box-long.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    },
+    {
+      "file": "box-large.glb",
+      "source_path": "Models/GLB format/box-large.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    }
+  ],
+  "transformations": {}
+}

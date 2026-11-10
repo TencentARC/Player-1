@@ -1,0 +1,13 @@
+task_prompt: |
+  Keep the banana and corn supply stocked, then finish with 50 coins earned.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.money_total_earned: 50
+  metrics_fields:
+    - gameTimeMs
+    - game_state.score
+    - game_state.money
+    - metrics.primary_score
+    - game_state.money_scan_status

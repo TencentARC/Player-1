@@ -1,0 +1,30 @@
+{
+  "source_url": "https://kenney.nl/assets/mini-dungeon",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "weapon-sword.glb",
+      "bytes": 9284,
+      "transforms": []
+    },
+    {
+      "file": "weapon-spear.glb",
+      "bytes": 7152,
+      "transforms": []
+    },
+    {
+      "file": "banner.glb",
+      "bytes": 19272,
+      "transforms": []
+    },
+    {
+      "file": "column.glb",
+      "bytes": 11268,
+      "transforms": []
+    },
+    {
+      "file": "Textures/colormap.png",
+      "bytes": 10838
+    }
+  ]
+}

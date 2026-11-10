@@ -1,0 +1,12 @@
+task_prompt: |
+  Survive long enough to score at least 200.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 200
+  metrics_fields:
+    - metrics.distance
+    - metrics.speed
+    - metrics.attempts
+    - metrics.high_score

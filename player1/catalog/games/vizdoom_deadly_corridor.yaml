@@ -1,0 +1,58 @@
+game_name: vizdoom_deadly_corridor
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom Deadly Corridor, a first-person combat run.
+  - Reach the green armor at the far end of the corridor while staying alive.
+  - Armed monsters line both sides of the route and will shoot at you.
+  - Moving closer to the armor increases reward; dying before reaching it loses reward.
+  - Fight threats that block the route, but keep making progress toward the goal.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the ViZDoom player moving through the corridor.
+    Controls:
+    - Hold w or s to move forward or backward.
+    - Hold a or d to move left or right.
+    Turn the camera horizontally with dx in [-1000, 1000], and always set dy=0.
+
+    dx=1000 represents one full visible game width.
+    Positive dx turns right, and negative dx turns left.
+
+    Larger dx values do not make you turn faster.
+    - Left-click or hold the left mouse button to fire.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [w, a, s, d]
+    mouse_move: true
+    mouse_click: [left]
+    mouse_hold: [left]
+
+in_context_examples:
+  player1_control:
+    - name: advance under fire
+      response: |-
+        <think>
+        The green armor is ahead, but a monster is firing from the left. I should advance, turn toward the threat, and fire while following the corridor.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":-100,"dy":0}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

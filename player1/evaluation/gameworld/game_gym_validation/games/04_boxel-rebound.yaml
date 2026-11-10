@@ -1,0 +1,40 @@
+profile: game-gym
+game_id: 04_boxel-rebound
+
+game_rules: |-
+  You are playing Boxel Rebound, an auto-running precision platform game.
+  - Time jumps to cross obstacles and reach the end of each level.
+  - Spikes and pits end the run.
+
+roles:
+  player:
+    description: |-
+      You control the jumping box while it moves forward automatically.
+    controls:
+      - Tap space or arrowup to jump.
+      - Wait for one game step to continue running without jumping.
+    in_context_examples:
+      control_v0_5:
+        - name: jump over a spike
+          response: |-
+            <think>
+            A spike is directly ahead of the moving box, so I should jump now to clear it and keep the run alive.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["space"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: run on clear ground
+          response: |-
+            <think>
+            The ground ahead is flat and clear, so jumping now would add risk; I should wait and let the box keep running forward.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

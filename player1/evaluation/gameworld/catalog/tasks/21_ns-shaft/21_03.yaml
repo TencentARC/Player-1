@@ -1,0 +1,13 @@
+task_prompt: |
+  Survive for at least 15 seconds without game over.
+  Land safely on each platform and recover quickly from bad landings.
+
+evaluator_config:
+  objective:
+    reach:
+      gameTimeMs: 15000
+  metrics_fields:
+    - game_state.score
+    - metrics.hp
+    - metrics.best_score
+    - metrics.primary_score

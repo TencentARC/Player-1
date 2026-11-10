@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "url": "https://kenney.nl/assets/blocky-characters",
+      "version": "2.0"
+    },
+    {
+      "url": "https://kenney.nl/assets/blaster-kit",
+      "version": "2.1"
+    }
+  ],
+  "license": "CC0-1.0",
+  "retrieved": "2026-09-10",
+  "revision": "combat-20260910-1",
+  "adaptations": [
+    "Character unlit extension removed for the fixed stylized PBR profile.",
+    "Strafe-aim clip combines original walk root/legs and original holding-both arms.",
+    "Weapon magazine receives a 0.75-second deterministic reload translation clip."
+  ],
+  "files": [
+    {
+      "file": "character-g.glb",
+      "source_crc32": "f632d7d1",
+      "bytes": 113940,
+      "crc32": "83c9fed9"
+    },
+    {
+      "file": "Textures/texture-g.png",
+      "source_crc32": "21308a64",
+      "bytes": 16069,
+      "crc32": "21308a64"
+    },
+    {
+      "file": "blaster-f.glb",
+      "source_crc32": "7c4dfbdf",
+      "bytes": 72936,
+      "crc32": "42ef9efc"
+    },
+    {
+      "file": "Textures/colormap.png",
+      "source_crc32": "49ba150a",
+      "bytes": 10223,
+      "crc32": "49ba150a"
+    }
+  ]
+}

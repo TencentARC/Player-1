@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "pack_id": "gym-precision",
+  "palette": {
+    "sky": "#dbe6e3",
+    "floor": "#b39b77",
+    "floorAccent": "#ccb38c",
+    "floorLine": "#eee7d8",
+    "wall": "#e1d8c2",
+    "wallAccent": "#56767b",
+    "trim": "#ede5cd",
+    "metal": "#405760",
+    "darkMetal": "#1f2e40",
+    "glass": "#17384a",
+    "cover": "#638587",
+    "coverAccent": "#415b63",
+    "hostile": "#ef5b4f",
+    "hostileAccent": "#ffc2b8",
+    "friendly": "#4aa89c",
+    "target": "#f08042",
+    "goal": "#f2af4f",
+    "hazard": "#f97316",
+    "neutral": "#e2e8f0",
+    "interactive": "#ffd37d",
+    "projectileFriendly": "#ffd84d",
+    "projectileHostile": "#ff7a2f",
+    "crate": "#9a6a3a",
+    "support": "#3b82f6",
+    "road": "#303746",
+    "roadEdge": "#e5e7eb",
+    "lane": "#f8fafc",
+    "verge": "#66845b",
+    "vehicle": "#f6cf3f",
+    "vehicleAccent": "#ffe993",
+    "coin": "#facc15",
+    "characterTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "hostile": "#b86cf0",
+    "hostileAccent": "#f2d7ff",
+    "friendly": "#00a7a0",
+    "target": "#ff8a3d",
+    "goal": "#00bfa5",
+    "interactive": "#38bdf8",
+    "projectileFriendly": "#22d3ee",
+    "projectileHostile": "#fb7185",
+    "vehicle": "#f06543",
+    "vehicleAccent": "#ff9674",
+    "coin": "#37e0a2",
+    "characterTint": "#b5d7fa"
+  },
+  "surfaces": {
+    "floor": "tiles",
+    "wall": "panels",
+    "road": "asphalt",
+    "verge": "ground"
+  },
+  "textures": {},
+  "assets": {
+    "duelist": {
+      "type": "model",
+      "role": "duelist",
+      "url": "../models/kenney/duel-blocky/character-g.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-g"
+          ]
+        }
+      }
+    },
+    "skirmisher": {
+      "type": "model",
+      "role": "skirmisher",
+      "url": "../models/kenney/duel-blocky/character-h.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-h"
+          ]
+        }
+      }
+    },
+    "hopper": {
+      "type": "model",
+      "role": "hopper",
+      "url": "../models/kenney/duel-blocky/character-r.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-r"
+          ]
+        }
+      }
+    },
+    "armory_weapon_sword": {
+      "type": "model",
+      "role": "armory_weapon_sword",
+      "url": "../models/kenney/duel-armory/weapon-sword.glb",
+      "forward_axis": "+z"
+    },
+    "armory_column": {
+      "type": "model",
+      "role": "armory_column",
+      "url": "../models/kenney/duel-armory/column.glb",
+      "forward_axis": "+z"
+    },
+    "armory_banner": {
+      "type": "model",
+      "role": "armory_banner",
+      "url": "../models/kenney/duel-armory/banner.glb",
+      "forward_axis": "+z"
+    },
+    "duelist_appearance_1": {
+      "type": "model",
+      "role": "duelist",
+      "url": "../models/kenney/duel-blocky/character-h.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-h"
+          ]
+        }
+      }
+    },
+    "duelist_appearance_2": {
+      "type": "model",
+      "role": "duelist",
+      "url": "../models/kenney/duel-blocky/character-r.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-r"
+          ]
+        }
+      }
+    },
+    "skirmisher_appearance_1": {
+      "type": "model",
+      "role": "skirmisher",
+      "url": "../models/kenney/duel-blocky/character-r.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-r"
+          ]
+        }
+      }
+    },
+    "skirmisher_appearance_2": {
+      "type": "model",
+      "role": "skirmisher",
+      "url": "../models/kenney/duel-blocky/character-g.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-g"
+          ]
+        }
+      }
+    },
+    "hopper_appearance_1": {
+      "type": "model",
+      "role": "hopper",
+      "url": "../models/kenney/duel-blocky/character-g.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-g"
+          ]
+        }
+      }
+    },
+    "hopper_appearance_2": {
+      "type": "model",
+      "role": "hopper",
+      "url": "../models/kenney/duel-blocky/character-h.glb",
+      "forward_axis": "+z",
+      "visual": {
+        "clips": {
+          "idle": "holding-right",
+          "walk": "walk",
+          "attack": "attack-melee-right",
+          "hurt": "die"
+        },
+        "sockets": {
+          "hand": "arm-right"
+        },
+        "material_roles": {
+          "body": [
+            "texture-h"
+          ]
+        }
+      }
+    }
+  },
+  "content_revision": "connected-worlds-20260910-3",
+  "visual_profile": "stylized",
+  "variants": {
+    "duelist": [
+      "duelist",
+      "duelist_appearance_1",
+      "duelist_appearance_2"
+    ],
+    "skirmisher": [
+      "skirmisher",
+      "skirmisher_appearance_1",
+      "skirmisher_appearance_2"
+    ],
+    "hopper": [
+      "hopper",
+      "hopper_appearance_1",
+      "hopper_appearance_2"
+    ]
+  },
+  "themes": [
+    {
+      "id": "native"
+    },
+    {
+      "id": "limestone",
+      "palette": {
+        "floor": "#b9b6a6",
+        "floorAccent": "#d6d0ba",
+        "wall": "#c8c7bc",
+        "wallAccent": "#526f74",
+        "cover": "#817e71",
+        "coverAccent": "#a5997c",
+        "verge": "#76918b"
+      },
+      "surfaces": {
+        "floor": "tiles",
+        "wall": "stone"
+      }
+    },
+    {
+      "id": "terracotta",
+      "palette": {
+        "floor": "#b4a189",
+        "floorAccent": "#c6b798",
+        "wall": "#d6c0a2",
+        "wallAccent": "#7f5a41",
+        "cover": "#876e52",
+        "coverAccent": "#a55d3a",
+        "verge": "#7c8657"
+      },
+      "surfaces": {
+        "floor": "stone",
+        "wall": "panels"
+      }
+    }
+  ]
+}

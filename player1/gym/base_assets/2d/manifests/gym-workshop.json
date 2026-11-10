@@ -1,0 +1,1844 @@
+{
+  "version": 1,
+  "pack_id": "gym-workshop",
+  "content_revision": "gym-workshop-diversity-2",
+  "visual_profile": "fieldcraft-ui-v1",
+  "assets": {
+    "item_oak_log": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_oak_planks": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_stick": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_coal": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_cobblestone": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_ingot": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_gold_ingot": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_leather": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_string": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        0,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wheat": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_redstone": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        128,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_feather": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        192,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_ore": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        256,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_cactus": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        320,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_potato": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        384,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_nether_gold_ore": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        448,
+        64,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_clay_ball": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        0,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_beef": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        64,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_birch_wood": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        128,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_stone": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        192,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_green_dye": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        256,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_baked_potato": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        320,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_brick": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        384,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_cooked_beef": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        448,
+        128,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_charcoal": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        0,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_smooth_stone": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        64,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_pickaxe": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        128,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_stone_pickaxe": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        192,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_pickaxe": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        256,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_sword": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        320,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_stone_sword": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        384,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_sword": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        448,
+        192,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_axe": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        0,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_stone_axe": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        64,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_axe": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        128,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_shovel": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        192,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_stone_shovel": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        256,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_torch": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        320,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_crafting_table": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        384,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_furnace": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        448,
+        256,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_chest": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        0,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_shield": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        64,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_helmet": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        128,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_chestplate": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        192,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_leggings": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        256,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_wooden_boots": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        320,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_helmet": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        384,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_chestplate": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        448,
+        320,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_leggings": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        0,
+        384,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_iron_boots": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        64,
+        384,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_bread": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        128,
+        384,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "item_bucket": {
+      "type": "atlas",
+      "url": "../images/workshop/items.svg",
+      "frame": [
+        192,
+        384,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "recipe_book": {
+      "type": "image",
+      "url": "../images/workshop/recipe-book.png",
+      "filter": "linear"
+    },
+    "workshop_cursor": {
+      "type": "image",
+      "url": "../images/workshop/cursor.svg",
+      "filter": "linear"
+    },
+    "workshop_avatar": {
+      "type": "image",
+      "url": "../images/workshop/avatar.svg",
+      "filter": "linear"
+    },
+    "frame_panel_0_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        32,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_0_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        37,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_0_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        59,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_1_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        32,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_1_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        37,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_1_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        59,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_2_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        32,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_2_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        37,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_panel_2_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        59,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_0_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        0,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_0_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        5,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_0_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        27,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_1_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        0,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_1_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        5,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_1_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        27,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_2_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        0,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_2_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        5,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_paper_2_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        27,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_0_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        64,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_0_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        69,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_0_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        91,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_1_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        64,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_1_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        69,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_1_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        91,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_2_0": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        64,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_2_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        69,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "frame_metal_2_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        91,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "slot": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        256,
+        0,
+        32,
+        32
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "slot_active": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        256,
+        32,
+        32,
+        32
+      ],
+      "filter": "nearest",
+      "variant_group": "workshop"
+    },
+    "slot_paper": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "filter": "nearest"
+    },
+    "frame_panel_0_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        96,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_0_0"
+    },
+    "frame_panel_0_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        128,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_0_0"
+    },
+    "frame_panel_0_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        101,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_0_1"
+    },
+    "frame_panel_0_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        133,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_0_1"
+    },
+    "frame_panel_0_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        123,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_0_2"
+    },
+    "frame_panel_0_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        155,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_0_2"
+    },
+    "frame_panel_1_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        96,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_1_0"
+    },
+    "frame_panel_1_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        128,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_1_0"
+    },
+    "frame_panel_1_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        101,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_1_1"
+    },
+    "frame_panel_1_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        133,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_1_1"
+    },
+    "frame_panel_1_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        123,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_1_2"
+    },
+    "frame_panel_1_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        155,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_1_2"
+    },
+    "frame_panel_2_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        96,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_2_0"
+    },
+    "frame_panel_2_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        128,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_2_0"
+    },
+    "frame_panel_2_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        101,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_2_1"
+    },
+    "frame_panel_2_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        133,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_2_1"
+    },
+    "frame_panel_2_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        123,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_2_2"
+    },
+    "frame_panel_2_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        155,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_panel_2_2"
+    },
+    "frame_paper_0_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        64,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_0_0"
+    },
+    "frame_paper_0_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        160,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_0_0"
+    },
+    "frame_paper_0_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        69,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_0_1"
+    },
+    "frame_paper_0_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        165,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_0_1"
+    },
+    "frame_paper_0_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        91,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_0_2"
+    },
+    "frame_paper_0_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        187,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_0_2"
+    },
+    "frame_paper_1_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        64,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_1_0"
+    },
+    "frame_paper_1_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        160,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_1_0"
+    },
+    "frame_paper_1_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        69,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_1_1"
+    },
+    "frame_paper_1_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        165,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_1_1"
+    },
+    "frame_paper_1_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        91,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_1_2"
+    },
+    "frame_paper_1_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        187,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_1_2"
+    },
+    "frame_paper_2_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        64,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_2_0"
+    },
+    "frame_paper_2_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        160,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_2_0"
+    },
+    "frame_paper_2_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        69,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_2_1"
+    },
+    "frame_paper_2_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        165,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_2_1"
+    },
+    "frame_paper_2_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        91,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_2_2"
+    },
+    "frame_paper_2_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        187,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_paper_2_2"
+    },
+    "frame_metal_0_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        32,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_0_0"
+    },
+    "frame_metal_0_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        192,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_0_0"
+    },
+    "frame_metal_0_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        37,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_0_1"
+    },
+    "frame_metal_0_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        197,
+        0,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_0_1"
+    },
+    "frame_metal_0_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        59,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_0_2"
+    },
+    "frame_metal_0_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        219,
+        0,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_0_2"
+    },
+    "frame_metal_1_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        32,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_1_0"
+    },
+    "frame_metal_1_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        192,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_1_0"
+    },
+    "frame_metal_1_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        37,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_1_1"
+    },
+    "frame_metal_1_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        197,
+        5,
+        22,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_1_1"
+    },
+    "frame_metal_1_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        59,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_1_2"
+    },
+    "frame_metal_1_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        219,
+        5,
+        5,
+        22
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_1_2"
+    },
+    "frame_metal_2_0_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        32,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_2_0"
+    },
+    "frame_metal_2_0_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        192,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_2_0"
+    },
+    "frame_metal_2_1_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        37,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_2_1"
+    },
+    "frame_metal_2_1_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        197,
+        27,
+        22,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_2_1"
+    },
+    "frame_metal_2_2_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        59,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_2_2"
+    },
+    "frame_metal_2_2_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        219,
+        27,
+        5,
+        5
+      ],
+      "filter": "nearest",
+      "role": "frame_metal_2_2"
+    },
+    "slot_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        288,
+        0,
+        32,
+        32
+      ],
+      "filter": "nearest",
+      "role": "slot"
+    },
+    "slot_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        224,
+        0,
+        32,
+        32
+      ],
+      "filter": "nearest",
+      "role": "slot"
+    },
+    "slot_active_variant_1": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        288,
+        32,
+        32,
+        32
+      ],
+      "filter": "nearest",
+      "role": "slot_active"
+    },
+    "slot_active_variant_2": {
+      "type": "atlas",
+      "url": "../images/workshop/ui-pixel-adventure.png",
+      "frame": [
+        224,
+        32,
+        32,
+        32
+      ],
+      "filter": "nearest",
+      "role": "slot_active"
+    }
+  },
+  "variants": {
+    "frame_panel_0_0": [
+      "frame_panel_0_0",
+      "frame_panel_0_0_variant_1",
+      "frame_panel_0_0_variant_2"
+    ],
+    "frame_panel_0_1": [
+      "frame_panel_0_1",
+      "frame_panel_0_1_variant_1",
+      "frame_panel_0_1_variant_2"
+    ],
+    "frame_panel_0_2": [
+      "frame_panel_0_2",
+      "frame_panel_0_2_variant_1",
+      "frame_panel_0_2_variant_2"
+    ],
+    "frame_panel_1_0": [
+      "frame_panel_1_0",
+      "frame_panel_1_0_variant_1",
+      "frame_panel_1_0_variant_2"
+    ],
+    "frame_panel_1_1": [
+      "frame_panel_1_1",
+      "frame_panel_1_1_variant_1",
+      "frame_panel_1_1_variant_2"
+    ],
+    "frame_panel_1_2": [
+      "frame_panel_1_2",
+      "frame_panel_1_2_variant_1",
+      "frame_panel_1_2_variant_2"
+    ],
+    "frame_panel_2_0": [
+      "frame_panel_2_0",
+      "frame_panel_2_0_variant_1",
+      "frame_panel_2_0_variant_2"
+    ],
+    "frame_panel_2_1": [
+      "frame_panel_2_1",
+      "frame_panel_2_1_variant_1",
+      "frame_panel_2_1_variant_2"
+    ],
+    "frame_panel_2_2": [
+      "frame_panel_2_2",
+      "frame_panel_2_2_variant_1",
+      "frame_panel_2_2_variant_2"
+    ],
+    "frame_paper_0_0": [
+      "frame_paper_0_0",
+      "frame_paper_0_0_variant_1",
+      "frame_paper_0_0_variant_2"
+    ],
+    "frame_paper_0_1": [
+      "frame_paper_0_1",
+      "frame_paper_0_1_variant_1",
+      "frame_paper_0_1_variant_2"
+    ],
+    "frame_paper_0_2": [
+      "frame_paper_0_2",
+      "frame_paper_0_2_variant_1",
+      "frame_paper_0_2_variant_2"
+    ],
+    "frame_paper_1_0": [
+      "frame_paper_1_0",
+      "frame_paper_1_0_variant_1",
+      "frame_paper_1_0_variant_2"
+    ],
+    "frame_paper_1_1": [
+      "frame_paper_1_1",
+      "frame_paper_1_1_variant_1",
+      "frame_paper_1_1_variant_2"
+    ],
+    "frame_paper_1_2": [
+      "frame_paper_1_2",
+      "frame_paper_1_2_variant_1",
+      "frame_paper_1_2_variant_2"
+    ],
+    "frame_paper_2_0": [
+      "frame_paper_2_0",
+      "frame_paper_2_0_variant_1",
+      "frame_paper_2_0_variant_2"
+    ],
+    "frame_paper_2_1": [
+      "frame_paper_2_1",
+      "frame_paper_2_1_variant_1",
+      "frame_paper_2_1_variant_2"
+    ],
+    "frame_paper_2_2": [
+      "frame_paper_2_2",
+      "frame_paper_2_2_variant_1",
+      "frame_paper_2_2_variant_2"
+    ],
+    "frame_metal_0_0": [
+      "frame_metal_0_0",
+      "frame_metal_0_0_variant_1",
+      "frame_metal_0_0_variant_2"
+    ],
+    "frame_metal_0_1": [
+      "frame_metal_0_1",
+      "frame_metal_0_1_variant_1",
+      "frame_metal_0_1_variant_2"
+    ],
+    "frame_metal_0_2": [
+      "frame_metal_0_2",
+      "frame_metal_0_2_variant_1",
+      "frame_metal_0_2_variant_2"
+    ],
+    "frame_metal_1_0": [
+      "frame_metal_1_0",
+      "frame_metal_1_0_variant_1",
+      "frame_metal_1_0_variant_2"
+    ],
+    "frame_metal_1_1": [
+      "frame_metal_1_1",
+      "frame_metal_1_1_variant_1",
+      "frame_metal_1_1_variant_2"
+    ],
+    "frame_metal_1_2": [
+      "frame_metal_1_2",
+      "frame_metal_1_2_variant_1",
+      "frame_metal_1_2_variant_2"
+    ],
+    "frame_metal_2_0": [
+      "frame_metal_2_0",
+      "frame_metal_2_0_variant_1",
+      "frame_metal_2_0_variant_2"
+    ],
+    "frame_metal_2_1": [
+      "frame_metal_2_1",
+      "frame_metal_2_1_variant_1",
+      "frame_metal_2_1_variant_2"
+    ],
+    "frame_metal_2_2": [
+      "frame_metal_2_2",
+      "frame_metal_2_2_variant_1",
+      "frame_metal_2_2_variant_2"
+    ],
+    "slot": [
+      "slot",
+      "slot_variant_1",
+      "slot_variant_2"
+    ],
+    "slot_active": [
+      "slot_active",
+      "slot_active_variant_1",
+      "slot_active_variant_2"
+    ]
+  },
+  "theme_group": "workshop",
+  "themes": [
+    {
+      "id": "brass",
+      "palette": {}
+    },
+    {
+      "id": "steel",
+      "palette": {
+        "background": "#162a34",
+        "surface": "#476777",
+        "worldWall": "#19262f",
+        "worldWallDark": "#10212b",
+        "text": "#243b45",
+        "textLight": "#e4f1f6",
+        "muted": "#8faebc",
+        "green": "#85dbda",
+        "greenDark": "#2b6870",
+        "amber": "#b7d7ec",
+        "workbench": "#435e6d",
+        "slot": "#223e4e",
+        "slotHint": "#90b8c5",
+        "tooltip": "#172c36",
+        "tooltipBorder": "#9bc6cf"
+      }
+    },
+    {
+      "id": "carved",
+      "palette": {
+        "background": "#2f2826",
+        "surface": "#8a644a",
+        "worldWall": "#383027",
+        "worldWallDark": "#29231e",
+        "text": "#4c3726",
+        "textLight": "#f5ead9",
+        "muted": "#b8a88b",
+        "green": "#bdd596",
+        "greenDark": "#586937",
+        "amber": "#e8c484",
+        "workbench": "#6d5944",
+        "slot": "#493a2d",
+        "slotHint": "#c3b493",
+        "tooltip": "#30281f",
+        "tooltipBorder": "#bfb18e"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+task_prompt: |
+  Defeat at least 4 enemy guards. Two guards are in your starting room, while four more are behind a door and may come in as reinforcements.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.kills: 4
+  metrics_fields:
+    - metrics.max_kills
+    - metrics.total_monsters
+    - metrics.health
+    - metrics.ammo
+    - metrics.lives

@@ -1,0 +1,16 @@
+task_prompt: |
+  Score at least 600 points by eating small dots.
+  Avoid ghost contact and keep moving through open lanes.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 600
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.primary_score
+    - metrics.high_score
+    - metrics.lives
+    - metrics.deaths
+    - metrics.maze_index

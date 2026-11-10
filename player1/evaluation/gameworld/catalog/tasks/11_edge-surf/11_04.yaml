@@ -1,0 +1,14 @@
+task_prompt: |
+  Stay alive and reach at least 1200 points before the game ends.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 1200
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.lives
+    - metrics.boosts
+    - metrics.shields
+    - metrics.attempts

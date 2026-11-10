@@ -1,0 +1,46 @@
+task_id: "base_2d_platform_train"
+game_id: base_2d_platform
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 1.5
+max_steps: 100
+task_target_score_field: 25
+continue_on_fail: false
+
+task_prompt: |
+  Run and jump through the level, avoid hazards, collect coins, and reach flags.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.primary_score
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.flags_reached
+    - metrics.coins_collected
+    - metrics.gaps_cleared
+    - metrics.spikes_cleared
+    - metrics.distance_progress
+    - metrics.level_distance_progress
+    - metrics.jumps
+    - metrics.dashes
+    - metrics.hazard_hits
+    - metrics.falls
+    - metrics.respawns
+    - metrics.checkpoint_index
+    - metrics.checkpoint_updates
+    - metrics.last_respawn_reason
+    - metrics.level_index
+    - metrics.best_primary_score
+    - metrics.step_count
+    - metrics.episode_count
+    - metrics.difficulty
+    - game_state.environment.difficulty
+    - terminal.outcome
+    - terminal.reason
+    - terminal.isTerminal

@@ -1,0 +1,19 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  In this run, finish level 2 and advance to level 3 or higher.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 2
+        target: 3
+      metrics.levels_completed_this_episode: 1
+  metrics_fields:
+    - game_state.completion_progress
+    - metrics.coins
+    - metrics.coins_total
+    - metrics.checkpoints_passed
+    - metrics.checkpoints_total
+    - metrics.deaths

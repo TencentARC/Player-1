@@ -1,0 +1,80 @@
+game_name: gw_17_mario-game_player
+game_rules: 'You are playing Super Mario Bros.
+
+  - Reach the flagpole while collecting coins and avoiding hazards.
+
+  - Landing on an enemy defeats it; touching an enemy from the side or below harms
+  Mario.
+
+  - Hitting question blocks from below can reveal coins or power-ups.'
+role_control:
+  role_control_block: 'Role:
+
+    You control Mario through the platform level.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to move horizontally.
+
+    - Hold arrowup to jump and arrowdown to crouch when Mario is large.
+
+    - Hold arrowup with arrowleft or arrowright to jump while moving.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: jump onto a platform
+    response: '<think>
+
+      A raised platform is ahead on the right, so I should run right and jump together
+      to reach its top without falling.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright","arrowup"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: retreat from an enemy
+    response: '<think>
+
+      An enemy blocks the path on the right while the ground behind Mario is clear,
+      so I should move left to create space.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowleft"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

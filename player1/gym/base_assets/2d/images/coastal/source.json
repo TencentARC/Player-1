@@ -1,0 +1,15 @@
+{
+  "origin_type": "original",
+  "author": "Player1",
+  "ownership": "Project-owned original work",
+  "created_for": "2026-09-10 Player1 visual upgrade",
+  "description": "Original Player1 coin SVG drawn for the coastal driving game.",
+  "third_party_material": false,
+  "third_party_license": null,
+  "files": [
+    {
+      "file": "coin.svg",
+      "bytes": 498
+    }
+  ]
+}

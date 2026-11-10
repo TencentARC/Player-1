@@ -1,0 +1,12 @@
+task_prompt: |
+  In one run, survive to at least 400 points.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 400
+  metrics_fields:
+    - metrics.distance
+    - metrics.speed
+    - metrics.attempts
+    - metrics.high_score

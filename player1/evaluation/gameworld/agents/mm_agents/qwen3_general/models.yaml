@@ -1,0 +1,9 @@
+qwen3-vl-30b-a3b:
+  model: "Qwen/Qwen3-VL-30B-A3B-Thinking"
+  endpoint: "http://127.0.0.1:8088/v1/chat/completions"
+  enable_memory: true
+
+qwen3-vl-235b-a22b:
+  model: "Qwen/Qwen3-VL-235B-A22B-Thinking"
+  endpoint: "http://127.0.0.1:8088/v1/chat/completions"
+  enable_memory: true

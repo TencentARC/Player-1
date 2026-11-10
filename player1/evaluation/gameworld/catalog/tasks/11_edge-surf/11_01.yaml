@@ -1,0 +1,14 @@
+task_prompt: |
+  Clear the opening obstacle sets and reach at least 200 points while preserving lives.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 200
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.lives
+    - metrics.boosts
+    - metrics.shields
+    - metrics.attempts

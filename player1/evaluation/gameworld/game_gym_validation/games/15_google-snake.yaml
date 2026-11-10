@@ -1,0 +1,40 @@
+profile: game-gym
+game_id: 15_google-snake
+
+game_rules: |-
+  You are playing Google Snake.
+  - Guide the continuously moving snake to apples to grow and score.
+  - Contact with a wall or the snake's own body ends the game.
+
+roles:
+  player:
+    description: |-
+      You choose the snake's travel direction.
+    controls:
+      - Tap arrowup, arrowdown, arrowleft, or arrowright to turn.
+      - Wait for one game step to keep moving in the current direction.
+    in_context_examples:
+      control_v0_5:
+        - name: turn toward the apple
+          response: |-
+            <think>
+            The apple is above the snake and the path is clear, so I should turn upward now and move toward the apple.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["arrowup"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: continue on a safe path
+          response: |-
+            <think>
+            The snake is already moving through a clear lane toward the apple, so I should wait and avoid making an unnecessary turn.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

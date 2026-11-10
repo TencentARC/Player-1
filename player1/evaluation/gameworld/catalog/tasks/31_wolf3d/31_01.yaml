@@ -1,0 +1,13 @@
+task_prompt: |
+  Eliminate at least 2 enemy guards. The run begins with two guards directly in front of you in the room.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.kills: 2
+  metrics_fields:
+    - metrics.max_kills
+    - metrics.total_monsters
+    - metrics.health
+    - metrics.ammo
+    - metrics.lives

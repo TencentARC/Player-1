@@ -1,0 +1,33 @@
+task_prompt: |
+  Secure at least 5 iron ore blocks in this run.
+  Head underground, locate iron ore blocks, and mine them once they are lined up in view.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.inventory.item_gains.iron_ore: 5
+  metrics_fields:
+    - metrics.items_total
+    - metrics.items_unique
+    - game_state.inventory.item_gains.dirt
+    - game_state.inventory.item_gains.wood_log
+    - game_state.inventory.item_gains.stone
+    - game_state.inventory.item_gains.coal_ore
+    - metrics.selected_tool_type
+    - metrics.selected_tool_matches_target
+    - metrics.targeted_block_exists
+    - metrics.targeted_block_type
+    - metrics.targeted_block_distance
+    - metrics.depth_below_surface
+    - metrics.is_underground
+    - metrics.nearby_iron_ore_count
+    - metrics.nearest_iron_ore_distance
+    - metrics.held_selected_item_type
+    - metrics.held_selected_item_count
+    - game_state.inventory.selected_slot
+    - game_state.environment.targeted_block.block_type
+    - game_state.environment.player_context.block_below
+    - game_state.environment.player_context.surface_y
+    - game_state.environment.nearby_resources.iron_ore.count
+    - game_state.environment.break_progress
+    - gameTimeMs

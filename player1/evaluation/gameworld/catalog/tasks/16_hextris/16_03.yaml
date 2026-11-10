@@ -1,0 +1,22 @@
+game_url_suffix: "?level=3"
+
+
+task_prompt: |
+  Clear matching blocks in a row and wait when no turn is needed.
+  Reach at least 1000 points while keeping blocks inside the outer boundary.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 1000
+  metrics_fields:
+    - game_state.level
+    - game_state.completion_progress
+    - game_state.environment.settled_blocks
+    - game_state.environment.highest_column_height
+    - game_state.environment.active_blocks
+    - metrics.score
+    - metrics.distance
+    - metrics.best_score
+    - metrics.difficulty
+    - metrics.topped_out

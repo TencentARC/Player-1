@@ -1,0 +1,12 @@
+{
+  "recordings": [{
+    "source": "vpt",
+    "input": "../../../raw/7xx/7.7/your-recording.jsonl",
+    "game": {"name": "Minecraft", "version": "recorded-version"},
+    "mode": "gameplay",
+    "start_ms": 2000,
+    "count": 1
+  }],
+  "split_seed": "player1-data",
+  "validation_basis_points": 0
+}

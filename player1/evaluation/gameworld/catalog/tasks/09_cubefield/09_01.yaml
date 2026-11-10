@@ -1,0 +1,15 @@
+task_prompt: |
+    Steer smoothly between cube gaps and finish with a score of at least 10000.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 10000
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.distance
+    - metrics.speed_forward
+    - metrics.speed_side
+    - metrics.cubes_alive
+    - metrics.high_score

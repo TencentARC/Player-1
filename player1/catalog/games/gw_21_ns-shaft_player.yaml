@@ -1,0 +1,71 @@
+game_name: gw_21_ns-shaft_player
+game_rules: 'You are playing NS-Shaft, a descending platform game.
+
+  - The character falls automatically and must land on lower platforms.
+
+  - Hazards reduce life; falling past the bottom or losing all life ends the run.'
+role_control:
+  role_control_block: 'Role:
+
+    You steer the falling character horizontally.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to move sideways.
+
+    - Wait for one game step to fall without horizontal movement.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowLeft
+    - ArrowRight
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: move toward a platform
+    response: '<think>
+
+      The next safe platform is below and to the right of the falling character, so
+      I should move right to line up the landing.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: stay over a safe platform
+    response: '<think>
+
+      The character is already centered above a safe platform, so I should wait and
+      fall straight down without drifting past either edge.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

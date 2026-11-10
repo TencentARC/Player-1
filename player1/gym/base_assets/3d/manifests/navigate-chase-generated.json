@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "pack_id": "navigate-chase-generated",
+  "palette": {
+    "sky": "#bfd9f2", "floor": "#f5f5f5", "floorAccent": "#e4e7eb", "floorLine": "#d8dde2",
+    "wall": "#a8b2bd", "wallAccent": "#64748b", "trim": "#d8dee6", "metal": "#455466",
+    "darkMetal": "#26343a", "glass": "#17384a", "cover": "#5b6b80", "coverAccent": "#31475b",
+    "hostile": "#ef5b4f", "hostileAccent": "#ffc2b8", "friendly": "#2f80ed", "friendlyAccent": "#dbeafe",
+    "target": "#ec5364", "targetAccent": "#ffe4e6", "goal": "#18c86b", "hazard": "#f97316",
+    "neutral": "#e2e8f0", "interactive": "#facc15"
+  },
+  "alternate_palette": {
+    "friendly": "#00a7a0", "friendlyAccent": "#d7fffb", "target": "#ff8a3d", "targetAccent": "#ffeadb",
+    "hostile": "#b86cf0", "hostileAccent": "#f2d7ff", "goal": "#00bfa5", "interactive": "#38bdf8"
+  },
+  "surfaces": { "floor": "concrete", "wall": "panels" },
+  "textures": {},
+  "assets": {
+    "humanoid": {
+      "role": "humanoid",
+      "type": "primitive",
+      "primitive": "navigator_humanoid"
+    }
+  }
+}

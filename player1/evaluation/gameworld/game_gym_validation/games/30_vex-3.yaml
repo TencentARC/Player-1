@@ -1,0 +1,46 @@
+profile: game-gym
+game_id: 30_vex-3
+
+game_rules: |-
+  You are playing Vex 3, a precision platform game with traps.
+  - Reach checkpoints and then the level exit.
+  - Avoid spikes, saws, pits, and other hazards.
+  - Some passages require jumping, crouch sliding, or dropping through gaps; death returns the runner to a checkpoint.
+
+roles:
+  runner:
+    description: |-
+      You control the Vex runner through the level.
+    controls:
+      - Hold arrowleft or arrowright to move.
+      - Hold arrowup with arrowleft or arrowright to jump while moving.
+      - Hold arrowdown with arrowleft or arrowright to crouch slide while moving.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: jump across a gap
+          response: |-
+            <think>
+            The next safe platform is across the gap on the right, so I should move right and jump together to reach it.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowright","arrowup"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: slide under a low trap
+          response: |-
+            <think>
+            A low trap blocks the passage on the right, so I should keep moving right while sliding beneath it instead of jumping into it.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowright","arrowdown"]
+            </parameter>
+            </function>
+            </tool_call>

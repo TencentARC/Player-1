@@ -1,0 +1,40 @@
+profile: game-gym
+game_id: 09_cubefield
+
+game_rules: |-
+  You are playing Cubefield, a 3D endless obstacle game.
+  - The triangular ship moves forward automatically through a field of cubes.
+  - Colliding with any cube ends the run.
+
+roles:
+  pilot:
+    description: |-
+      You steer the triangular ship around cube obstacles.
+    controls:
+      - Hold arrowleft or arrowright to steer sideways.
+      - Wait for one game step to continue straight.
+    in_context_examples:
+      control_v0_5:
+        - name: steer away from a block
+          response: |-
+            <think>
+            A cube blocks the center while the left side is open, so I should steer left early to pass around it safely.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowleft"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: continue through a clear lane
+          response: |-
+            <think>
+            The lane directly ahead is clear and the nearest cubes remain far to both sides, so I should wait and continue straight.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

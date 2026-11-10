@@ -1,0 +1,47 @@
+{
+  "source": "https://kenney.nl/assets/nature-kit",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "tree_pineRoundB.glb",
+      "source_path": "Models/GLTF format/tree_pineRoundB.glb",
+      "dependencies": []
+    },
+    {
+      "file": "tree_pineRoundC.glb",
+      "source_path": "Models/GLTF format/tree_pineRoundC.glb",
+      "dependencies": []
+    },
+    {
+      "file": "tree_oak.glb",
+      "source_path": "Models/GLTF format/tree_oak.glb",
+      "dependencies": []
+    },
+    {
+      "file": "tree_palm.glb",
+      "source_path": "Models/GLTF format/tree_palm.glb",
+      "dependencies": []
+    },
+    {
+      "file": "rock_largeB.glb",
+      "source_path": "Models/GLTF format/rock_largeB.glb",
+      "dependencies": []
+    },
+    {
+      "file": "rock_largeC.glb",
+      "source_path": "Models/GLTF format/rock_largeC.glb",
+      "dependencies": []
+    },
+    {
+      "file": "plant_bushLarge.glb",
+      "source_path": "Models/GLTF format/plant_bushLarge.glb",
+      "dependencies": []
+    },
+    {
+      "file": "plant_bushSmall.glb",
+      "source_path": "Models/GLTF format/plant_bushSmall.glb",
+      "dependencies": []
+    }
+  ],
+  "transformations": {}
+}

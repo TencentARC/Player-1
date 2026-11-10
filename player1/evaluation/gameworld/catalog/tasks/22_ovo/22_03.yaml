@@ -1,0 +1,21 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Spawn on level 2.
+  Complete level 2 and move on to level 3 or higher.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 2
+        target: 3
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.coins
+    - metrics.primary_score
+    - metrics.coins_total
+    - metrics.distance_to_goal
+    - metrics.level_number

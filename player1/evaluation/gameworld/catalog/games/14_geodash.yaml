@@ -1,0 +1,38 @@
+game_rules: |
+  You are playing GeoDash, a Geometry Dash-style auto-running platformer.
+
+  ## Game Objective
+  - Survive for as long as possible.
+  - Jump over spikes and hazards.
+
+  ## Game Rules
+  - The character auto-runs continuously.
+  - Jump timing is the core mechanic.
+  - Crashing into obstacles ends the run.
+
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the runner.
+        Time jumps to avoid spikes and run as long as possible.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Space
+    computer_use_controls:
+      allowed_keys: ["Space"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Do nothing briefly to keep the direction.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: jump
+        description: Jump.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.1

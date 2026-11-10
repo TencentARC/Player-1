@@ -1,0 +1,5 @@
+qwen3-vl-plus:
+  model: "qwen3-vl-plus"
+  base_url: "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+  # CN: https://dashscope.aliyuncs.com/compatible-mode/v1
+  enable_memory: true

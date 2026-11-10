@@ -1,0 +1,13 @@
+task_prompt: |
+  Rack up at least 5 guard kills. Two enemies begin in your room, and four more are positioned behind a door that may open into the fight.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.kills: 5
+  metrics_fields:
+    - metrics.max_kills
+    - metrics.total_monsters
+    - metrics.health
+    - metrics.ammo
+    - metrics.lives

@@ -1,0 +1,773 @@
+{
+  "version": 1,
+  "pack_id": "gym-summit",
+  "content_revision": "summit-diversity-2",
+  "visual_profile": "summit-biomes-2",
+  "palette": {
+    "sky": "#b8dded",
+    "background": "#d6edf2",
+    "surface": "#b7d2d5",
+    "surfaceAccent": "#89b2b5",
+    "grid": "#e6f1ed",
+    "text": "#233b43",
+    "neutral": "#ecede1",
+    "friendly": "#56d3a0",
+    "goal": "#f4c962",
+    "hazard": "#ed8b56",
+    "coin": "#ffd96a",
+    "platform": "#cc8455",
+    "spriteTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "spriteTint": "#efddef",
+    "friendly": "#a3cbd9",
+    "goal": "#d7c17e"
+  },
+  "assets": {
+    "runner_idle": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        2,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear",
+      "variant_group": "runner"
+    },
+    "runner_walk_a": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        94,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear",
+      "variant_group": "runner"
+    },
+    "runner_walk_b": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        186,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear",
+      "variant_group": "runner"
+    },
+    "runner_jump": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        278,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear",
+      "variant_group": "runner"
+    },
+    "runner_hit": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        370,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear",
+      "variant_group": "runner"
+    },
+    "runner_duck": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        2,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear",
+      "variant_group": "runner"
+    },
+    "ground_top": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        94,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear",
+      "variant_group": "biome"
+    },
+    "ground_body": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        162,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear",
+      "variant_group": "biome"
+    },
+    "ledge_left": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        230,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear",
+      "variant_group": "biome"
+    },
+    "ledge_middle": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        298,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear",
+      "variant_group": "biome"
+    },
+    "ledge_right": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        366,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear",
+      "variant_group": "biome"
+    },
+    "spikes": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        434,
+        110,
+        64,
+        34
+      ],
+      "filter": "linear"
+    },
+    "coin": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        2,
+        218,
+        38,
+        40
+      ],
+      "filter": "linear"
+    },
+    "coin_edge": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        44,
+        218,
+        38,
+        40
+      ],
+      "filter": "linear"
+    },
+    "flag_a": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        86,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "flag_b": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        154,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "checkpoint": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        222,
+        218,
+        20,
+        64
+      ],
+      "filter": "linear"
+    },
+    "bush": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        246,
+        218,
+        64,
+        40
+      ],
+      "filter": "linear"
+    },
+    "rock": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        314,
+        218,
+        63,
+        44
+      ],
+      "filter": "linear"
+    },
+    "sign": {
+      "type": "atlas",
+      "url": "../images/kenney/platform/summit-atlas.png",
+      "frame": [
+        381,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "clouds": {
+      "type": "image",
+      "url": "../images/kenney/platform/clouds.png",
+      "filter": "linear"
+    },
+    "forest": {
+      "type": "image",
+      "url": "../images/kenney/platform/forest.png",
+      "filter": "linear"
+    },
+    "runner_idle_v1": {
+      "type": "atlas",
+      "role": "runner_idle",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        2,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_walk_a_v1": {
+      "type": "atlas",
+      "role": "runner_walk_a",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        94,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_walk_b_v1": {
+      "type": "atlas",
+      "role": "runner_walk_b",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        186,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_jump_v1": {
+      "type": "atlas",
+      "role": "runner_jump",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        278,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_hit_v1": {
+      "type": "atlas",
+      "role": "runner_hit",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        370,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_duck_v1": {
+      "type": "atlas",
+      "role": "runner_duck",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        462,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "ground_top_v1": {
+      "type": "atlas",
+      "role": "ground_top",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        554,
+        2,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ground_body_v1": {
+      "type": "atlas",
+      "role": "ground_body",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        622,
+        2,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_left_v1": {
+      "type": "atlas",
+      "role": "ledge_left",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        690,
+        2,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_middle_v1": {
+      "type": "atlas",
+      "role": "ledge_middle",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        758,
+        2,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_right_v1": {
+      "type": "atlas",
+      "role": "ledge_right",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        826,
+        2,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "runner_idle_v2": {
+      "type": "atlas",
+      "role": "runner_idle",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        894,
+        2,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_walk_a_v2": {
+      "type": "atlas",
+      "role": "runner_walk_a",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        2,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_walk_b_v2": {
+      "type": "atlas",
+      "role": "runner_walk_b",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        94,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_jump_v2": {
+      "type": "atlas",
+      "role": "runner_jump",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        186,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_hit_v2": {
+      "type": "atlas",
+      "role": "runner_hit",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        278,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_duck_v2": {
+      "type": "atlas",
+      "role": "runner_duck",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        370,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "ground_top_v2": {
+      "type": "atlas",
+      "role": "ground_top",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        462,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ground_body_v2": {
+      "type": "atlas",
+      "role": "ground_body",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        530,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_left_v2": {
+      "type": "atlas",
+      "role": "ledge_left",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        598,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_middle_v2": {
+      "type": "atlas",
+      "role": "ledge_middle",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        666,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_right_v2": {
+      "type": "atlas",
+      "role": "ledge_right",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        734,
+        110,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "runner_idle_v3": {
+      "type": "atlas",
+      "role": "runner_idle",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        802,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_walk_a_v3": {
+      "type": "atlas",
+      "role": "runner_walk_a",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        894,
+        110,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_walk_b_v3": {
+      "type": "atlas",
+      "role": "runner_walk_b",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        2,
+        218,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_jump_v3": {
+      "type": "atlas",
+      "role": "runner_jump",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        94,
+        218,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_hit_v3": {
+      "type": "atlas",
+      "role": "runner_hit",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        186,
+        218,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "runner_duck_v3": {
+      "type": "atlas",
+      "role": "runner_duck",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        278,
+        218,
+        88,
+        104
+      ],
+      "filter": "linear"
+    },
+    "ground_top_v3": {
+      "type": "atlas",
+      "role": "ground_top",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        370,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ground_body_v3": {
+      "type": "atlas",
+      "role": "ground_body",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        438,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_left_v3": {
+      "type": "atlas",
+      "role": "ledge_left",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        506,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_middle_v3": {
+      "type": "atlas",
+      "role": "ledge_middle",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        574,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    },
+    "ledge_right_v3": {
+      "type": "atlas",
+      "role": "ledge_right",
+      "url": "../images/kenney/platform/diversity-atlas.png",
+      "frame": [
+        642,
+        218,
+        64,
+        64
+      ],
+      "filter": "linear"
+    }
+  },
+  "variants": {
+    "runner_idle": [
+      "runner_idle",
+      "runner_idle_v1",
+      "runner_idle_v2",
+      "runner_idle_v3"
+    ],
+    "runner_walk_a": [
+      "runner_walk_a",
+      "runner_walk_a_v1",
+      "runner_walk_a_v2",
+      "runner_walk_a_v3"
+    ],
+    "runner_walk_b": [
+      "runner_walk_b",
+      "runner_walk_b_v1",
+      "runner_walk_b_v2",
+      "runner_walk_b_v3"
+    ],
+    "runner_jump": [
+      "runner_jump",
+      "runner_jump_v1",
+      "runner_jump_v2",
+      "runner_jump_v3"
+    ],
+    "runner_hit": [
+      "runner_hit",
+      "runner_hit_v1",
+      "runner_hit_v2",
+      "runner_hit_v3"
+    ],
+    "runner_duck": [
+      "runner_duck",
+      "runner_duck_v1",
+      "runner_duck_v2",
+      "runner_duck_v3"
+    ],
+    "ground_top": [
+      "ground_top",
+      "ground_top_v1",
+      "ground_top_v2",
+      "ground_top_v3"
+    ],
+    "ground_body": [
+      "ground_body",
+      "ground_body_v1",
+      "ground_body_v2",
+      "ground_body_v3"
+    ],
+    "ledge_left": [
+      "ledge_left",
+      "ledge_left_v1",
+      "ledge_left_v2",
+      "ledge_left_v3"
+    ],
+    "ledge_middle": [
+      "ledge_middle",
+      "ledge_middle_v1",
+      "ledge_middle_v2",
+      "ledge_middle_v3"
+    ],
+    "ledge_right": [
+      "ledge_right",
+      "ledge_right_v1",
+      "ledge_right_v2",
+      "ledge_right_v3"
+    ]
+  },
+  "theme_group": "biome",
+  "themes": [
+    {
+      "id": "alpine",
+      "palette": {}
+    },
+    {
+      "id": "snowfield",
+      "palette": {
+        "sky": "#b8d2e8",
+        "background": "#e5eff2",
+        "surface": "#9cb7ce",
+        "surfaceAccent": "#718aab",
+        "grid": "#f5fafb",
+        "platform": "#8295ab"
+      }
+    },
+    {
+      "id": "sandstone",
+      "palette": {
+        "sky": "#f2cba2",
+        "background": "#ffe6b5",
+        "surface": "#d8a275",
+        "surfaceAccent": "#b77a58",
+        "grid": "#f2d2a7",
+        "platform": "#b97944"
+      }
+    },
+    {
+      "id": "slate",
+      "palette": {
+        "sky": "#a5c7bf",
+        "background": "#d6e4d7",
+        "surface": "#8aa59e",
+        "surfaceAccent": "#5c7d79",
+        "grid": "#c2d0c8",
+        "platform": "#78867f"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+game_url_suffix: "#infinite/5"
+
+task_prompt: |
+  Solve this round with all 5 letters in the correct places.
+
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.letters_correct: 5
+    require:
+      metrics.word_number: 5
+  metrics_fields:
+    - metrics.attempts
+    - game_state.completion_progress
+    - metrics.guesses_remaining
+    - metrics.letters_present
+    - metrics.letters_absent

@@ -1,0 +1,50 @@
+profile: game-gym
+game_id: 18_minecraft-clone-glm
+
+game_rules: |-
+  You are playing a Minecraft-style first-person sandbox game.
+  - Explore nearby terrain and gather resources by breaking blocks.
+  - Blocks can be placed using the item selected in the hotbar.
+  - The starting hotbar contains wood logs, wood planks, cobblestone, torches, and dirt in slots 1 through 5.
+  - Newly collected resources can fill later hotbar slots; crafting is not available.
+
+roles:
+  player:
+    description: |-
+      You control the first-person player and its selected hotbar item.
+    controls:
+      - Hold arrowup, arrowdown, arrowleft, or arrowright to move forward, backward, left, or right.
+      - Hold space while moving to jump.
+      - Aim with relative mouse movement. Positive dx turns right, negative dx turns left, positive dy looks down, and negative dy looks up.
+      - Hold the left mouse button on a nearby targeted block to mine it.
+      - Right-click to place the selected block.
+      - Tap keys 1 through 9 to select a hotbar slot.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: mine a nearby block
+          response: |-
+            <think>
+            A resource block is centered under the crosshair and close enough to reach, so I should keep mining it until it breaks.
+            </think>
+
+            <tool_call>
+            <function=mouse_control>
+            <parameter=mouse_hold>
+            left
+            </parameter>
+            </function>
+            </tool_call>
+        - name: place a useful block
+          response: |-
+            <think>
+            The selected block should fill the empty space centered under the crosshair, so I should place it against the visible surface.
+            </think>
+
+            <tool_call>
+            <function=mouse_control>
+            <parameter=mouse_click>
+            right
+            </parameter>
+            </function>
+            </tool_call>

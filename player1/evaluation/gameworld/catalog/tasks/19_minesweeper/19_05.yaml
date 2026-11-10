@@ -1,0 +1,17 @@
+task_prompt: |
+  Correctly flag at least 6 mines using right-click.
+  Reveal for extra clues first, then deduce and mark mine positions.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.correct_flags: 6
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.primary_score
+    - metrics.revealed_safe_cells
+    - metrics.total_safe_cells
+    - metrics.total_mines
+    - metrics.remaining_mines

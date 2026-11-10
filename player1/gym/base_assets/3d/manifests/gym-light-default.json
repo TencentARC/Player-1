@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "pack_id": "gym-light-default",
+  "palette": {
+    "sky": "#bfd9f2", "floor": "#d8d8d8", "floorAccent": "#b0b0b0", "floorLine": "#b0b0b0",
+    "wall": "#a8b2bd", "wallAccent": "#566575", "trim": "#d8dee6", "metal": "#455466",
+    "darkMetal": "#1f2937", "glass": "#17384a", "cover": "#3f6475", "coverAccent": "#254658",
+    "hostile": "#ef5b4f", "hostileAccent": "#ffc2b8", "friendly": "#2f80ed", "target": "#ff4f64",
+    "goal": "#18c86b", "hazard": "#f97316", "neutral": "#e2e8f0", "interactive": "#facc15",
+    "projectileFriendly": "#ffd84d", "projectileHostile": "#ff7a2f", "crate": "#9a6a3a", "support": "#3b82f6",
+    "road": "#303746", "roadEdge": "#e5e7eb", "lane": "#f8fafc", "verge": "#3f765f",
+    "vehicle": "#f6cf3f", "vehicleAccent": "#ffe993", "coin": "#facc15"
+  },
+  "alternate_palette": {
+    "hostile": "#b86cf0", "hostileAccent": "#f2d7ff", "friendly": "#00a7a0", "target": "#ff8a3d",
+    "goal": "#00bfa5", "interactive": "#38bdf8", "projectileFriendly": "#22d3ee",
+    "projectileHostile": "#fb7185", "vehicle": "#f06543", "vehicleAccent": "#ff9674", "coin": "#37e0a2"
+  },
+  "surfaces": { "floor": "concrete", "wall": "panels", "road": "asphalt", "verge": "ground" },
+  "textures": {},
+  "assets": {
+    "humanoid": { "role": "humanoid", "type": "primitive", "primitive": "humanoid" },
+    "melee_weapon": { "role": "melee_weapon", "type": "primitive", "primitive": "melee_weapon" },
+    "view_melee_weapon": { "role": "view_melee_weapon", "type": "primitive", "primitive": "view_melee_weapon" },
+    "view_spear": { "role": "view_spear", "type": "primitive", "primitive": "view_spear" },
+    "view_weapon": { "role": "view_weapon", "type": "primitive", "primitive": "view_weapon" },
+    "projectile": { "role": "projectile", "type": "primitive", "primitive": "projectile" },
+    "cover": { "role": "cover", "type": "primitive", "primitive": "cover" },
+    "crate": { "role": "crate", "type": "primitive", "primitive": "crate" },
+    "console": { "role": "console", "type": "primitive", "primitive": "console" },
+    "pickup": { "role": "pickup", "type": "primitive", "primitive": "pickup" },
+    "lever": { "role": "lever", "type": "primitive", "primitive": "lever" },
+    "pressure_plate": { "role": "pressure_plate", "type": "primitive", "primitive": "pressure_plate" },
+    "door": { "role": "door", "type": "primitive", "primitive": "door" },
+    "checkpoint_gate": { "role": "checkpoint_gate", "type": "primitive", "primitive": "checkpoint_gate" },
+    "platform": { "role": "platform", "type": "primitive", "primitive": "platform" },
+    "aim_target": { "role": "aim_target", "type": "primitive", "primitive": "aim_target" },
+    "vehicle": { "role": "vehicle", "type": "primitive", "primitive": "vehicle" },
+    "coin": { "role": "coin", "type": "primitive", "primitive": "coin" },
+    "ground_goal": { "role": "ground_goal", "type": "primitive", "primitive": "ground_goal" }
+  }
+}

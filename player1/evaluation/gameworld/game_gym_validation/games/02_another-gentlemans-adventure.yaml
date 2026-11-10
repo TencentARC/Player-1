@@ -1,0 +1,46 @@
+profile: game-gym
+game_id: 02_another-gentlemans-adventure
+
+game_rules: |-
+  You are playing Another Gentleman's Adventure, a platform game.
+  - Navigate platforms, avoid hazards, and collect coins.
+  - Hit golden question blocks from below to reveal items.
+  - Landing on an enemy from above defeats it.
+
+roles:
+  player:
+    description: |-
+      You control the gentleman character.
+    controls:
+      - Hold arrowleft or arrowright to move horizontally.
+      - Hold arrowup to jump.
+      - Hold arrowup with arrowleft or arrowright to jump while moving.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: jump to a higher platform
+          response: |-
+            <think>
+            The next platform is ahead and higher, so I should move right and jump at the same time to land on it.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowright","arrowup"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: return to a safe platform
+          response: |-
+            <think>
+            The safe platform continues to the left at the same height, so I should move left without jumping and stay on solid ground.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowleft"]
+            </parameter>
+            </function>
+            </tool_call>

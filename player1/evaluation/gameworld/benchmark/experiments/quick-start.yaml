@@ -1,0 +1,8 @@
+experiment_name: quick_start
+headless: true
+
+cases:
+  - game: "10_doodle-jump"
+    tasks: ["10_01"]
+    models: ["gpt-5.2"]
+    repeat: 1

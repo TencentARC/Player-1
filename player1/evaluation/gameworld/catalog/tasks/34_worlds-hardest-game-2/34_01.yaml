@@ -1,0 +1,17 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Collect 1 coin while playing level 1.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.coins: 1
+    require:
+      game_state.level: 1
+  metrics_fields:
+    - game_state.completion_progress
+    - metrics.checkpoints_passed
+    - metrics.deaths
+    - metrics.distance_to_goal
+    - metrics.player_alive

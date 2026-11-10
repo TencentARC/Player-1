@@ -1,0 +1,65 @@
+game_rules: |
+  You are playing Edge Surf, an endless surfing game.
+  You control a surfer riding waves and collecting items.
+
+  ## Game Objective
+  - Survive as long as possible while surfing.
+  - Achieve the highest score and distance with 3 lives.
+
+  ## Game Rules
+  - You can only turn left or right, slow down or boost the surfer.
+  - Hitting obstacles costs lives.
+  - Collecting boosts gives temporary speed, and shields gives temporary invincibility.
+
+game_roles:
+  - name: surfer
+    prompt:
+      role_section: |
+        You control the surfer character.
+        Turn left and right to avoid obstacles and collect items.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Continue surfing in the same direction without action.
+        - Arrow Left: Turn left
+        - Arrow Right: Turn right
+        - Arrow Up: Slow down the surfer
+        - Arrow Down: Boost the surfer (requires a boost item)
+
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowLeft", "ArrowRight", "ArrowDown", "Space"]
+      allow_clicks: false
+    semantic_controls:
+      - id: wait
+        description: Continue surfing in the same direction.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: turn_left
+        description: Turn left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: turn_right
+        description: Turn right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: slow_down
+        description: Slow down the surfer.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: boost
+        description: Boost the surfer (requires a boost item).
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.1
+      # - id: start
+      #   description: Start the game or continue after pause.
+      #   binding:
+      #     action: press_key
+      #     key: "Space"

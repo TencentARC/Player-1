@@ -1,0 +1,20 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Complete the level by reaching the bread.
+  Time your movement with the automatic flaps and avoid spikes.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 1
+        target: 2
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.deaths
+    - metrics.spike_hits
+    - metrics.flap_max
+    - metrics.flap_target

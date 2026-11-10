@@ -1,0 +1,15 @@
+task_prompt: |
+  Use precise dodging to keep momentum and reach at least 35000 points in one run.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 35000
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.distance
+    - metrics.speed_forward
+    - metrics.speed_side
+    - metrics.cubes_alive
+    - metrics.high_score

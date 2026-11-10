@@ -1,0 +1,49 @@
+game_name: base_3d_drive_lane
+
+game_rules: |-
+  You are playing 3D Drive Lane, a highway coin-collection game viewed from behind your car.
+  - Keep the player car on the road.
+  - Steer left and right across four lanes.
+  - Collect as many road coins as possible.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the player car.
+    Controls:
+    - Steer with a=left and d=right.
+    - Wait for one game step to keep the current lane.
+  game_controls:
+    duration_ms: 200
+    keys: [arrowleft, arrowright, a, d]
+
+in_context_examples:
+  original_player1_control:
+    - name: align with a coin
+      response: |-
+        <think>
+        The nearest coin is in the adjacent lane to the left and is approaching quickly. I should hold A now to align the car with it.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["a"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: steer left
+      response: |-
+        <think>
+        The car is in the middle of the road, with another lane visible to its left. I should hold A to steer into that lane.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["a"]
+        </parameter>
+        </function>
+        </tool_call>

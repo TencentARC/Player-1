@@ -1,0 +1,18 @@
+task_prompt: |
+  Gather at least 20 wood logs in this run.
+  Find trees, line up with their trunks, and move between trees as needed.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.inventory.item_gains.wood_log: 20
+  metrics_fields:
+    - game_state.inventory.item_counts.wood_log
+    - metrics.items_total
+    - metrics.items_unique
+    - metrics.held_selected_item_type
+    - metrics.held_selected_item_count
+    - game_state.inventory.selected_slot
+    - game_state.environment.targeted_block.block_type
+    - game_state.environment.break_progress
+    - gameTimeMs

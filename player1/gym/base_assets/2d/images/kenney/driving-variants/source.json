@@ -1,0 +1,62 @@
+{
+  "source": "https://kenney.nl/assets/racing-pack",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "car_red_2.png",
+      "source_path": "PNG/Cars/car_red_2.png",
+      "dependencies": []
+    },
+    {
+      "file": "car_yellow_5.png",
+      "source_path": "PNG/Cars/car_yellow_5.png",
+      "dependencies": []
+    },
+    {
+      "file": "car_green_3.png",
+      "source_path": "PNG/Cars/car_green_3.png",
+      "dependencies": []
+    },
+    {
+      "file": "tent_red_large.png",
+      "source_path": "PNG/Objects/tent_red_large.png",
+      "dependencies": []
+    },
+    {
+      "file": "tent_red.png",
+      "source_path": "PNG/Objects/tent_red.png",
+      "dependencies": []
+    },
+    {
+      "file": "tent_blue.png",
+      "source_path": "PNG/Objects/tent_blue.png",
+      "dependencies": []
+    },
+    {
+      "file": "rock2.png",
+      "source_path": "PNG/Objects/rock2.png",
+      "dependencies": []
+    },
+    {
+      "file": "rock3.png",
+      "source_path": "PNG/Objects/rock3.png",
+      "dependencies": []
+    },
+    {
+      "file": "barrier_red.png",
+      "source_path": "PNG/Objects/barrier_red.png",
+      "dependencies": []
+    },
+    {
+      "file": "barrier_red_race.png",
+      "source_path": "PNG/Objects/barrier_red_race.png",
+      "dependencies": []
+    },
+    {
+      "file": "tires_red.png",
+      "source_path": "PNG/Objects/tires_red.png",
+      "dependencies": []
+    }
+  ],
+  "transformations": {}
+}

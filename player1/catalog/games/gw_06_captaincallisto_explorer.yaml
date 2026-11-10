@@ -1,0 +1,88 @@
+game_name: gw_06_captaincallisto_explorer
+game_rules: 'You are playing Captain Callisto, a platform adventure game.
+
+  - Reach each area''s exit and collect coins along the way.
+
+  - Fuel enables the jetpack for upward flight.
+
+  - Landing on enemies defeats them; other enemy contact or falling causes a respawn.'
+role_control:
+  role_control_block: 'Role:
+
+    You control Captain Callisto.
+
+    Controls:
+
+    - Hold arrowleft, arrowright, a, or d to move horizontally.
+
+    - Hold arrowup, arrowdown, w, or s to climb or move vertically.
+
+    - Hold space to jump and shift to use collected jetpack fuel.
+
+    - Tap r to restart the area.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    - Shift
+    - Space
+    - a
+    - d
+    - r
+    - s
+    - w
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: jump across a gap
+    response: '<think>
+
+      The next ledge is ahead and above, so I should move right and jump together
+      to cross the gap and gain height.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright","space"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: climb through a passage
+    response: '<think>
+
+      A climbable passage continues directly above me, so I should move upward through
+      it instead of jumping toward the distant ledge.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowup"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

@@ -1,0 +1,16 @@
+task_prompt: |
+  Reach at least 2000 points in one continuous run.
+  Follow paths with dots and keep away from ghosts to stay alive.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 2000
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.primary_score
+    - metrics.high_score
+    - metrics.lives
+    - metrics.deaths
+    - metrics.maze_index

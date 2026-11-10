@@ -1,0 +1,79 @@
+{
+  "source_url": "https://kenney.nl/assets/blocky-characters",
+  "version": "2.0",
+  "license": "CC0-1.0",
+  "retrieved": "2026-09-10",
+  "revision": "monastery-20260910-1",
+  "adaptations": [
+    "Unlit extension removed for fixed stylized PBR lighting.",
+    "walk-guard and sprint-guard combine original locomotion with the original holding-right arm channel."
+  ],
+  "files": [
+    {
+      "file": "character-l.glb",
+      "bytes": 114816,
+      "source_crc32": "e1291235",
+      "crc32": "1c27fd76"
+    },
+    {
+      "file": "Textures/texture-l.png",
+      "bytes": 22764,
+      "crc32": "617d4646"
+    },
+    {
+      "file": "character-g.glb",
+      "bytes": 114812,
+      "source_crc32": "f632d7d1",
+      "crc32": "2a247ce3"
+    },
+    {
+      "file": "Textures/texture-g.png",
+      "bytes": 16069,
+      "crc32": "21308a64"
+    },
+    {
+      "file": "character-h.glb",
+      "bytes": 114816,
+      "source_crc32": "be879e0c",
+      "crc32": "cda4a4fa"
+    },
+    {
+      "file": "Textures/texture-h.png",
+      "bytes": 16215,
+      "crc32": "be03f9cb"
+    },
+    {
+      "file": "character-r.glb",
+      "bytes": 114816,
+      "source_crc32": "4515bb55",
+      "crc32": "cbe2367f"
+    },
+    {
+      "file": "Textures/texture-r.png",
+      "bytes": 13909,
+      "crc32": "9a2287ee"
+    },
+    {
+      "file": "character-k.glb",
+      "bytes": 114812,
+      "source_crc32": "ff693ee4",
+      "crc32": "fa46b389"
+    },
+    {
+      "file": "Textures/texture-k.png",
+      "bytes": 17437,
+      "crc32": "c75e0188"
+    },
+    {
+      "file": "character-m.glb",
+      "bytes": 114812,
+      "source_crc32": "df49cb4d",
+      "crc32": "acfe3d1f"
+    },
+    {
+      "file": "Textures/texture-m.png",
+      "bytes": 19343,
+      "crc32": "51f192b6"
+    }
+  ]
+}

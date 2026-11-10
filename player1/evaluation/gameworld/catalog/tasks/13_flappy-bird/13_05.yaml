@@ -1,0 +1,13 @@
+task_prompt: |
+  Pass at least 15 pipes in one run.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.pipes_passed: 15
+  metrics_fields:
+    - game_state.score
+    - gameTimeMs
+    - metrics.distance
+    - metrics.pipes_visible
+    - metrics.best_score

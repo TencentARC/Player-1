@@ -1,0 +1,17 @@
+game_url_suffix: "#infinite/2"
+
+task_prompt: |
+  Guess the word so all five letters turn green.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.letters_correct: 5
+    require:
+      metrics.word_number: 2
+  metrics_fields:
+    - metrics.attempts
+    - game_state.completion_progress
+    - metrics.guesses_remaining
+    - metrics.letters_present
+    - metrics.letters_absent

@@ -1,0 +1,27 @@
+{
+  "source": "https://kenney.nl/assets/car-kit",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "sedan-sports.glb",
+      "source_path": "Models/GLB format/sedan-sports.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    },
+    {
+      "file": "cone.glb",
+      "source_path": "Models/GLB format/cone.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    }
+  ],
+  "transformations": {
+    "sedan-sports.glb": "Add a four-wheel, one-revolution quaternion clip; split the red body/ spoiler paint triangles into a tintable PBR material (roughness 0.38); preserve windows, tires, lamps and trim on the original map. Source vertex geometry and UVs remain unchanged."
+  }
+}

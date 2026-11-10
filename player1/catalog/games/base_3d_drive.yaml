@@ -1,0 +1,48 @@
+game_name: base_3d_drive
+
+game_rules: |-
+  You are playing 3D Drive, with the camera following behind your car.
+  - Cross checkpoint lines in order along the continuously extending road.
+  - Stay near the road center because contact with the road edge stops the car.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the car and view it from behind.
+    Controls:
+    - Drive with w=forward, s=brake, a=steer left, d=steer right.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    keys: [w, s, a, d, arrowleft, arrowright, arrowup, arrowdown]
+
+in_context_examples:
+  original_player1_control:
+    - name: accelerate through a curve
+      response: |-
+        <think>
+        The active checkpoint follows the road as it curves left ahead. I should hold W and A together to accelerate while steering through the highlighted gate.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w","a"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: drive forward
+      response: |-
+        <think>
+        The car is facing a straight section of road with open space immediately ahead. I should hold W to continue moving steadily forward along this section.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

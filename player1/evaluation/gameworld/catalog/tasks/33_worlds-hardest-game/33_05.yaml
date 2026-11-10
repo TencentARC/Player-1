@@ -1,0 +1,21 @@
+game_url_suffix: "?level=5"
+
+task_prompt: |
+  In one uninterrupted run, clear level 5 and reach level 6 or higher.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 5
+        target: 6
+      metrics.levels_completed_this_episode: 1
+  metrics_fields:
+    - game_state.completion_progress
+    - metrics.coins
+    - metrics.coins_total
+    - metrics.checkpoints_passed
+    - metrics.checkpoints_total
+    - metrics.deaths
+    - metrics.deaths_this_episode
+    - metrics.uninterrupted

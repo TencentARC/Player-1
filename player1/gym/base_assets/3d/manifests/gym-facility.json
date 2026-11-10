@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "pack_id": "gym-facility",
+  "palette": {
+    "sky": "#aac6d5",
+    "floor": "#5c6b78",
+    "floorAccent": "#677786",
+    "floorLine": "#b0b0b0",
+    "wall": "#b9c5cd",
+    "wallAccent": "#3d5569",
+    "trim": "#dce6e5",
+    "metal": "#33485d",
+    "darkMetal": "#1f2e40",
+    "glass": "#17384a",
+    "cover": "#59778a",
+    "coverAccent": "#f4aa53",
+    "hostile": "#ef5b4f",
+    "hostileAccent": "#ffc2b8",
+    "friendly": "#2f80ed",
+    "target": "#ff4f64",
+    "goal": "#64efcb",
+    "hazard": "#f97316",
+    "neutral": "#e2e8f0",
+    "interactive": "#ffd37d",
+    "projectileFriendly": "#ffd84d",
+    "projectileHostile": "#ff7a2f",
+    "crate": "#9a6a3a",
+    "support": "#3b82f6",
+    "road": "#303746",
+    "roadEdge": "#e5e7eb",
+    "lane": "#f8fafc",
+    "verge": "#3f765f",
+    "vehicle": "#f6cf3f",
+    "vehicleAccent": "#ffe993",
+    "coin": "#facc15",
+    "vergeAccent": "#838b7a"
+  },
+  "alternate_palette": {
+    "hostile": "#b86cf0",
+    "hostileAccent": "#f2d7ff",
+    "friendly": "#00a7a0",
+    "target": "#ff8a3d",
+    "goal": "#00bfa5",
+    "interactive": "#38bdf8",
+    "projectileFriendly": "#22d3ee",
+    "projectileHostile": "#fb7185",
+    "vehicle": "#f06543",
+    "vehicleAccent": "#ff9674",
+    "coin": "#37e0a2"
+  },
+  "surfaces": {
+    "floor": "tiles",
+    "wall": "panels",
+    "road": "asphalt",
+    "verge": "ground",
+    "floorAccent": "panels",
+    "vergeAccent": "concrete",
+    "roadEdge": "panels"
+  },
+  "textures": {},
+  "assets": {
+    "factory_machine": {
+      "type": "model",
+      "role": "machine",
+      "url": "../models/kenney/factory/machine.glb",
+      "forward_axis": "+z"
+    },
+    "factory_machine_window": {
+      "type": "model",
+      "role": "machine",
+      "url": "../models/kenney/factory/machine-window.glb",
+      "forward_axis": "+z"
+    },
+    "factory_box_large": {
+      "type": "model",
+      "role": "cargo",
+      "url": "../models/kenney/factory/box-large.glb",
+      "forward_axis": "+z"
+    },
+    "factory_box_small": {
+      "type": "model",
+      "role": "factory_box_small",
+      "url": "../models/kenney/factory/box-small.glb",
+      "forward_axis": "+z"
+    },
+    "factory_screen_wide": {
+      "type": "model",
+      "role": "factory_screen_wide",
+      "url": "../models/kenney/factory/screen-wide.glb",
+      "forward_axis": "+z"
+    },
+    "factory_pipe_large_long": {
+      "type": "model",
+      "role": "factory_pipe_large_long",
+      "url": "../models/kenney/factory/pipe-large-long.glb",
+      "forward_axis": "+z"
+    },
+    "factory_pipe_large_bend": {
+      "type": "model",
+      "role": "factory_pipe_large_bend",
+      "url": "../models/kenney/factory/pipe-large-bend.glb",
+      "forward_axis": "+z"
+    },
+    "factory_catwalk_straight": {
+      "type": "model",
+      "role": "factory_catwalk_straight",
+      "url": "../models/kenney/factory/catwalk-straight.glb",
+      "forward_axis": "+z"
+    },
+    "factory_structure_yellow_medium": {
+      "type": "model",
+      "role": "factory_structure_yellow_medium",
+      "url": "../models/kenney/factory/structure-yellow-medium.glb",
+      "forward_axis": "+z"
+    },
+    "factory_machine_fortified": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/equipment/machine-fortified.glb",
+      "forward_axis": "+z",
+      "role": "machine"
+    },
+    "factory_box_wide": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/equipment/box-wide.glb",
+      "forward_axis": "+z",
+      "role": "cargo"
+    },
+    "factory_box_long": {
+      "type": "model",
+      "url": "../models/kenney/combat-diversity/equipment/box-long.glb",
+      "forward_axis": "+z",
+      "role": "cargo"
+    }
+  },
+  "content_revision": "factory-campus-20260910-1",
+  "visual_profile": "stylized",
+  "variants": {
+    "factory_machine": [
+      "factory_machine",
+      "factory_machine_window",
+      "factory_machine_fortified"
+    ],
+    "factory_machine_window": [
+      "factory_machine_window",
+      "factory_machine_fortified",
+      "factory_machine"
+    ],
+    "factory_box_large": [
+      "factory_box_large",
+      "factory_box_wide",
+      "factory_box_long"
+    ]
+  },
+  "themes": [
+    {
+      "id": "blue_assembly"
+    },
+    {
+      "id": "brick_workshop",
+      "palette": {
+        "wall": "#c5b195",
+        "wallAccent": "#815c49",
+        "floor": "#908778",
+        "floorAccent": "#aa9980",
+        "metal": "#594c46",
+        "coverAccent": "#dda954",
+        "verge": "#70856a"
+      },
+      "surfaces": {
+        "floor": "concrete",
+        "wall": "bricks",
+        "road": "tiles"
+      }
+    },
+    {
+      "id": "sage_laboratory",
+      "palette": {
+        "wall": "#c2d0c4",
+        "wallAccent": "#4f7168",
+        "floor": "#7f998f",
+        "floorAccent": "#a6b7a6",
+        "metal": "#3c615c",
+        "coverAccent": "#d7c57a",
+        "verge": "#718f80"
+      },
+      "surfaces": {
+        "floor": "panels",
+        "wall": "panels",
+        "road": "concrete"
+      }
+    }
+  ]
+}

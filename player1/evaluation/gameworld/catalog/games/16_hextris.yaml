@@ -1,0 +1,52 @@
+game_rules: |
+  You are playing Hextris, a fast-paced hexagon-based puzzle game.
+
+  ## Game Objective
+  - Matching Mechanism: Group 3 or more blocks of the same color on any of the six sides to clear them and get scores.
+  - Prevent blocks from stacking outside the outer boundary of the central hexagon.
+
+  ## Game Rules
+  - The game runs continuously and blocks fall from the edges into the central hexagon.
+  - The speed of the falling blocks increases over time.
+  - Left/Right arrows rotate the hexagon in opposite directions.
+  - Press Down to speed up falling block motion.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the rotating hexagon.
+        Keep the board manageable by rotating quickly and balancing incoming blocks.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowLeft: rotate hexagon left
+        - ArrowRight: rotate hexagon right
+        - ArrowDown: accelerate falling blocks
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowDown"]
+      hold_duration: 0.1
+      allow_clicks: false
+    semantic_controls:
+      - id: wait
+        description: Briefly wait while the board evolves.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: rotate_left
+        description: Rotate the hexagon left once.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: rotate_right
+        description: Rotate the hexagon right once.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: accelerate
+        description: Temporarily speed up falling blocks.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.1

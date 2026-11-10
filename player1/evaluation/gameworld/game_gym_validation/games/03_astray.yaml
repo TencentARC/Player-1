@@ -1,0 +1,43 @@
+profile: game-gym
+game_id: 03_astray
+
+game_rules: |-
+  You are playing Astray, a maze navigation game.
+  - Guide the ball through open corridors to the exit.
+  - The exit is usually near the far upper-right corner.
+
+roles:
+  player:
+    description: |-
+      You control the ball in the maze.
+    controls:
+      - Hold arrowup, arrowdown, arrowleft, or arrowright to move through the maze.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: roll toward the right
+          response: |-
+            <think>
+            The corridor ahead is open to the right, so I should move right toward the next turn without touching either wall on the way.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowright"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: roll toward the top
+          response: |-
+            <think>
+            The right passage ends at a wall while the route upward is clear, so I should move up through the open corridor.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowup"]
+            </parameter>
+            </function>
+            </tool_call>

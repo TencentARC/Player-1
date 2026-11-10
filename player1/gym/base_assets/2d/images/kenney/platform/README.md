@@ -1,0 +1,3 @@
+# Platform artwork
+
+Kenney New Platformer Pack 1.1 (CC0), with its original license included. `SOURCES.json` maps every used source and crop. The six poses share an 88×104 crop so character feet stay registered. The base 512×512 atlas is accompanied by a 1024×512 atlas containing three additional character sets and snow, sand and stone terrain. Grouped manifest variants keep a character consistent across poses and a biome consistent across ground tops, body tiles and ledges. Four linked scene themes set the distant landscape palette. Two 256×256 masks retain the source cloud and forest silhouettes. Simulation geometry sets every collider, surface top and runner foot.

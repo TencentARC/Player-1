@@ -1,0 +1,46 @@
+profile: game-gym
+game_id: 25_rocket-league-2d
+
+game_rules: |-
+  You are playing Rocket League 2D, a side-view car soccer game.
+  - Hit the ball into the opponent's net while protecting your own goal.
+  - Jumping reaches airborne balls and an available boost increases speed.
+
+roles:
+  player:
+    description: |-
+      You control the blue car.
+    controls:
+      - Hold a or d to drive left or right.
+      - Hold w to jump.
+      - Hold space to use an available boost.
+      - Combine driving with jump or boost when needed.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: drive toward the ball
+          response: |-
+            <think>
+            The ball is ahead and slightly above the car on the right, so I should drive right and jump to meet it.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["d","w"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: turn back toward the ball
+          response: |-
+            <think>
+            The ball has moved behind the car toward the left side, so I should drive left and quickly recover a useful position.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["a"]
+            </parameter>
+            </function>
+            </tool_call>

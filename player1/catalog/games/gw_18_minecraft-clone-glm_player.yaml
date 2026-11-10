@@ -1,0 +1,106 @@
+game_name: gw_18_minecraft-clone-glm_player
+game_rules: 'You are playing a Minecraft-style first-person sandbox game.
+
+  - Explore nearby terrain and gather resources by breaking blocks.
+
+  - Blocks can be placed using the item selected in the hotbar.
+
+  - The starting hotbar contains wood logs, wood planks, cobblestone, torches, and
+  dirt in slots 1 through 5.
+
+  - Newly collected resources can fill later hotbar slots; crafting is not available.'
+role_control:
+  role_control_block: 'Role:
+
+    You control the first-person player and its selected hotbar item.
+
+    Controls:
+
+    - Hold arrowup, arrowdown, arrowleft, or arrowright to move forward, backward,
+    left, or right.
+
+    - Hold space while moving to jump.
+
+    - Aim with relative mouse movement. Positive dx turns right, negative dx turns
+    left, positive dy looks down, and negative dy looks up.
+
+    - Hold the left mouse button on a nearby targeted block to mine it.
+
+    - Right-click to place the selected block.
+
+    - Tap keys 1 through 9 to select a hotbar slot.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 200
+    keys:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    - Space
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: mine a nearby block
+    response: '<think>
+
+      A resource block is centered under the crosshair and close enough to reach,
+      so I should keep mining it until it breaks.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=mouse_control>
+
+      <parameter=mouse_hold>
+
+      left
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: place a useful block
+    response: '<think>
+
+      The selected block should fill the empty space centered under the crosshair,
+      so I should place it against the visible surface.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=mouse_control>
+
+      <parameter=mouse_click>
+
+      right
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

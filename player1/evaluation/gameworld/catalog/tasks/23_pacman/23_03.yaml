@@ -1,0 +1,16 @@
+task_prompt: |
+  Score at least 1500 points without ending the run early.
+  Keep eating dots while staying away from ghosts.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 1500
+  metrics_fields:
+    - game_state.level
+    - gameTimeMs
+    - metrics.primary_score
+    - metrics.high_score
+    - metrics.lives
+    - metrics.deaths
+    - metrics.maze_index

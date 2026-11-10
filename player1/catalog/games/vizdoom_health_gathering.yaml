@@ -1,0 +1,54 @@
+game_name: vizdoom_health_gathering
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom Health Gathering on a damaging floor.
+  - Survive as long as possible while the floor continuously drains health.
+  - Medkits appear around the arena and restore health when collected.
+  - Keep moving between nearby medkits because remaining still leads to death.
+  - Episode reward increases for every moment you stay alive.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the ViZDoom player searching for medkits.
+    Controls:
+    - Hold w to move forward.
+    - Hold a or d to turn left or right.
+    Turn the camera horizontally with dx in [-1000, 1000], and always set dy=0.
+
+    dx=1000 represents one full visible game width.
+    Positive dx turns right, and negative dx turns left.
+
+    Larger dx values do not make you turn faster.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [w, a, d]
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+
+in_context_examples:
+  player1_control:
+    - name: collect a visible medkit
+      response: |-
+        <think>
+        My health is falling and a medkit is visible on the right. I should turn toward it and keep moving forward to collect it quickly.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

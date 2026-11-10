@@ -1,0 +1,39 @@
+{
+  "source": "https://kenney.nl/assets/shooting-gallery",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "path": "target_red3.png",
+      "source_path": "PNG/Objects/target_red3.png"
+    },
+    {
+      "path": "bg_blue.png",
+      "source_path": "PNG/Stall/bg_blue.png"
+    },
+    {
+      "file": "target_colored.png",
+      "source_file": "PNG/Objects/target_colored.png",
+      "bytes": 3414,
+      "crc32": "f961e650"
+    },
+    {
+      "file": "target_red1.png",
+      "source_file": "PNG/Objects/target_red1.png",
+      "bytes": 3165,
+      "crc32": "435284f1"
+    },
+    {
+      "file": "bg_wood.png",
+      "source_file": "PNG/Stall/bg_wood.png",
+      "bytes": 2561,
+      "crc32": "b3fac3fb"
+    },
+    {
+      "file": "bg_green.png",
+      "source_file": "PNG/Stall/bg_green.png",
+      "bytes": 1682,
+      "crc32": "f4d90e79"
+    }
+  ],
+  "diversity_revision": "2026-09-10"
+}

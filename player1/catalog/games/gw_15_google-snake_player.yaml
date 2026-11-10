@@ -1,0 +1,73 @@
+game_name: gw_15_google-snake_player
+game_rules: 'You are playing Google Snake.
+
+  - Guide the continuously moving snake to apples to grow and score.
+
+  - Contact with a wall or the snake''s own body ends the game.'
+role_control:
+  role_control_block: 'Role:
+
+    You choose the snake''s travel direction.
+
+    Controls:
+
+    - Tap arrowup, arrowdown, arrowleft, or arrowright to turn.
+
+    - Wait for one game step to keep moving in the current direction.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: turn toward the apple
+    response: '<think>
+
+      The apple is above the snake and the path is clear, so I should turn upward
+      now and move toward the apple.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["arrowup"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: continue on a safe path
+    response: '<think>
+
+      The snake is already moving through a clear lane toward the apple, so I should
+      wait and avoid making an unnecessary turn.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

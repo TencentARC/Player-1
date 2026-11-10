@@ -1,0 +1,54 @@
+game_name: vizdoom_my_way_home
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom My Way Home, a first-person maze navigation task.
+  - Find and reach the green armor hidden in a fixed room before time runs out.
+  - Your starting room and facing direction change between episodes.
+  - Explore connected rooms, remember visited paths, and avoid repeating dead ends.
+  - The episode ends successfully when you move over the green armor.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the ViZDoom player exploring the maze.
+    Controls:
+    - Hold w to move forward.
+    - Hold a or d to move sideways.
+    Turn the camera horizontally with dx in [-1000, 1000], and always set dy=0.
+
+    dx=1000 represents one full visible game width.
+    Positive dx turns right, and negative dx turns left.
+
+    Larger dx values do not make you turn faster.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [w, a, d]
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+
+in_context_examples:
+  player1_control:
+    - name: search through a passage
+      response: |-
+        <think>
+        The green armor is not visible, and the current room opens to the right. I should turn into that passage and move forward to continue searching.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

@@ -1,0 +1,14 @@
+task_prompt: |
+  Build a controlled mid-length snake and eat at least 10 apples.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.apples_eaten: 10
+  metrics_fields:
+    - game_state.score
+    - gameTimeMs
+    - metrics.snake_length
+    - metrics.speed
+    - metrics.board_width
+    - metrics.board_height

@@ -1,0 +1,80 @@
+game_rules: |
+  You are playing Captain Callisto, a platform adventure.
+
+  ## Game Objective
+  - Reach the exit of each area.
+  - Collect coins along the way.
+
+  ## Game Rules
+  - Move left/right/up/down and jump across platforms.
+  - Use the jetpack to fly up after you collected the fuels.
+  - Kill the enemies by jumping on them.
+  - When you touch the enemies (not from above) or falling, you will respawn.
+  - You need a move to start the level after respawning.
+
+game_roles:
+  - name: explorer
+    prompt:
+      role_section: |
+        You control Captain Callisto.
+        Control the player to move, jump, and reach the exit.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Do nothing.
+        - ArrowLeft / ArrowRight or A/D: move left/right
+        - ArrowUp / ArrowDown or W/S: climb or move vertically
+        - Space: jump
+        - Shift: jetpack
+        - r: restart
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "w", "a", "s", "d", "Space", "r", "Shift"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Do nothing.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Move left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Move right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: move_up
+        description: Move up.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: move_down
+        description: Move down.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.1
+      - id: jump
+        description: Jump over obstacles or gaps.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.05
+      - id: jetpack
+        description: Use the jetpack to fly up (only if available)
+        binding:
+          action: press_key
+          key: "Shift"
+          duration: 0.1
+      - id: restart
+        description: Restart the level. (You will need a move to start the level after respawning)
+        binding:
+          action: press_key
+          key: "r"
+          duration: 0.1

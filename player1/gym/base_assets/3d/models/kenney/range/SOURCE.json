@@ -1,0 +1,25 @@
+{
+  "source": "https://kenney.nl/assets/blaster-kit",
+  "version": "2.1",
+  "license": "CC0-1.0",
+  "retrieved": "2026-09-10",
+  "purpose": "Precision Hall target backing and service equipment",
+  "files": [
+    {
+      "path": "License.txt",
+      "bytes": 700
+    },
+    {
+      "path": "Textures/colormap.png",
+      "bytes": 10223
+    },
+    {
+      "path": "crate-wide.glb",
+      "bytes": 59404
+    },
+    {
+      "path": "target-large.glb",
+      "bytes": 7568
+    }
+  ]
+}

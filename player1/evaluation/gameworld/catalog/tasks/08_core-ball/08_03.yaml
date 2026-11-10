@@ -1,0 +1,20 @@
+game_url_suffix: "?level=3"
+
+
+task_prompt: |
+  Clear level 3 with 20 points.
+  Time shots as the center spins; avoid attached balls, segments, and obstacles.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 20
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.queue_remaining
+    - metrics.queue_total
+    - metrics.attached_count
+    - metrics.initial_attached
+    - metrics.total_required
+    - metrics.attempts

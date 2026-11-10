@@ -1,0 +1,119 @@
+player_mode: cooperative
+
+game_rules: |
+  You are playing 'Fireboy and Watergirl in The Forest Temple'.
+  Some puzzles require both characters to cooperate to solve.
+
+  ## Game Objective
+  - Both characters must reach their respective exit doors to complete the level.
+  - Collect all diamonds for a higher score.
+
+  ## Game Rules
+  - Green toxic liquid: Kills BOTH characters
+  - Red lava pools: Kills Watergirl only
+  - Blue water pools: Kills Fireboy only
+  - Buttons and levers control platforms and doors
+  - Boxes can be pushed to reach higher platforms
+
+game_roles:
+  - name: watergirl
+    prompt:
+      role_section: |
+        You are Agent 0 controlling the Watergirl character (blue girl).
+
+        YOUR OBJECTIVES:
+        - Collect blue diamonds (Watergirl's gems)
+        - Reach the blue exit door
+        - NEVER touch red lava (instant death)
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - W: Jump
+        - A: Move left
+        - D: Move right
+        - W + A: Jump left
+        - W + D: Jump right
+    computer_use_controls:
+      allowed_keys: ["w", "a", "d"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Stay still briefly.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Walk left (hold).
+        binding:
+          action: press_key
+          key: "a"
+          duration: 0.1
+      - id: move_right
+        description: Walk right (hold).
+        binding:
+          action: press_key
+          key: "d"
+          duration: 0.1
+      - id: jump_left
+        description: Jump diagonally left (jump + left).
+        binding:
+          action: press_keys
+          keys: ["w", "a"]
+          duration: 0.1
+      - id: jump_right
+        description: Jump diagonally right (jump + right).
+        binding:
+          action: press_keys
+          keys: ["w", "d"]
+          duration: 0.1
+
+  - name: fireboy
+    prompt:
+      role_section: |
+        You are Agent 1 controlling the Fireboy character (red boy).
+
+        YOUR OBJECTIVES:
+        - Collect red diamonds (Fireboy's gems)
+        - Reach the red exit door
+        - NEVER touch blue water (instant death)
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowUp: Jump
+        - ArrowLeft: Move left
+        - ArrowRight: Move right
+        - ArrowUp + ArrowLeft: Jump left
+        - ArrowUp + ArrowRight: Jump right
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowLeft", "ArrowRight"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Stay still briefly.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Walk left (hold).
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Walk right (hold).
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: jump_left
+        description: Jump diagonally left (jump + left).
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowLeft"]
+          duration: 0.1
+      - id: jump_right
+        description: Jump diagonally right (jump + right).
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowRight"]
+          duration: 0.1

@@ -1,0 +1,4 @@
+model_name: qwen3.5-player1-control-t-a-baserl
+action_format: qwen3_coder_xml
+action_space_mode: player1_control
+history_context_mode: t_a

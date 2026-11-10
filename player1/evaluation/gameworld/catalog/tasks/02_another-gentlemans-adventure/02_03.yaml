@@ -1,0 +1,13 @@
+task_prompt: |
+  Pick up at least 3 coins before the run ends.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.session_coins_collected: 3
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.coins
+    - metrics.coins_total

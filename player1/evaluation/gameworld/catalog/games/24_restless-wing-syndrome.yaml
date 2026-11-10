@@ -1,0 +1,67 @@
+game_rules: |
+  You are playing Restless Wing Syndrome, a platformer with automatic flaps.
+
+  ## Game Objective
+  - Reach the exit (looks like a bread) of each level.
+  - Avoid spikes and hazards.
+
+  ## Game Rules
+  - The bird flaps automatically on a timer (flap meter at top left). The flap meter will automatically decrease, one cell at a time. When it is empty, the bird will automatically jump up then the meter will be recharged to full. You can observe the flap meter to time your movements.
+  - You can move left or right to steer mid-air.
+  - Hold Up to glide (slow descent) in the air.
+  - Use Up+Left or Up+Right to glide diagonally.
+  - Most of the time the movements are achieved by gliding with appropriate direction.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the bird.
+        Steer left/right to navigate platforms and hazards.
+        Hold Up to glide (slow descent). Use Up+Left/Right to glide diagonally.
+        You can use glide actions consecutively for sustained slow descent.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowLeft / ArrowRight: Move left/right
+        - ArrowUp: Hold to glide (slow descent, uses flap meter)
+        - ArrowUp + ArrowLeft / ArrowRight: Glide while moving left/right
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowUp"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Stay still briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_left
+        description: Move left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Move right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: glide
+        description: Hold to slow descent using flap meter.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: glide_left
+        description: Glide while moving left (slow descent + left).
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowLeft"]
+          duration: 0.1
+      - id: glide_right
+        description: Glide while moving right (slow descent + right).
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowRight"]
+          duration: 0.1

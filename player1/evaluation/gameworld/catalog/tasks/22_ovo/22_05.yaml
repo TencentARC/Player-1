@@ -1,0 +1,21 @@
+game_url_suffix: "?level=3"
+
+task_prompt: |
+  Load into level 3.
+  Clear level 3 and reach level 4 or higher.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 3
+        target: 4
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.coins
+    - metrics.primary_score
+    - metrics.coins_total
+    - metrics.distance_to_goal
+    - metrics.level_number

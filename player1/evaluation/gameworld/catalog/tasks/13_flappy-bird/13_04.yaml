@@ -1,0 +1,13 @@
+task_prompt: |
+  Survive long enough to pass at least 10 pipes in one attempt.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.pipes_passed: 10
+  metrics_fields:
+    - game_state.score
+    - gameTimeMs
+    - metrics.distance
+    - metrics.pipes_visible
+    - metrics.best_score

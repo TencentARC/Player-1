@@ -1,0 +1,4 @@
+qwen2.5-vl-32b-instruct-cua:
+  model: "Qwen2.5-VL-32B-Instruct"
+  endpoint: "http://127.0.0.1:8088/v1/chat/completions"
+  enable_memory: true

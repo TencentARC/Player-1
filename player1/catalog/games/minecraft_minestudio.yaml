@@ -1,0 +1,89 @@
+game_name: minecraft_minestudio
+width: 640
+height: 360
+
+game_rules: |-
+  You are playing Minecraft.
+  - Complete the task using only the visible game state.
+  - Interact with the first-person world or in inventory screens.
+  - To mine, interact with, or collect a target, move into very close range and place the crosshair precisely on it; attempts from a distance or without precise aim will fail.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the Minecraft player.
+    Controls:
+    - Move by holding keys: w=forward, a=left, s=backward, and d=right.
+    - While moving, also hold space to jump, control to sprint, or shift to sneak.
+    - Tap e to open or close the inventory. Tap keys 1 through 9 to select a hotbar slot, or use mouse scrolling to change the selected slot.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+
+    dx and dy set the mouse movement amount.
+    - Use absolute mouse coordinates in [0, 1000] on the inventory screen, from top-left to bottom-right.
+    - Left-click once to attack your target.
+    - Hold the left mouse button in consecutive game steps to break a block.
+    - Right-click once to use, place, or interact.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    # MineStudio advances one native Minecraft tick per environment step.
+    # The official simulator uses 50 ms per step (20 Hz), matching MineDojo.
+    duration_ms: 50
+    keys: [w, a, s, d, arrowup, arrowleft, arrowdown, arrowright, space, control, shift, e, "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    mouse_move: true
+    mouse_click: [left, right]
+    mouse_hold: [left]
+
+in_context_examples:
+  player1_control:
+    - name: find the target
+      response: |-
+        <think>
+        No target is visible, so I need to turn my view and check the surrounding area before moving to locate it.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":400,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>
+    - name: mine a block
+      response: |-
+        <think>
+        The dirt block is within reach and under the crosshair at the center of the screen, so I will hold the left mouse button to mine it.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_hold>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+    - name: simultaneous movement, aim, and attack
+      response: |-
+        <think>
+        The target is within reach to the lower right, so move forward, turn my view right and below toward it, and attack.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":200,"dy":100}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

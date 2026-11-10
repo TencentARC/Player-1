@@ -1,0 +1,21 @@
+game_url_suffix: "?level=4"
+
+task_prompt: |
+  Stay alive through level 4 and enter level 5 or higher in the same run.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 4
+        target: 5
+      metrics.levels_completed_this_episode: 1
+  metrics_fields:
+    - game_state.completion_progress
+    - metrics.coins
+    - metrics.coins_total
+    - metrics.checkpoints_passed
+    - metrics.checkpoints_total
+    - metrics.deaths
+    - metrics.deaths_this_episode
+    - metrics.uninterrupted

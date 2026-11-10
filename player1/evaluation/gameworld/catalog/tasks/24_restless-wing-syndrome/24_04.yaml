@@ -1,0 +1,20 @@
+game_url_suffix: "?level=4"
+
+task_prompt: |
+  Navigate the bird toward the toast in level 4.
+  Steer through the longer dangerous passages without touching spikes.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 4
+        target: 5
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.deaths
+    - metrics.spike_hits
+    - metrics.flap_max
+    - metrics.flap_target

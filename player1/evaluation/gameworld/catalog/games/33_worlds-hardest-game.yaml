@@ -1,0 +1,56 @@
+game_rules: |
+  You are playing World's Hardest Game, a precision maze dodge game.
+
+  ## Game Objective
+  - Collect all coins in the level.
+  - Reach the green exit zone to complete the level.
+
+  ## Game Rules
+  - You control a red square in a maze.
+  - Blue enemies move on fixed paths and kill you on contact.
+  - Checkpoints save progress after collecting items. Use checkpoints to split the level into safe segments.
+  - Observe enemy cycles carefully to avoid them.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the red square.
+        Move to collect coins and reach the exit while avoiding enemies.
+        Avoid blue enemies, collect all coins, and reach the green exit.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowUp: Move up
+        - ArrowDown: Move down
+        - ArrowLeft: Move left
+        - ArrowRight: Move right
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly to observe.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_up
+        description: Move up.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+      - id: move_down
+        description: Move down.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+      - id: move_left
+        description: Move left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+      - id: move_right
+        description: Move right.
+        binding:
+          action: press_key
+          key: "ArrowRight"

@@ -1,0 +1,52 @@
+profile: game-gym
+game_id: 19_minesweeper
+
+game_rules: |-
+  You are playing Minesweeper, a logic puzzle game.
+  - Reveal every safe cell without opening a mine.
+  - A revealed number gives the count of mines in its eight neighboring cells.
+  - Flags can mark covered cells believed to contain mines.
+
+roles:
+  player:
+    description: |-
+      You inspect and interact with the Minesweeper board.
+    controls:
+      - Point with absolute mouse coordinates in [0, 1000] from top-left to bottom-right.
+      - Left-click a covered cell to reveal it.
+      - Right-click a covered cell to place or remove a flag.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: mark a certain mine
+          response: |-
+            <think>
+            The covered center cell is confirmed as a mine by the adjacent clues, so I should point to it and place a flag.
+            </think>
+
+            <tool_call>
+            <function=mouse_control>
+            <parameter=mouse_move>
+            {"mode":"absolute","x":500,"y":500}
+            </parameter>
+            <parameter=mouse_click>
+            right
+            </parameter>
+            </function>
+            </tool_call>
+        - name: reveal a safe cell
+          response: |-
+            <think>
+            The clues show the covered cell just left of center cannot contain a mine, so I should reveal that safe cell now.
+            </think>
+
+            <tool_call>
+            <function=mouse_control>
+            <parameter=mouse_move>
+            {"mode":"absolute","x":450,"y":500}
+            </parameter>
+            <parameter=mouse_click>
+            left
+            </parameter>
+            </function>
+            </tool_call>

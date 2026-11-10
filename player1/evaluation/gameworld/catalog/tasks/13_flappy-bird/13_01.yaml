@@ -1,0 +1,14 @@
+task_prompt: |
+  Clear at least 1 pipe in a single run.
+  Keep altitude stable through the first gap.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.pipes_passed: 1
+  metrics_fields:
+    - game_state.score
+    - gameTimeMs
+    - metrics.distance
+    - metrics.pipes_visible
+    - metrics.best_score

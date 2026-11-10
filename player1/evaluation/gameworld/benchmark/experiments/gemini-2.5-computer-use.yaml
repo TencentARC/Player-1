@@ -1,0 +1,8 @@
+experiment_name: gemini-2.5-computer-use_all_games_all_tasks
+headless: true
+
+cases:
+  - game: all
+    tasks: all
+    models: ["gemini-2.5-computer-use"]
+    repeat: 1

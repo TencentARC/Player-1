@@ -1,0 +1,11 @@
+task_prompt: |
+  Without missing a placement, stack at least 30 blocks successfully.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.successful_blocks: 30
+  metrics_fields:
+    - game_state.score
+    - metrics.missed_blocks
+    - metrics.deaths

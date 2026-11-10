@@ -1,0 +1,57 @@
+{
+  "name": "Kenney Factory Kit",
+  "version": "3.0",
+  "license": "CC0-1.0",
+  "source_url": "https://kenney.nl/assets/factory-kit",
+  "download_url": "https://kenney.nl/media/pages/assets/factory-kit/edaac9d4f6-1777639602/kenney_factory-kit_3.0.zip",
+  "archive": {
+    "filename": "kenney_factory-kit_3.0.zip",
+    "bytes": 4511890
+  },
+  "files": [
+    {
+      "path": "License.txt",
+      "bytes": 700
+    },
+    {
+      "path": "Textures/colormap.png",
+      "bytes": 11813
+    },
+    {
+      "path": "box-large.glb",
+      "bytes": 7496
+    },
+    {
+      "path": "box-small.glb",
+      "bytes": 7500
+    },
+    {
+      "path": "catwalk-straight.glb",
+      "bytes": 33492
+    },
+    {
+      "path": "machine-window.glb",
+      "bytes": 38812
+    },
+    {
+      "path": "machine.glb",
+      "bytes": 25620
+    },
+    {
+      "path": "pipe-large-bend.glb",
+      "bytes": 44512
+    },
+    {
+      "path": "pipe-large-long.glb",
+      "bytes": 27288
+    },
+    {
+      "path": "screen-wide.glb",
+      "bytes": 13904
+    },
+    {
+      "path": "structure-yellow-medium.glb",
+      "bytes": 36796
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+game_url_suffix: "?level=3"
+
+task_prompt: |
+  Break every brick in this stage to finish it.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 1
+  metrics_fields:
+    - game_state.score
+    - game_state.level
+    - metrics.lives
+    - metrics.bricks_remaining
+    - metrics.bricks_total

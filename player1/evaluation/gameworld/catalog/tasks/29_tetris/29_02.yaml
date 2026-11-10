@@ -1,0 +1,12 @@
+task_prompt: |
+  In a single run, push your score to at least 300.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 300
+  metrics_fields:
+    - game_state.level
+    - game_state.completion_progress
+    - metrics.lines_remaining
+    - metrics.lines_target

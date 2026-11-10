@@ -1,0 +1,13 @@
+task_prompt: |
+  Wipe out all 6 enemy guards. Two are in the starting room, and the other four are behind a door and may rush in as support.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.kills: 6
+  metrics_fields:
+    - metrics.max_kills
+    - metrics.total_monsters
+    - metrics.health
+    - metrics.ammo
+    - metrics.lives

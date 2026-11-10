@@ -1,0 +1,4 @@
+ui-tars-1.5-7b:
+  model: "UI-TARS-1.5-7B"
+  endpoint: "http://127.0.0.1:8004/v1/chat/completions"
+  enable_memory: false

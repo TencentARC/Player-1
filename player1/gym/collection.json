@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "collection_id": "player1-gym",
+  "games": [
+    {
+      "game_id": "base_3d_drive_lane",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_2d_drive_lane_collect",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_2d_arcade_planar",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_3d_aim",
+      "variant": "continuous_initialization"
+    },
+    {
+      "game_id": "base_3d_movement",
+      "variant": "continuous_initialization"
+    },
+    {
+      "game_id": "base_3d_combat_arena",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_2d_aim",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_3d_drive",
+      "variant": "continuous_initialization"
+    },
+    {
+      "game_id": "base_3d_navigate_chase",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_2d_aim_arena",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_2d_drive_planar_wasd",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_3d_melee_arena",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_3d_duel",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_2d_ui_crafting",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_3d_duel_precision",
+      "variant": "original"
+    },
+    {
+      "game_id": "base_2d_platform",
+      "variant": "original"
+    }
+  ]
+}

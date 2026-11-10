@@ -1,0 +1,38 @@
+task_id: "base_3d_drive_train"
+game_id: base_3d_drive
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 1
+max_steps: 100
+task_target_score_field: 25
+continue_on_fail: false
+
+task_prompt: |
+  Cross checkpoint lines on the road.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.primary_score
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.checkpoints_passed
+    - metrics.routes_completed
+    - metrics.route_checkpoint_index
+    - metrics.total_checkpoints
+    - metrics.speed
+    - metrics.distance_to_checkpoint
+    - metrics.road_distance
+    - metrics.distance_driven
+    - metrics.collisions
+    - metrics.off_road_hits
+    - metrics.out_of_bounds
+    - metrics.step_count
+    - game_state.environment.difficulty
+    - terminal.outcome
+    - terminal.isTerminal

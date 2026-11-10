@@ -1,0 +1,15 @@
+task_prompt: |
+  Reach at least 400 points in one run.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.score_earned: 400
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - game_state.level
+    - metrics.coins
+    - metrics.lives
+    - metrics.time_left_s
+    - metrics.level_progress_percent

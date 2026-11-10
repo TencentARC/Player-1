@@ -1,0 +1,10 @@
+task_prompt: |
+  In a single run, land at least 15 blocks successfully.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.successful_blocks: 15
+  metrics_fields:
+    - game_state.score
+    - metrics.deaths

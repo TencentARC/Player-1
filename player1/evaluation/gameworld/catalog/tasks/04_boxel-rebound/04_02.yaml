@@ -1,0 +1,13 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Complete the stage with 100% level progress.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 1.0
+  metrics_fields:
+    - game_state.level
+    - game_state.score
+    - metrics.distance

@@ -1,0 +1,296 @@
+game_rules: |
+  You are playing Minesweeper, a logic puzzle.
+
+  ## Game Objective
+  - Reveal every safe cell without detonating a mine.
+
+  ## Game Rules
+  - Left click a cell reveals it; right click flags a mine.
+  - A number shows how many mines are adjacent to that cell.
+  - Clicking a mine ends the game.
+
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the board to reveal safe cells and avoid mines.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Mouse left click: Reveal a cell
+        - Mouse right click: Flag a mine
+    computer_use_controls:
+      allowed_keys: []
+      allow_clicks: true
+    semantic_controls:
+      - id: wait
+        description: Pause briefly.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: reveal_cell
+        description: Reveal a cell by id (cell="a1".."i9").
+        parameters:
+          cell:
+            type: string
+            description: Cell id, e.g., a1..i9.
+        required: [cell]
+        binding:
+          action: click
+          cell_param: true
+          cell_bindings: &cell_bindings
+            a1:
+              x: 539
+              y: 146
+            b1:
+              x: 564
+              y: 146
+            c1:
+              x: 589
+              y: 146
+            d1:
+              x: 615
+              y: 146
+            e1:
+              x: 640
+              y: 146
+            f1:
+              x: 665
+              y: 146
+            g1:
+              x: 690
+              y: 146
+            h1:
+              x: 716
+              y: 146
+            i1:
+              x: 741
+              y: 146
+            a2:
+              x: 539
+              y: 171
+            b2:
+              x: 564
+              y: 171
+            c2:
+              x: 589
+              y: 171
+            d2:
+              x: 615
+              y: 171
+            e2:
+              x: 640
+              y: 171
+            f2:
+              x: 665
+              y: 171
+            g2:
+              x: 690
+              y: 171
+            h2:
+              x: 716
+              y: 171
+            i2:
+              x: 741
+              y: 171
+            a3:
+              x: 539
+              y: 197
+            b3:
+              x: 564
+              y: 197
+            c3:
+              x: 589
+              y: 197
+            d3:
+              x: 615
+              y: 197
+            e3:
+              x: 640
+              y: 197
+            f3:
+              x: 665
+              y: 197
+            g3:
+              x: 690
+              y: 197
+            h3:
+              x: 716
+              y: 197
+            i3:
+              x: 741
+              y: 197
+            a4:
+              x: 539
+              y: 222
+            b4:
+              x: 564
+              y: 222
+            c4:
+              x: 589
+              y: 222
+            d4:
+              x: 615
+              y: 222
+            e4:
+              x: 640
+              y: 222
+            f4:
+              x: 665
+              y: 222
+            g4:
+              x: 690
+              y: 222
+            h4:
+              x: 716
+              y: 222
+            i4:
+              x: 741
+              y: 222
+            a5:
+              x: 539
+              y: 248
+            b5:
+              x: 564
+              y: 248
+            c5:
+              x: 589
+              y: 248
+            d5:
+              x: 615
+              y: 248
+            e5:
+              x: 640
+              y: 248
+            f5:
+              x: 665
+              y: 248
+            g5:
+              x: 690
+              y: 248
+            h5:
+              x: 716
+              y: 248
+            i5:
+              x: 741
+              y: 248
+            a6:
+              x: 539
+              y: 274
+            b6:
+              x: 564
+              y: 274
+            c6:
+              x: 589
+              y: 274
+            d6:
+              x: 615
+              y: 274
+            e6:
+              x: 640
+              y: 274
+            f6:
+              x: 665
+              y: 274
+            g6:
+              x: 690
+              y: 274
+            h6:
+              x: 716
+              y: 274
+            i6:
+              x: 741
+              y: 274
+            a7:
+              x: 539
+              y: 299
+            b7:
+              x: 564
+              y: 299
+            c7:
+              x: 589
+              y: 299
+            d7:
+              x: 615
+              y: 299
+            e7:
+              x: 640
+              y: 299
+            f7:
+              x: 665
+              y: 299
+            g7:
+              x: 690
+              y: 299
+            h7:
+              x: 716
+              y: 299
+            i7:
+              x: 741
+              y: 299
+            a8:
+              x: 539
+              y: 325
+            b8:
+              x: 564
+              y: 325
+            c8:
+              x: 589
+              y: 325
+            d8:
+              x: 615
+              y: 325
+            e8:
+              x: 640
+              y: 325
+            f8:
+              x: 665
+              y: 325
+            g8:
+              x: 690
+              y: 325
+            h8:
+              x: 716
+              y: 325
+            i8:
+              x: 741
+              y: 325
+            a9:
+              x: 539
+              y: 350
+            b9:
+              x: 564
+              y: 350
+            c9:
+              x: 589
+              y: 350
+            d9:
+              x: 615
+              y: 350
+            e9:
+              x: 640
+              y: 350
+            f9:
+              x: 665
+              y: 350
+            g9:
+              x: 690
+              y: 350
+            h9:
+              x: 716
+              y: 350
+            i9:
+              x: 741
+              y: 350
+      - id: flag_cell
+        description: Flag a cell by id (cell="a1".."i9").
+        parameters:
+          cell:
+            type: string
+            description: Cell id, e.g., a1..i9.
+        required: [cell]
+        binding:
+          action: click
+          button: right
+          cell_param: true
+          cell_bindings: *cell_bindings

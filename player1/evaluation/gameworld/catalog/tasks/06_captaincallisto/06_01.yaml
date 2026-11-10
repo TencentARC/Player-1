@@ -1,0 +1,17 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Collect at least 6 coins and stay alive.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.coins: 6
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.player
+    - metrics.coins_total
+    - metrics.lives
+    - metrics.deaths
+    - metrics.distance_to_goal

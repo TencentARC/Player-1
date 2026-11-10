@@ -1,0 +1,13 @@
+task_prompt: |
+  Stay alive for at least 20 seconds while descending.
+  Choose your next platform early so you have time to move toward it.
+
+evaluator_config:
+  objective:
+    reach:
+      gameTimeMs: 20000
+  metrics_fields:
+    - game_state.score
+    - metrics.hp
+    - metrics.best_score
+    - metrics.primary_score

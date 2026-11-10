@@ -1,0 +1,17 @@
+game_url_suffix: "?level=4"
+
+task_prompt: |
+  Gather all 15 coins in this level.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.coins: 15
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.player
+    - metrics.coins_total
+    - metrics.lives
+    - metrics.deaths
+    - metrics.distance_to_goal

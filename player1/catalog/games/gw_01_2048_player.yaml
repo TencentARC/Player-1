@@ -1,0 +1,89 @@
+game_name: gw_01_2048_player
+game_rules: 'You are playing 2048, a sliding tile puzzle game.
+
+  - Moving shifts every tile in one direction.
+
+  - Two matching tiles merge into one tile with twice the value.
+
+  - A new tile appears after each move that changes the board.
+
+  - The game ends when the board has no legal move.'
+role_control:
+  role_control_block: 'Role:
+
+    You control the 2048 board.
+
+    Controls:
+
+    - Tap arrowup to slide every tile up.
+
+    - Tap arrowdown to slide every tile down.
+
+    - Tap arrowleft to slide every tile left.
+
+    - Tap arrowright to slide every tile right.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: merge matching tiles
+    response: '<think>
+
+      Matching tiles can merge by moving left, so I should slide the board left and
+      keep more empty cells available for later moves.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["arrowleft"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: preserve open cells
+    response: '<think>
+
+      The largest tiles are along the bottom, and sliding down can combine matching
+      tiles while keeping upper cells open for new tiles.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["arrowdown"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

@@ -1,0 +1,58 @@
+game_name: vizdoom_deathmatch
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom Deathmatch, an open first-person combat arena.
+  - Maximize reward by defeating as many hostile monsters as possible before time runs out or you die.
+  - Different monsters give different rewards and can attack from across the arena.
+  - Weapons, ammunition, health, and armor are scattered around the map.
+  - Keep moving, collect useful resources, and select a suitable weapon for nearby threats.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the ViZDoom player.
+    Controls:
+    - Hold w or s to move forward or backward.
+    - Hold a or d to move left or right.
+    - Hold shift with movement to move faster.
+    - Tap 1 through 6 to select a weapon.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Left-click or hold the left mouse button to fire.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [w, a, s, d, shift, "1", "2", "3", "4", "5", "6"]
+    mouse_move: true
+    mouse_click: [left]
+    mouse_hold: [left]
+
+in_context_examples:
+  player1_control:
+    - name: engage near supplies
+      response: |-
+        <think>
+        A hostile monster is approaching from the right near useful supplies. I should turn toward it, move closer, and fire while staying ready to collect resources.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

@@ -1,0 +1,55 @@
+game_rules: |
+  You are playing 2048, a sliding tile puzzle game.
+
+  ## Game Objective
+  - Combine matching tiles to create higher values.
+
+  ## Game Rules
+  - All tiles slide in the direction you press.
+  - When two tiles with the same number collide, they merge into one tile with doubled value.
+  - After each valid move (any tile is moved), a new tile of 2 or 4 appears in a random empty cell.
+  - Game ends when no more moves are possible (board is full and no merges available).
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the 2048 board.
+        Choose exactly one action per step to slide tiles.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Do nothing.
+        - ArrowUp: Slide all tiles up
+        - ArrowDown: Slide all tiles down
+        - ArrowLeft: Slide all tiles left
+        - ArrowRight: Slide all tiles right
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Do nothing.
+        binding:
+          action: wait
+          duration: 0.5
+      - id: move_up
+        description: Slide all tiles up.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+      - id: move_down
+        description: Slide all tiles down.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+      - id: move_left
+        description: Slide all tiles left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+      - id: move_right
+        description: Slide all tiles right.
+        binding:
+          action: press_key
+          key: "ArrowRight"

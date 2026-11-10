@@ -1,0 +1,40 @@
+{
+  "source_url": "https://kenney.nl/assets/castle-kit",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "wall.glb",
+      "bytes": 16552,
+      "transforms": []
+    },
+    {
+      "file": "wall-pillar.glb",
+      "bytes": 18156,
+      "transforms": []
+    },
+    {
+      "file": "tower-square-top.glb",
+      "bytes": 13276,
+      "transforms": []
+    },
+    {
+      "file": "flag-banner-long.glb",
+      "bytes": 6660,
+      "transforms": []
+    },
+    {
+      "file": "wall-doorway.glb",
+      "bytes": 37560,
+      "transforms": []
+    },
+    {
+      "file": "gate.glb",
+      "bytes": 13880,
+      "transforms": []
+    },
+    {
+      "file": "Textures/colormap.png",
+      "bytes": 7529
+    }
+  ]
+}

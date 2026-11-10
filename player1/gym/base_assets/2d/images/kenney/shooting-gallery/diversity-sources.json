@@ -1,0 +1,22 @@
+{
+  "package": "shooting-gallery",
+  "license": "CC0",
+  "files": [
+    {
+      "file": "target_colored.png",
+      "source_file": "PNG/Objects/target_colored.png"
+    },
+    {
+      "file": "target_red1.png",
+      "source_file": "PNG/Objects/target_red1.png"
+    },
+    {
+      "file": "bg_wood.png",
+      "source_file": "PNG/Stall/bg_wood.png"
+    },
+    {
+      "file": "bg_green.png",
+      "source_file": "PNG/Stall/bg_green.png"
+    }
+  ]
+}

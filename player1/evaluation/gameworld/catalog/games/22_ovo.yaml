@@ -1,0 +1,83 @@
+game_rules: |
+  You are playing OVO, a fast platformer with traps.
+
+  ## Game Objective
+  - Reach the exit of each level.
+  - Collect coins while avoiding hazards.
+
+  ## Game Rules
+  - Avoid traps and pits.
+  - When you go next to the wall, you can jump higher.
+  - Jump on place and press down to smash the ground.
+
+game_roles:
+  - name: runner
+    prompt:
+      role_section: |
+        You control the character in OVO.
+        Control the player to run and jump through levels.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowLeft / ArrowRight: move left/right.
+        - ArrowUp: jump.
+        - ArrowUp + ArrowRight / ArrowLeft: jump while moving right / left.
+        - ArrowDown: smash the ground.
+        - ArrowDown + ArrowRight / ArrowLeft: slide right / left.
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Run left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Run right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: jump
+        description: Jump.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: jump_right
+        description: Jump while moving right.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowRight"]
+          duration: 0.1
+      - id: jump_left
+        description: Jump while moving left.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowLeft"]
+          duration: 0.1
+      - id: smash_ground
+        description: Smash the ground.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.1
+      - id: slide_right
+        description: Slide right.
+        binding:
+          action: press_keys
+          keys: ["ArrowDown", "ArrowRight"]
+          duration: 0.1
+      - id: slide_left
+        description: Slide left.
+        binding:
+          action: press_keys
+          keys: ["ArrowDown", "ArrowLeft"]
+          duration: 0.1

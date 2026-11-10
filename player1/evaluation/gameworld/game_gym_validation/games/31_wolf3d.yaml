@@ -1,0 +1,46 @@
+profile: game-gym
+game_id: 31_wolf3d
+
+game_rules: |-
+  You are playing Wolfenstein 3D, a first-person shooter game.
+  - Search rooms and defeat enemy guards while preserving health and ammunition.
+  - The pistol starts with eight bullets and defeated guards may drop ammunition.
+  - Doors can separate rooms; losing all health costs a life and respawns the player.
+
+roles:
+  player:
+    description: |-
+      You control the first-person soldier.
+    controls:
+      - Hold arrowup or arrowdown to move forward or backward.
+      - Hold arrowleft or arrowright to turn.
+      - Tap x to shoot and space to open a nearby door.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: shoot a centered guard
+          response: |-
+            <think>
+            An enemy guard is centered in front of me with a clear shot, so I should fire now before the guard attacks again.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["x"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: open a nearby door
+          response: |-
+            <think>
+            A closed door is centered directly ahead and I am close enough to use it, so I should open it before entering the next room.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["space"]
+            </parameter>
+            </function>
+            </tool_call>

@@ -1,0 +1,16 @@
+{
+  "source": "https://kenney.nl/assets/car-kit",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "hatchback-sports.glb",
+      "source_path": "Models/GLB format/hatchback-sports.glb",
+      "dependencies": [
+        {
+          "file": "Textures/colormap.png"
+        }
+      ]
+    }
+  ],
+  "transformations": "Add an exact-distance four-wheel quaternion clip; split the source green paint triangles into a tintable PBR material while retaining windows/lamps/tires/trim"
+}

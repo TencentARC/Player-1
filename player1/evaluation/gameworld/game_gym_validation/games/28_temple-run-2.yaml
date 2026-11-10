@@ -1,0 +1,42 @@
+profile: game-gym
+game_id: 28_temple-run-2
+
+game_rules: |-
+  You are playing Temple Run 2, an endless runner game.
+  - Follow the path and survive for as long as possible.
+  - Missing a turn or failing to avoid an obstacle ends the run.
+
+roles:
+  runner:
+    description: |-
+      You control the runner's lane changes, turns, jumps, and slides.
+    controls:
+      - Hold a or d to change lanes or take a left or right turn.
+      - Hold w to jump and s to slide.
+      - Tap space to start or continue the run.
+      - Wait for one game step when no input is needed.
+    in_context_examples:
+      control_v0_5:
+        - name: jump over a low obstacle
+          response: |-
+            <think>
+            A low ground obstacle blocks the current lane, so I should jump now and clear it safely while continuing along the path.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["w"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: run along a clear lane
+          response: |-
+            <think>
+            The runner is centered and the path ahead is clear, so I should wait and continue forward without making an unnecessary jump or lane change.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

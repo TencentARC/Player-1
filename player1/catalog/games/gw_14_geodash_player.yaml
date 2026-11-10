@@ -1,0 +1,70 @@
+game_name: gw_14_geodash_player
+game_rules: 'You are playing GeoDash, an auto-running platform game.
+
+  - Time jumps to clear spikes and other hazards.
+
+  - Crashing into an obstacle ends the run.'
+role_control:
+  role_control_block: 'Role:
+
+    You control when the runner jumps.
+
+    Controls:
+
+    - Tap space to jump.
+
+    - Wait for one game step to continue running without jumping.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - Space
+    mouse_move: true
+    mouse_click:
+    - left
+    - right
+    - middle
+    mouse_hold:
+    - left
+    - right
+    - middle
+in_context_examples:
+  original_player1_control: &id001
+  - name: jump over a spike
+    response: '<think>
+
+      A spike is approaching on the ground, so I should jump now and clear it safely
+      before the runner reaches the hazard.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_tap>
+
+      ["space"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: run on clear ground
+    response: '<think>
+
+      The ground ahead is clear and the next obstacle is still distant, so I should
+      wait and keep running without an early jump.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

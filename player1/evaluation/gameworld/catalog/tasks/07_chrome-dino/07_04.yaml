@@ -1,0 +1,12 @@
+task_prompt: |
+  Survive and reach a score of at least 600.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 600
+  metrics_fields:
+    - metrics.distance
+    - metrics.speed
+    - metrics.attempts
+    - metrics.high_score

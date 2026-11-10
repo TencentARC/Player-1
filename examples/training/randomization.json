@@ -1,0 +1,15 @@
+{
+  "visual_perturbation_id": "player1-randomization",
+  "train_modes": [
+    {
+      "mode_id": "all",
+      "weight": 100,
+      "domain_profiles": {
+        "appearance": "perturbed",
+        "camera": "perturbed",
+        "scene": "perturbed",
+        "control": "perturbed"
+      }
+    }
+  ]
+}

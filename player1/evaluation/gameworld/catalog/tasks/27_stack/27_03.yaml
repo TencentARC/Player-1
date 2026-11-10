@@ -1,0 +1,11 @@
+task_prompt: |
+  Build a streak of at least 20 successful block placements without a miss.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.successful_blocks: 20
+  metrics_fields:
+    - game_state.score
+    - metrics.missed_blocks
+    - metrics.deaths

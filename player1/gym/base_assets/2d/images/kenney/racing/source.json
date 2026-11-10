@@ -1,0 +1,34 @@
+{
+  "source": "https://kenney.nl/assets/racing-pack",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "path": "car_blue_1.png",
+      "source_path": "PNG/Cars/car_blue_1.png"
+    },
+    {
+      "path": "tree_large.png",
+      "source_path": "PNG/Objects/tree_large.png"
+    },
+    {
+      "path": "tree_small.png",
+      "source_path": "PNG/Objects/tree_small.png"
+    },
+    {
+      "path": "rock1.png",
+      "source_path": "PNG/Objects/rock1.png"
+    },
+    {
+      "path": "tent_blue_large.png",
+      "source_path": "PNG/Objects/tent_blue_large.png"
+    },
+    {
+      "path": "barrier_white.png",
+      "source_path": "PNG/Objects/barrier_white.png"
+    },
+    {
+      "path": "tires_white.png",
+      "source_path": "PNG/Objects/tires_white.png"
+    }
+  ]
+}

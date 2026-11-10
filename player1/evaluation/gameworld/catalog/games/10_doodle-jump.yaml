@@ -1,0 +1,49 @@
+game_rules: |
+  You are playing Doodle Jump, a vertical platformer.
+
+  ## Game Objective
+  - Keep ascending by landing on higher platforms.
+
+  ## Game Rules
+  - Green platforms: normal platforms.
+  - Blue movable platforms: moving left and right.
+  - Red breakable platforms: if you step on it, it will break and you will fall.
+  - White vanishable platforms: can step on it once, it will vanish.
+  - The left and right sides wrap around each other.
+
+game_roles:
+  - name: doodle
+  
+    prompt:
+      role_section: |
+        You control Doodle.
+        Control the player to drift and avoid falling.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Do nothing to continue vertical movement.
+        - ArrowLeft / ArrowRight: move horizontally.
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Do nothing to continue vertical movement.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Drift left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Drift right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+
+
+

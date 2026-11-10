@@ -1,0 +1,66 @@
+game_name: base_3d_duel_precision
+
+game_rules: |-
+  You are playing 3D Duel Precision, an endless first-person one-on-one sword fight.
+  - The opponent waits at a distance; move closer to start the fight.
+  - Chase the opponent as it circles, backs away, moves diagonally, and jumps when you get close.
+  - Keep the center crosshair directly on the opponent before slashing; a slash hits only when aimed and within reach.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control a sword fighter in a one-on-one duel.
+    Controls:
+    - Move with w/s/a/d relative to where you are looking.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Left-click to slash.
+    - Press space to dodge, or wait for one game step.
+  game_controls:
+    duration_ms: 200
+    keys: [w, s, a, d, space]
+    mouse_move: true
+    mouse_click: [left]
+
+in_context_examples:
+  original_player1_control:
+    - name: aim before attacking
+      response: |-
+        <think>
+        The opponent is close and slightly left. I should advance while turning left and attacking toward its body.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":-50,"dy":0}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: turn the view right
+      response: |-
+        <think>
+        The arena extends to my right. I should move the mouse slightly right to turn toward that side.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>

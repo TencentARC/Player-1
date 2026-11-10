@@ -1,0 +1,37 @@
+game_rules: |
+  You are playing Boxel Rebound, a precision platformer.
+
+  ## Game Objective
+  -  Time your jumps to navigate through each level to reach the end without dying.
+  - Your character automatically moves forward continuously.
+
+  ## Game Rules
+  - You can only jump - no left/right movement control.
+  - Avoid spikes and falling into pits.
+
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the boxel character.
+        Time your jumps to navigate through the level.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Do nothing to continue movement.
+        - Space or ArrowUp: Jump
+    computer_use_controls:
+      allowed_keys: ["Space", "ArrowUp"]
+      allow_clicks: true
+    semantic_controls:
+      - id: wait
+        description: Do nothing to continue movement.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: jump
+        description: Jump to avoid obstacles or cross gaps.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.1

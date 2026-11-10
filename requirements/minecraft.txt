@@ -1,0 +1,19 @@
+-r base.txt
+numpy==1.26.4
+gym==0.26.2
+opencv-python-headless==4.8.0.76
+absl-py
+rich
+coloredlogs
+daemoniker
+diskcache
+lxml
+Pyro4
+xmltodict
+minecraft_data==3.20.0
+jinja2
+psutil
+requests
+tqdm
+huggingface-hub>=0.26,<1
+setuptools>=69

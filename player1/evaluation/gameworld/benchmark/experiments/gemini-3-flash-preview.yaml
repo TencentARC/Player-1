@@ -1,0 +1,8 @@
+experiment_name: gemini-3-flash-preview_all_games_all_tasks
+headless: true
+
+cases:
+  - game: all
+    tasks: all
+    models: ["gemini-3-flash-preview"]
+    repeat: 1

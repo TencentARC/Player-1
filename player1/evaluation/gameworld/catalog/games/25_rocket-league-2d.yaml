@@ -1,0 +1,54 @@
+game_rules: |
+  You are playing Rocket League 2D, a side-view car soccer game.
+
+  ## Game Objective
+  - Score goals by hitting the ball into the opponent's net.
+  - Prevent the opponent from scoring.
+
+  ## Game Rules
+  - Drive left/right to position your car.
+  - Jump to hit the ball in the air.
+  - Boost can increase speed if available.
+
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the blue car.
+        Drive, jump, and boost to hit the ball and score goals.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - A/D: Drive
+        - W: Jump
+        - Space: Boost or speed up (if available)
+    computer_use_controls:
+      allowed_keys: ["a", "d", "w", "Space"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_left
+        description: Drive left.
+        binding:
+          action: press_key
+          key: "a"
+      - id: move_right
+        description: Drive right.
+        binding:
+          action: press_key
+          key: "d"
+      - id: jump
+        description: Jump to hit the ball.
+        binding:
+          action: press_key
+          key: "w"
+      - id: boost
+        description: Use boost or speed up if supported.
+        binding:
+          action: press_key
+          key: "Space"

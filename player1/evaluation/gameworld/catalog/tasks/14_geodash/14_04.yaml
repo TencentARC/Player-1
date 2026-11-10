@@ -1,0 +1,19 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Jump through the faster obstacle patterns and reach a score of at least 200.
+  Time each jump carefully.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 200
+  metrics_fields:
+    - gameTimeMs
+    - game_state.completion_progress
+    - metrics.distance
+    - metrics.points
+    - metrics.best_score
+    - metrics.deaths
+    - game_state.mode
+    - game_state.player_die

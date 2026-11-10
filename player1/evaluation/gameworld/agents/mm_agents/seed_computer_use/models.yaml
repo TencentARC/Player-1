@@ -1,0 +1,6 @@
+seed-1.8-cua:
+  # CN model: doubao-seed-1-8-251228
+  # CN base_url: https://ark.cn-beijing.volces.com/api/v3
+  model: "seed-1-8-251228"
+  base_url: "https://ark.ap-southeast.bytepluses.com/api/v3"
+  enable_memory: true

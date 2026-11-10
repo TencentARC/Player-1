@@ -1,0 +1,77 @@
+game_rules: |
+  You are playing Vex 3, a precision platformer with traps.
+
+  ## Game Objective
+  - Reach the checkpoints and then the exit of each level.
+  - Avoid spikes, saws, and falling hazards.
+
+  ## Game Rules
+  - Move left/right and jump between platforms.
+  - Some sections require crouch sliding or dropping through gaps.
+  - Death resets you to checkpoints.
+
+game_roles:
+  - name: runner
+    prompt:
+      role_section: |
+        You control the Vex character.
+        Control the player to move, jump, and slide.
+        You are a platform runner.
+        Reach the exit while avoiding traps.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowLeft / ArrowRight or A/D: move
+        - ArrowUp + ArrowLeft / ArrowRight: jump left/right
+        - ArrowDown + ArrowLeft / ArrowRight: crouch slide left/right
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Move left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Move right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: jump
+        description: Jump.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: jump_left
+        description: Jump left.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowLeft"]
+          duration: 0.1
+      - id: jump_right
+        description: Jump right.
+        binding:
+          action: press_keys
+          keys: ["ArrowUp", "ArrowRight"]
+          duration: 0.1
+      - id: crouch_slide_left
+        description: Crouch slide left.
+        binding:
+          action: press_keys
+          keys: ["ArrowDown", "ArrowLeft"]
+          duration: 0.1
+      - id: crouch_slide_right
+        description: Crouch slide right.
+        binding:
+          action: press_keys
+          keys: ["ArrowDown", "ArrowRight"]
+          duration: 0.1

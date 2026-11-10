@@ -1,0 +1,20 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Collect the floating piece of toast.
+  Make small left-right corrections and avoid rushing into spikes.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 2
+        target: 3
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.deaths
+    - metrics.spike_hits
+    - metrics.flap_max
+    - metrics.flap_target

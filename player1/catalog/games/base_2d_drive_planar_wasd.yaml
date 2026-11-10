@@ -1,0 +1,49 @@
+game_name: base_2d_drive_planar_wasd
+
+game_rules: |-
+  You are playing 2D Drive Planar, a top-down vehicle game.
+  - Pass the active checkpoint lines in order.
+  - Stay on the road. Fence contact keeps the vehicle inside and reduces its speed.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the player car.
+    Controls:
+    - Move with w=up, s=down, a=left, d=right.
+    - Combine one vertical and one horizontal key for diagonal movement.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    keys: [w, s, a, d, arrowleft, arrowright, arrowup, arrowdown]
+
+in_context_examples:
+  original_player1_control:
+    - name: drive toward the checkpoint
+      response: |-
+        <think>
+        The next active checkpoint lies directly above the vehicle and the road remains straight. I should hold W to accelerate upward to reach the highlighted line.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: move up
+      response: |-
+        <think>
+        The vehicle is near the lower part of the view and the road continues upward. I should hold W to move along this straight section.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["w"]
+        </parameter>
+        </function>
+        </tool_call>

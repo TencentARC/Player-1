@@ -1,0 +1,1 @@
+.crosshair,.facing-mark{width:6px;height:6px;box-sizing:border-box;border:1px solid #fff2c8;background:#263b3b;box-shadow:none;opacity:1;left:calc(50% - 3px);top:calc(50% - 3px);transform:translateZ(0);will-change:transform}.crosshair:before,.crosshair:after,.facing-mark:before,.facing-mark:after{display:none}

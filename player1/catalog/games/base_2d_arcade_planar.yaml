@@ -1,0 +1,53 @@
+game_name: base_2d_arcade_planar
+
+game_rules: |-
+  You are playing 2D Arcade Planar, a 4-direction coin collector game.
+
+  Game Rules:
+  - Collect coins.
+  - Avoid every moving obstacle.
+  - A collected coin gives score `+1`.
+  - An obstacle collision ends the episode but does not reduce score.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the player block.
+    Controls:
+    - Move with w=up, s=down, a=left, d=right.
+    - Combine one vertical and one horizontal key for diagonal movement.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    keys: [a, d, w, s, arrowleft, arrowright, arrowup, arrowdown]
+
+in_context_examples:
+  original_player1_control:
+    - name: move toward a coin
+      response: |-
+        <think>
+        The nearest coin is directly to my right, and no obstacle blocks the path. I should hold D to move toward it and collect it.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["d"]
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: move right
+      response: |-
+        <think>
+        The player block is near the left side, with open ground immediately to its right. I should hold D to move across that open space.
+        </think>
+
+        <tool_call>
+        <function=key_control>
+        <parameter=key_hold>
+        ["d"]
+        </parameter>
+        </function>
+        </tool_call>

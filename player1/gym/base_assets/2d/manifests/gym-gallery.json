@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "pack_id": "gym-gallery",
+  "palette": {
+    "background": "#101e2a",
+    "surface": "#23404e",
+    "surfaceAccent": "#426274",
+    "grid": "#58828f",
+    "text": "#d6e7e7",
+    "friendly": "#2878ff",
+    "friendlyAccent": "#9dc6ff",
+    "hostile": "#e5484d",
+    "hostileAccent": "#ffb8b8",
+    "target": "#ffab65",
+    "goal": "#6be2bb",
+    "hazard": "#ff887c",
+    "neutral": "#64748b",
+    "interactive": "#f4c430",
+    "projectile": "#ffd84d",
+    "road": "#343b49",
+    "roadEdge": "#f0f3f5",
+    "lane": "#e7ebef",
+    "verge": "#4d8469",
+    "vehicle": "#ffd338",
+    "vehicleAccent": "#ffef8a",
+    "coin": "#f5c542",
+    "sky": "#cfe5f4",
+    "pipe": "#337c55",
+    "platform": "#465668",
+    "spriteTint": "#ffffff"
+  },
+  "alternate_palette": {
+    "friendly": "#00a7a0",
+    "friendlyAccent": "#95ebe4",
+    "hostile": "#a75bd8",
+    "hostileAccent": "#e7c5f6",
+    "target": "#ec7a2f",
+    "goal": "#00a991",
+    "hazard": "#d95c84",
+    "interactive": "#38a9d0",
+    "projectile": "#2cc9d2",
+    "vehicle": "#f06442",
+    "vehicleAccent": "#ffa080",
+    "coin": "#2fcf9b",
+    "pipe": "#347fc4"
+  },
+  "surfaces": {
+    "background": "panels",
+    "floor": "grid",
+    "road": "asphalt",
+    "platform": "metal"
+  },
+  "assets": {
+    "gallery_target": {
+      "type": "image",
+      "url": "../images/kenney/shooting-gallery/target_red3.png",
+      "filter": "linear",
+      "variant_group": "gallery"
+    },
+    "gallery_panel": {
+      "type": "image",
+      "url": "../images/kenney/shooting-gallery/bg_blue.png",
+      "filter": "linear",
+      "variant_group": "gallery"
+    },
+    "gallery_cursor": {
+      "type": "image",
+      "url": "../images/kenney/crosshair-pack/crosshair-031.png",
+      "filter": "linear"
+    },
+    "gallery_ring": {
+      "type": "image",
+      "url": "../images/kenney/particle-pack/circle_01.png",
+      "filter": "linear"
+    },
+    "gallery_spark": {
+      "type": "image",
+      "url": "../images/kenney/particle-pack/star_04.png",
+      "filter": "linear"
+    },
+    "gallery_target_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/shooting-gallery/target_colored.png",
+      "filter": "linear",
+      "role": "gallery_target"
+    },
+    "gallery_target_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/shooting-gallery/target_red1.png",
+      "filter": "linear",
+      "role": "gallery_target"
+    },
+    "gallery_panel_variant_1": {
+      "type": "image",
+      "url": "../images/kenney/shooting-gallery/bg_wood.png",
+      "filter": "linear",
+      "role": "gallery_panel"
+    },
+    "gallery_panel_variant_2": {
+      "type": "image",
+      "url": "../images/kenney/shooting-gallery/bg_green.png",
+      "filter": "linear",
+      "role": "gallery_panel"
+    }
+  },
+  "content_revision": "gym-gallery-diversity-2",
+  "variants": {
+    "gallery_target": [
+      "gallery_target",
+      "gallery_target_variant_1",
+      "gallery_target_variant_2"
+    ],
+    "gallery_panel": [
+      "gallery_panel",
+      "gallery_panel_variant_1",
+      "gallery_panel_variant_2"
+    ]
+  },
+  "theme_group": "gallery",
+  "themes": [
+    {
+      "id": "steel",
+      "palette": {}
+    },
+    {
+      "id": "wood",
+      "palette": {
+        "background": "#342c29",
+        "surface": "#a98661",
+        "grid": "#cfb98a",
+        "surfaceAccent": "#e8c994"
+      }
+    },
+    {
+      "id": "garden",
+      "palette": {
+        "background": "#1b3432",
+        "surface": "#83bbae",
+        "grid": "#b4ce9b",
+        "surfaceAccent": "#d2df9e"
+      }
+    }
+  ]
+}

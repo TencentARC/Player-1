@@ -1,0 +1,37 @@
+game_rules: |
+  You are playing Flappy Bird, a one-button flying game.
+
+  ## Game Objective
+  - Keep the bird flying between pipes for as long as possible.
+  - Pass pipes to increase your score.
+
+  ## Game Rules
+  - Press Space to flap upward; gravity pulls you down.
+  - Hitting pipes or the ground ends the run.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the bird.
+        Tap to flap and avoid the pipes.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Space: Flap upward
+        - Wait: Do nothing briefly to let gravity pull bird downward
+    computer_use_controls:
+      allowed_keys: ["Space"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Do nothing briefly to let gravity pull bird downward
+        binding:
+          action: wait
+          duration: 0.1
+      - id: flap
+        description: Flap upward.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.1

@@ -1,0 +1,62 @@
+game_rules: |
+  You are playing Monkey Mart, a store management game.
+
+  ## Game Objective
+  - Stock shelves, serve customers, and earn money.
+  - Expand the store by unlocking new stations and upgrades.
+
+  ## Game Rules
+  - Move next to stations to automatically harvest crops, carry goods, and restock shelves.
+  - Customers show the item they want above their heads; keep the matching shelf stocked so they can buy it.
+  - Customers pay you at the counter after they got the wanted items, go to the counter to serve them and collect the cash.
+  - The assistant monkey can help with harverst, you may need to wake the assistant regularly.
+  - Alternate between harvesting, restocking, and serving; use earnings to unlock more stations and assistants.
+
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the monkey character.
+        Move around the store to stock and manage items.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowUp: Move up
+        - ArrowDown: Move down
+        - ArrowLeft: Move left
+        - ArrowRight: Move right
+        - wait: Stay still to wait for assistants and customers
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowLeft", "ArrowDown", "ArrowRight"]
+      allow_clicks: false
+      hold_duration: 0.2
+    semantic_controls:
+      - id: wait
+        description: Stay still to wait for assistants and customers.
+        binding:
+          action: wait
+          duration: 0.5
+      - id: move_up
+        description: Move up.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.2
+      - id: move_down
+        description: Move down.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.2
+      - id: move_left
+        description: Move left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.2
+      - id: move_right
+        description: Move right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.2

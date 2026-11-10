@@ -1,0 +1,32 @@
+task_id: "base_2d_aim_train"
+game_id: base_2d_aim
+game_url_suffix: "?autostart=1&difficulty=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 10
+max_steps: 100
+task_target_score_field: 100
+continue_on_fail: false
+
+task_prompt: |
+  Hit targets.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.primary_score
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.targets_collected
+    - metrics.clicks
+    - metrics.misclicks
+    - metrics.average_precision
+    - metrics.step_count
+    - game_state.environment.difficulty
+    - game_state.environment.perturb_active
+    - terminal.outcome
+    - terminal.isTerminal

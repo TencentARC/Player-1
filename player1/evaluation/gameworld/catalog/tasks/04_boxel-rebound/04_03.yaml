@@ -1,0 +1,13 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Achieve at least 50% progress in this stage.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 0.5
+  metrics_fields:
+    - game_state.level
+    - game_state.score
+    - metrics.distance

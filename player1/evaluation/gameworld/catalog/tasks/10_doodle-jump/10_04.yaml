@@ -1,0 +1,11 @@
+task_prompt: |
+  Chain clean landings across moving and fragile platforms to reach at least 3000.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 3000
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.platforms_visible

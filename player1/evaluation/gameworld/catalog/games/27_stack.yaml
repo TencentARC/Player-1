@@ -1,0 +1,38 @@
+game_rules: |
+  You are playing Stack, a timing-based block stacking game.
+
+  ## Game Objective
+  - Drop each moving block to align with the stack.
+  - Build the highest stack possible.
+
+  ## Game Rules
+  - Each block moves back and forth over the tower.
+  - Press Space to drop the block.
+  - Any overhanging part is cut off.
+  - The game ends when there is no overlap.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the stacking blocks.
+        You are stacking blocks by timing drops.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Do nothing to wait the stack to move
+        - Space: Drop the block once
+    computer_use_controls:
+      allowed_keys: ["Space"]
+      allow_clicks: false
+    semantic_controls:
+      - id: wait
+        description: Wait briefly.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: drop_block
+        description: Drop the block to place it.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.1

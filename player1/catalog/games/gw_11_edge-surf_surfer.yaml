@@ -1,0 +1,73 @@
+game_name: gw_11_edge-surf_surfer
+game_rules: 'You are playing Edge Surf, an endless surfing game.
+
+  - Avoid obstacles and collect useful items while traveling as far as possible.
+
+  - Obstacle impacts cost lives; shields grant temporary protection and boosts grant
+  temporary speed.'
+role_control:
+  role_control_block: 'Role:
+
+    You steer the surfer and manage its speed.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to turn.
+
+    - Hold arrowup to slow down.
+
+    - Hold arrowdown to use an available speed boost.
+
+    - Wait for one game step to continue on the current path.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowDown
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    - Space
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: steer toward the route
+    response: '<think>
+
+      An obstacle is directly ahead and the right side is clear, so I should turn
+      right now to keep surfing along the safe route.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: hold the center of a clear path
+    response: '<think>
+
+      The current route is centered and clear for several lengths ahead, so I should
+      wait now and avoid adding an unnecessary turn.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

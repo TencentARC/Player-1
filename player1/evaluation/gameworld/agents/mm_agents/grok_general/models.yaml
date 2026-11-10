@@ -1,0 +1,4 @@
+grok-4.1-fast-reasoning:
+  model: "grok-4-1-fast-reasoning"
+  base_url: "https://api.x.ai/v1"
+  enable_memory: true

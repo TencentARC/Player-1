@@ -1,0 +1,22 @@
+game_url_suffix: "?level=5"
+
+
+task_prompt: |
+  Reach at least 1500 points while keeping blocks inside the outer boundary.
+  Match and clear colors on all six sides.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 1500
+  metrics_fields:
+    - game_state.level
+    - game_state.completion_progress
+    - game_state.environment.settled_blocks
+    - game_state.environment.highest_column_height
+    - game_state.environment.active_blocks
+    - metrics.score
+    - metrics.distance
+    - metrics.best_score
+    - metrics.difficulty
+    - metrics.topped_out

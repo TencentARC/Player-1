@@ -1,0 +1,20 @@
+game_url_suffix: "?level=5"
+
+task_prompt: |
+  Control the bird to touch the bread item.
+  Make small left-right adjustments and stay alive through the tight gaps.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.level:
+        start: 5
+        target: 6
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - gameTimeMs
+    - metrics.deaths
+    - metrics.spike_hits
+    - metrics.flap_max
+    - metrics.flap_target

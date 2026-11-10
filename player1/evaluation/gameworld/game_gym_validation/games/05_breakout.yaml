@@ -1,0 +1,41 @@
+profile: game-gym
+game_id: 05_breakout
+
+game_rules: |-
+  You are playing Breakout, a brick-breaking game.
+  - Keep the ball in play by bouncing it with the paddle.
+  - Ball impacts break bricks and increase the score.
+  - Letting the ball pass below the paddle loses it.
+
+roles:
+  player:
+    description: |-
+      You control the paddle at the bottom of the board.
+    controls:
+      - Hold arrowleft or arrowright to move the paddle.
+      - Wait for one game step when the paddle is already aligned.
+    in_context_examples:
+      control_v0_5:
+        - name: follow the ball
+          response: |-
+            <think>
+            The falling ball is to the right of the paddle, so I should move right to get underneath its path before impact.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowright"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: hold a good paddle position
+          response: |-
+            <think>
+            The paddle is already centered directly beneath the falling ball, so I should wait and preserve the alignment until the ball arrives.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

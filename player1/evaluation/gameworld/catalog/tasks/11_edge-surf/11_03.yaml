@@ -1,0 +1,14 @@
+task_prompt: |
+  Survive denser obstacle waves and push the score to at least 800.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 800
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.lives
+    - metrics.boosts
+    - metrics.shields
+    - metrics.attempts

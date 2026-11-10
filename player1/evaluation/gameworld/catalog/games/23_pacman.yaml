@@ -1,0 +1,53 @@
+game_rules: |
+  You are playing Pac-Man, a maze chase game.
+
+  ## Game Objective
+  - Eat all small dots in the maze.
+  - Avoid ghosts; eating a large dot temporarily lets you eat them.
+
+  TIPS:
+  - Use corridors to bait ghosts into corners.
+  - Save large dots for tricky sections.
+
+game_roles:
+  - name: pacman
+    prompt:
+      role_section: |
+        You control Pac-Man.
+        Control the player to move through the maze.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowUp: Move up through the maze
+        - ArrowDown: Move down through the maze
+        - ArrowLeft: Move left through the maze
+        - ArrowRight: Move right through the maze
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_up
+        description: Move up.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+      - id: move_down
+        description: Move down.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+      - id: move_left
+        description: Move left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+      - id: move_right
+        description: Move right.
+        binding:
+          action: press_key
+          key: "ArrowRight"

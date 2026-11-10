@@ -1,0 +1,50 @@
+game_name: vizdoom_defend_line
+width: 640
+height: 480
+
+game_rules: |-
+  You are playing ViZDoom Defend the Line from a fixed position.
+  - Maximize reward by stopping monsters before they cross the defended line.
+  - You cannot move; turn horizontally and fire at threats approaching from the far side.
+  - Monsters attack up close or from a distance, keep returning, and become harder to stop.
+  - Ammunition is limited, so track the closest threat and avoid wasting shots.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the stationary ViZDoom defender.
+    Controls:
+    - Hold a or d to turn left or right.
+    Turn the camera horizontally with dx in [-1000, 1000], and always set dy=0.
+
+    dx=1000 represents one full visible game width.
+    Positive dx turns right, and negative dx turns left.
+
+    Larger dx values do not make you turn faster.
+    - Left-click or hold the left mouse button to fire.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 57
+    keys: [a, d]
+    mouse_move: true
+    mouse_click: [left]
+    mouse_hold: [left]
+
+in_context_examples:
+  player1_control:
+    - name: stop the closest threat
+      response: |-
+        <think>
+        The closest monster is moving toward the line from the left. I should turn left while firing at it before it advances farther.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":-100,"dy":0}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>

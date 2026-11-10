@@ -1,0 +1,46 @@
+game_rules: |
+  You are playing Cubefield, a 3D endless runner where you navigate a triangular ship through a field of cubes.
+
+  ## Game Objective
+  - Survive as long as possible by avoiding cube obstacles.
+
+  ## Game Rules
+  - Move left and right to dodge cubes.
+  - The ship automatically moves forward.
+  - Hitting any cube ends the game instantly.
+
+
+game_roles:
+  - name: pilot
+    prompt:
+      role_section: |
+        You control the triangular ship.
+        Move left or right to navigate through the cube field.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Continue straight.
+        - Arrow Left: Move left
+        - Arrow Right: Move right
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight"]
+      allow_clicks: true
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Continue straight.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: move_left
+        description: Move left to avoid cubes.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: move_right
+        description: Move right to avoid cubes.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+

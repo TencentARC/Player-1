@@ -1,0 +1,46 @@
+game_rules: |
+  You are playing the Chrome Dino runner game. Jump to start the run.
+
+  ## Game Objective
+  - Survive as long as possible while the dino runs.
+  - Avoid obstacles to keep the run going and increase score.
+
+game_roles:
+  - name: runner
+    prompt:
+      role_section: |
+        You control the dinosaur runner.
+        Jump to avoid obstacles and survive.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Wait: Do nothing to keep the run going.
+        - Space/ArrowUp: Jump or start the run.
+        - ArrowDown: Duck or descend faster.
+    computer_use_controls:
+      allowed_keys: ["Space", "ArrowUp", "ArrowDown"]
+      allow_clicks: false
+      hold_duration: 0.2
+    semantic_controls:
+      - id: wait
+        description: Do nothing briefly to keep the run going.
+        binding:
+          action: wait
+          duration: 0.1
+      - id: jump
+        description: Jump over obstacles.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.2
+      - id: duck
+        description: Duck under flying obstacles or descend faster.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.2
+      - id: start
+        description: Start or restart the run.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.2

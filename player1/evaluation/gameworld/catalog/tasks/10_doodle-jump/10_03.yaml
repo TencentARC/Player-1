@@ -1,0 +1,11 @@
+task_prompt: |
+  Navigate denser platform patterns and reach at least 1000 before a fall.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 1000
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.platforms_visible

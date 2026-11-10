@@ -1,0 +1,41 @@
+profile: game-gym
+game_id: 20_monkey-mart
+
+game_rules: |-
+  You are playing Monkey Mart, a store management game.
+  - Move near stations to harvest crops, carry goods, and restock shelves automatically.
+  - Keep requested goods stocked and visit the counter to serve customers and collect payment.
+  - Earnings unlock additional stations, upgrades, and assistants.
+
+roles:
+  player:
+    description: |-
+      You control the monkey managing the store.
+    controls:
+      - Hold arrowup, arrowdown, arrowleft, or arrowright to move around the store.
+      - Wait for one game step to remain near a station, assistant, or customer.
+    in_context_examples:
+      control_v0_5:
+        - name: move to a stocked shelf
+          response: |-
+            <think>
+            The stocked goods need to reach the shelf above the monkey, so I should move upward and approach the shelf to restock it.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowup"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: wait for work to finish
+          response: |-
+            <think>
+            The monkey is positioned at the correct station while its current job completes, so I should wait instead of walking away early.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

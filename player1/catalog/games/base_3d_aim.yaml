@@ -1,0 +1,55 @@
+game_name: base_3d_aim
+
+game_rules: |-
+  You are playing 3D Aim, an endless first-person target game.
+  - Aim at the active target and shoot it to score.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the game pointer.
+    Controls:
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Left-click to shoot.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    mouse_move: true
+    mouse_click: [left]
+
+in_context_examples:
+  original_player1_control:
+    - name: correct aim and fire
+      response: |-
+        <think>
+        The active target is slightly right and above the crosshair. I should aim right and up and fire in the same game step before the target changes.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":50,"dy":-50}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: turn the view right
+      response: |-
+        <think>
+        The current view shows part of the room extending to the right of the crosshair. I should move the mouse right to turn toward that area.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"relative","dx":100,"dy":0}
+        </parameter>
+        </function>
+        </tool_call>

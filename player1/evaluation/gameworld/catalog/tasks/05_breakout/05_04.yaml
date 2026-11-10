@@ -1,0 +1,15 @@
+game_url_suffix: "?level=4"
+
+task_prompt: |
+  Win this round by clearing every remaining block.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 1
+  metrics_fields:
+    - game_state.score
+    - game_state.level
+    - metrics.lives
+    - metrics.bricks_remaining
+    - metrics.bricks_total

@@ -1,0 +1,75 @@
+game_rules: |
+  You are playing Wolfenstein 3D, a first-person shooter game.
+
+  ## Game Objective
+  - Search for and defeat enemy guards by shooting them.
+  - Survive while maximizing kills.
+
+  ## Game Rules
+  - Guards will shoot at you when triggered (shot by you or you are nearby), reducing your health.
+  - You start with a pistol and 8 bullets.
+  - Killed guards may drop ammo clips.
+  - If your health reaches 0, you die and respawn (losing one life).
+  - Some enemies are in an adjacent room behind a door. Use the SPACE key near a door to open it.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control a soldier in first-person view.
+        Shoot guards to defeat them. Manage your ammo and health.
+        Use arrow keys to move and turn, X to shoot, SPACE to open doors.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowUp: Move forward
+        - ArrowDown: Move backward
+        - ArrowLeft: Turn left
+        - ArrowRight: Turn right
+        - x: Shoot / Attack
+        - Space: Use / Open door
+    computer_use_controls:
+      allowed_keys: ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "x", "Space"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly to observe.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_forward
+        description: Move forward.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+          duration: 0.1
+      - id: move_backward
+        description: Move backward.
+        binding:
+          action: press_key
+          key: "ArrowDown"
+          duration: 0.1
+      - id: turn_left
+        description: Turn left.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+          duration: 0.1
+      - id: turn_right
+        description: Turn right.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+          duration: 0.1
+      - id: shoot
+        description: Shoot / Attack.
+        binding:
+          action: press_key
+          key: "x"
+          duration: 0.1
+      - id: open_door
+        description: Use / Open door.
+        binding:
+          action: press_key
+          key: "Space"
+          duration: 0.1

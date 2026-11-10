@@ -1,0 +1,39 @@
+{
+  "source_url": "https://kenney.nl/assets/blocky-characters",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "character-g.glb",
+      "bytes": 113376,
+      "transforms": [
+        "Remove KHR_materials_unlit; metallic=0, roughness=0.78. Geometry, node transforms, texture and animation buffers unchanged."
+      ]
+    },
+    {
+      "file": "character-h.glb",
+      "bytes": 113380,
+      "transforms": [
+        "Remove KHR_materials_unlit; metallic=0, roughness=0.78. Geometry, node transforms, texture and animation buffers unchanged."
+      ]
+    },
+    {
+      "file": "character-r.glb",
+      "bytes": 113380,
+      "transforms": [
+        "Remove KHR_materials_unlit; metallic=0, roughness=0.78. Geometry, node transforms, texture and animation buffers unchanged."
+      ]
+    },
+    {
+      "file": "Textures/texture-g.png",
+      "bytes": 16069
+    },
+    {
+      "file": "Textures/texture-h.png",
+      "bytes": 16215
+    },
+    {
+      "file": "Textures/texture-r.png",
+      "bytes": 13909
+    }
+  ]
+}

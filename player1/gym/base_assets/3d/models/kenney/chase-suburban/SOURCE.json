@@ -1,0 +1,31 @@
+{
+  "source_url": "https://kenney.nl/assets/city-kit-suburban",
+  "version": "2.0",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "building-type-a.glb",
+      "bytes": 98604
+    },
+    {
+      "file": "building-type-j.glb",
+      "bytes": 99512
+    },
+    {
+      "file": "building-type-p.glb",
+      "bytes": 109260
+    },
+    {
+      "file": "fence.glb",
+      "bytes": 9672
+    },
+    {
+      "file": "tree-small.glb",
+      "bytes": 5812
+    },
+    {
+      "file": "Textures/colormap.png",
+      "bytes": 11784
+    }
+  ]
+}

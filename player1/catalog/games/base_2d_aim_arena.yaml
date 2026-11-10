@@ -1,0 +1,60 @@
+game_name: base_2d_aim_arena
+
+game_rules: |-
+  You are playing 2D Aim Arena, an endless top-down arena aiming game.
+  - Reposition around moving enemies; enemy contact is recorded but player health is unlimited.
+  - Shoot enemies to score.
+  - Cover blocks movement and shots. Reposition when an enemy is behind an obstacle.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the player in the arena.
+    Controls:
+    - Aim directly with absolute coordinates in [0, 1000] from top-left to bottom-right.
+    Move the pointer or camera with dx and dy in [-1000, 1000]
+    dx=1000 represents one full visible game width, and dy=1000 represents one full visible game height.
+    Positive dx moves right, negative dx moves left, positive dy moves down, and negative dy moves up.
+    dx and dy set the mouse movement amount.
+    - Move with w=up, s=down, a=left, d=right.
+    - Left-click to shoot.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    keys: [w, d, a, s]
+    mouse_move: true
+    mouse_click: [left]
+
+in_context_examples:
+  original_player1_control:
+    - name: shoot a nearby enemy
+      response: |-
+        <think>
+        The enemy is above and to my right. I should point at the enemy with its coordinates, and shoot at the same time before it gets closer.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"absolute","x":598,"y":771}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: move the pointer
+      response: |-
+        <think>
+        The pointer is currently on the left side of the arena view. I should move it toward x=600 and y=450 to place it farther to the right.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"absolute","x":600,"y":450}
+        </parameter>
+        </function>
+        </tool_call>

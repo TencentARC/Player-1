@@ -1,0 +1,12 @@
+game_url_suffix: "?level=4"
+
+task_prompt: |
+  Navigate maze level 4 and arrive at the exit.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 1.0
+  metrics_fields:
+    - game_state.level
+    - metrics.distance_to_goal

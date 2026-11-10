@@ -1,0 +1,14 @@
+task_prompt: |
+  Collect at least 2 coins while staying safe.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.session_coins_collected: 2
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.coins
+    - metrics.coins_total
+    - metrics.deaths

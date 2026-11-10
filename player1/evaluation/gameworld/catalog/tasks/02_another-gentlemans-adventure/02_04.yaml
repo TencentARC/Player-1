@@ -1,0 +1,13 @@
+task_prompt: |
+  Gather at least 4 coins in the current level.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.session_coins_collected: 4
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.coins
+    - metrics.coins_total

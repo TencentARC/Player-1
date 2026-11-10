@@ -1,0 +1,13 @@
+game_url_suffix: "?level=3"
+
+task_prompt: |
+  Reach full completion (100% progress) for this level.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 1.0
+  metrics_fields:
+    - game_state.level
+    - game_state.score
+    - metrics.distance

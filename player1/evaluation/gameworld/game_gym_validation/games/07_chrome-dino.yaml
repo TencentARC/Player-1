@@ -1,0 +1,41 @@
+profile: game-gym
+game_id: 07_chrome-dino
+
+game_rules: |-
+  You are playing Chrome Dino, an endless runner game.
+  - The dinosaur runs forward automatically.
+  - Avoid ground and flying obstacles to survive and increase the score.
+
+roles:
+  runner:
+    description: |-
+      You control the dinosaur's jumps and ducks.
+    controls:
+      - Tap space or arrowup to start the run or jump.
+      - Hold arrowdown to duck or descend faster.
+      - Wait for one game step to continue running normally.
+    in_context_examples:
+      control_v0_5:
+        - name: jump over a cactus
+          response: |-
+            <think>
+            A cactus is close in front of the running dinosaur, so I should jump now to pass safely over the obstacle.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_tap>
+            ["space"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: run on a clear path
+          response: |-
+            <think>
+            The path ahead is empty and the dinosaur is running safely, so I should wait instead of jumping before an obstacle appears.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://kenney.nl/assets/nature-kit",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "tree_oak.glb",
+      "bytes": 14644,
+      "transforms": []
+    },
+    {
+      "file": "tree_detailed.glb",
+      "bytes": 31412,
+      "transforms": []
+    }
+  ]
+}

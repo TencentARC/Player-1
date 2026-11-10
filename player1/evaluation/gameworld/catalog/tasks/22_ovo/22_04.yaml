@@ -1,0 +1,23 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Enter at level 2.
+  Collect at least 1 coin while in level 2.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.coins.collected_level: 1
+    require:
+      game_state.level: 2
+  metrics_fields:
+    - game_state.completion_progress
+    - game_state.score
+    - game_state.coins.remaining_level
+    - game_state.coins.total_level
+    - gameTimeMs
+    - metrics.coins
+    - metrics.primary_score
+    - metrics.coins_total
+    - metrics.distance_to_goal
+    - metrics.level_number

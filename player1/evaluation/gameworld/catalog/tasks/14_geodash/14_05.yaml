@@ -1,0 +1,19 @@
+game_url_suffix: "?level=3"
+
+task_prompt: |
+  Keep jumping safely and finish with at least 200 points.
+  Time jumps through long rows of spikes and the narrow gaps near the end.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 200
+  metrics_fields:
+    - gameTimeMs
+    - game_state.completion_progress
+    - metrics.distance
+    - metrics.points
+    - metrics.best_score
+    - metrics.deaths
+    - game_state.mode
+    - game_state.player_die

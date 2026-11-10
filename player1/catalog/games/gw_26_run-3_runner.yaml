@@ -1,0 +1,71 @@
+game_name: gw_26_run-3_runner
+game_rules: 'You are playing Run 3, an endless tunnel runner game.
+
+  - Stay on the tunnel platforms and survive for as long as possible.
+
+  - Move sideways around missing floor sections and jump across gaps.'
+role_control:
+  role_control_block: 'Role:
+
+    You steer the runner through the tunnel.
+
+    Controls:
+
+    - Hold arrowleft or arrowright to move sideways.
+
+    - Hold arrowup or space to jump.
+
+    - Combine a horizontal key with a jump key to jump diagonally.
+
+    - Wait for one game step when no input is needed.'
+  game_controls:
+    duration_ms: 100
+    keys:
+    - ArrowLeft
+    - ArrowRight
+    - ArrowUp
+    - Space
+    mouse_move: true
+    mouse_click: []
+    mouse_hold: []
+in_context_examples:
+  original_player1_control: &id001
+  - name: jump over a gap
+    response: '<think>
+
+      The open floor continues beyond the gap on the right, so I should move right
+      and jump together to reach it.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=key_control>
+
+      <parameter=key_hold>
+
+      ["arrowright","space"]
+
+      </parameter>
+
+      </function>
+
+      </tool_call>'
+  - name: run on solid ground
+    response: '<think>
+
+      Solid floor continues straight ahead and the runner is centered safely, so I
+      should wait instead of drifting or jumping without need.
+
+      </think>
+
+
+      <tool_call>
+
+      <function=wait>
+
+      </function>
+
+      </tool_call>'
+  basic_player1_control: *id001

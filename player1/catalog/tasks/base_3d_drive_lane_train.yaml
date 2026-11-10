@@ -1,0 +1,41 @@
+task_id: "base_3d_drive_lane_train"
+game_id: base_3d_drive_lane
+game_url_suffix: "?autostart=1&difficulty=1&rand_init_pos=1&fullscreen=1"
+evaluator_id: game_api_metric
+training_reward_field: metrics.primary_score
+training_reward_scale: 3
+max_steps: 100
+task_target_score_field: 100
+continue_on_fail: false
+
+task_prompt: |
+  Collect road coins.
+
+evaluator_config:
+  terminal_status: fail
+  score_field: metrics.primary_score
+  end_field: terminal.isTerminal
+  metrics_fields:
+    - metrics.distance_px
+    - metrics.coins_collected
+    - metrics.coins_visible
+    - metrics.coins_missed
+    - metrics.rand_init_pos
+    - metrics.next_coin_spawn_gap_px
+    - metrics.coin_speed_px_per_step
+    - metrics.env_reward_step
+    - metrics.env_reward_episode
+    - metrics.primary_score
+    - metrics.primary_positive_score
+    - metrics.primary_penalty_score
+    - metrics.step_count
+    - game_state.environment.rand_init_pos
+    - game_state.environment.coin_spawn_gap_px
+    - game_state.environment.next_coin_spawn_gap_px
+    - game_state.environment.coin_speed_px_per_step
+    - game_state.environment.fullscreen.active
+    - game_state.environment.fullscreen.width
+    - game_state.environment.fullscreen.height
+    - game_state.environment.fullscreen.fov
+    - terminal.outcome
+    - terminal.isTerminal

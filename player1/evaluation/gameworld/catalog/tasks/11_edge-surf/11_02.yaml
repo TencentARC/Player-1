@@ -1,0 +1,14 @@
+task_prompt: |
+  Maintain controlled turns through mid-run traffic and reach at least 500 in one run.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 500
+  metrics_fields:
+    - gameTimeMs
+    - metrics.distance
+    - metrics.lives
+    - metrics.boosts
+    - metrics.shields
+    - metrics.attempts

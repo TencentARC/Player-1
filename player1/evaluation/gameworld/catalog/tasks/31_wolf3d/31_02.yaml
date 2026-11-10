@@ -1,0 +1,13 @@
+task_prompt: |
+  Take down at least 3 enemy guards. Two are in front of you at the start, and four more wait behind a door and may join the fight.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.kills: 3
+  metrics_fields:
+    - metrics.max_kills
+    - metrics.total_monsters
+    - metrics.health
+    - metrics.ammo
+    - metrics.lives

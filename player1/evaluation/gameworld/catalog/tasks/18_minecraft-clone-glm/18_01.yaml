@@ -1,0 +1,18 @@
+task_prompt: |
+  Collect at least 20 dirt blocks in this run.
+  Look around the ground and mine nearby dirt efficiently.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.inventory.item_gains.dirt: 20
+  metrics_fields:
+    - game_state.inventory.item_counts.dirt
+    - metrics.items_total
+    - metrics.items_unique
+    - metrics.held_selected_item_type
+    - metrics.held_selected_item_count
+    - game_state.inventory.selected_slot
+    - game_state.environment.targeted_block.block_type
+    - game_state.environment.break_progress
+    - gameTimeMs

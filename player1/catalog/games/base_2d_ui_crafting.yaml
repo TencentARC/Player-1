@@ -1,0 +1,57 @@
+game_name: base_2d_ui_crafting
+
+game_rules: |-
+  You are playing 2D UI Crafting. Complete the request shown in the upper-left.
+  - Crafting: select the requested recipe to autofill the 2x2 or 3x3 grid, then take the output.
+  - Smelting: place the source item in the upper furnace slot and coal in the lower slot, wait, then take the output.
+  - Equipment: place the requested item in its matching armor or offhand slot.
+  - The Recipe Book shows available recipes and can autofill their ingredients.
+  - Each completed request scores and immediately starts the next request.
+
+role_control:
+  role_control_block: |-
+    Role:
+    You control the interface pointer.
+    Controls:
+    - Move the pointer with absolute coordinates in [0, 1000] from top-left to bottom-right.
+    - Left-click to pick up or place a stack, activate a button, or take output.
+    - Right-click to split a stack or place one item.
+    - Wait for one game step when no input is needed.
+  game_controls:
+    duration_ms: 200
+    mouse_move: true
+    mouse_click: [left, right]
+
+in_context_examples:
+  original_player1_control:
+    - name: open the Recipe Book
+      response: |-
+        <think>
+        In this workbench view, opening the Recipe Book will reveal available recipes, so I should move the mouse onto the icon and left-click.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"absolute","x":313,"y":351}
+        </parameter>
+        <parameter=mouse_click>
+        left
+        </parameter>
+        </function>
+        </tool_call>
+
+  basic_player1_control:
+    - name: move the pointer
+      response: |-
+        <think>
+        In this workbench view, the pointer is near the left edge, so I should move the mouse to the position at x=600 and y=450.
+        </think>
+
+        <tool_call>
+        <function=mouse_control>
+        <parameter=mouse_move>
+        {"mode":"absolute","x":600,"y":450}
+        </parameter>
+        </function>
+        </tool_call>

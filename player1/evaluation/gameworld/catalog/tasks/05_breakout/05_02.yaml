@@ -1,0 +1,15 @@
+game_url_suffix: "?level=2"
+
+task_prompt: |
+  Complete this stage by removing all bricks.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.completion_progress: 1
+  metrics_fields:
+    - game_state.score
+    - game_state.level
+    - metrics.lives
+    - metrics.bricks_remaining
+    - metrics.bricks_total

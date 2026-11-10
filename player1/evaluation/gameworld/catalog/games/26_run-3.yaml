@@ -1,0 +1,47 @@
+game_rules: |
+  You are playing Run 3, an endless tunnel runner.
+
+  ## Game Objective
+  - Survive as long as possible while navigating gaps.
+
+  ## Game Rules
+  - Move left/right to navigate gaps.
+  - Jump to cross gaps.
+
+game_roles:
+  - name: runner
+    prompt:
+      role_section: |
+        You are the runner.
+        Control the player to move sideways and jump over gaps.
+        You run through tunnels in Run 3.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - ArrowLeft / ArrowRight: move left/right.
+        - ArrowUp or Space: jump.
+    computer_use_controls:
+      allowed_keys: ["ArrowLeft", "ArrowRight", "ArrowUp", "Space"]
+      allow_clicks: false
+      hold_duration: 0.1
+    semantic_controls:
+      - id: wait
+        description: Pause briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: move_left
+        description: Move left along the tunnel.
+        binding:
+          action: press_key
+          key: "ArrowLeft"
+      - id: move_right
+        description: Move right along the tunnel.
+        binding:
+          action: press_key
+          key: "ArrowRight"
+      - id: jump
+        description: Jump across gaps.
+        binding:
+          action: press_key
+          key: "ArrowUp"
+

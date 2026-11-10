@@ -1,0 +1,54 @@
+{
+  "package": "top-down-tanks-redux",
+  "license": "CC0",
+  "files": [
+    {
+      "file": "tankBody_huge.png",
+      "source_file": "PNG/Default size/tankBody_huge.png"
+    },
+    {
+      "file": "tankBody_bigRed.png",
+      "source_file": "PNG/Default size/tankBody_bigRed.png"
+    },
+    {
+      "file": "tankBody_green.png",
+      "source_file": "PNG/Default size/tankBody_green.png"
+    },
+    {
+      "file": "tankBody_dark.png",
+      "source_file": "PNG/Default size/tankBody_dark.png"
+    },
+    {
+      "file": "tankBlue_barrel2.png",
+      "source_file": "PNG/Default size/tankBlue_barrel2.png"
+    },
+    {
+      "file": "tankRed_barrel2.png",
+      "source_file": "PNG/Default size/tankRed_barrel2.png"
+    },
+    {
+      "file": "tankGreen_barrel3.png",
+      "source_file": "PNG/Default size/tankGreen_barrel3.png"
+    },
+    {
+      "file": "tankDark_barrel3.png",
+      "source_file": "PNG/Default size/tankDark_barrel3.png"
+    },
+    {
+      "file": "crateWood.png",
+      "source_file": "PNG/Default size/crateWood.png"
+    },
+    {
+      "file": "tileGrass1.png",
+      "source_file": "PNG/Default size/tileGrass1.png"
+    },
+    {
+      "file": "tileSand2.png",
+      "source_file": "PNG/Default size/tileSand2.png"
+    },
+    {
+      "file": "barricadeWood.png",
+      "source_file": "PNG/Default size/barricadeWood.png"
+    }
+  ]
+}

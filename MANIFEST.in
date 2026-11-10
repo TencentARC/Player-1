@@ -1,0 +1,9 @@
+recursive-include docs *.md
+recursive-include assets *.png *.jpg
+recursive-include examples *.py *.json
+recursive-include scripts *.py
+recursive-include tests/core *.py
+include tests/__init__.py tests/release_fixture.py
+global-exclude *.pyc
+prune raw
+prune work

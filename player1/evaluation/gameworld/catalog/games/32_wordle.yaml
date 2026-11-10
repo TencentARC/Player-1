@@ -1,0 +1,44 @@
+game_rules: |
+  You are playing Wordle, a word guessing game.
+
+  ## Game Objective
+  - Guess the hidden five-letter word in six tries.
+  - Use color feedback to refine guesses.
+
+  ## Game Rules
+  - Each guess must be a valid five-letter word.
+  - Green means correct letter in the correct place.
+  - Yellow means correct letter in the wrong place.
+  - Gray means the letter is not in the word.
+  - The guess is auto-submitted when you type the 5th letter.
+
+game_roles:
+  - name: player
+    prompt:
+      role_section: |
+        You control the keyboard input.
+        Type a valid five-letter word to make a guess. The guess is auto-submitted when 5 letters are entered.
+        Use color feedback (green/yellow/gray) to narrow down the answer.
+      computer_use_controls_section: |
+        ACTION SPACE (ONLY LEGAL ACTIONS):
+        - Type a 5-letter word (e.g., type "hello"). The guess is auto-submitted when 5 letters are entered.
+        - Use Backspace to clear the input
+
+    computer_use_controls:
+      allowed_keys: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "Enter", "Backspace"]
+      allow_clicks: false
+    semantic_controls:
+      - id: wait
+        description: Wait briefly.
+        binding:
+          action: wait
+          duration: 0.2
+      - id: type_text
+        description: Type a five-letter guess (for example "hello"). The guess auto-submits after the 5th letter.
+        parameters:
+          text:
+            type: string
+            description: Five-letter guess to type, e.g., "hello".
+        required: [text]
+        binding:
+          action: type

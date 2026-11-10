@@ -1,0 +1,17 @@
+task_prompt: |
+  Acquire at least 50 leaves in this run.
+  Keep moving through the area and collect nearby leaves on the trees.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.inventory.item_gains.leaves: 50
+  metrics_fields:
+    - metrics.items_total
+    - metrics.items_unique
+    - metrics.held_selected_item_type
+    - metrics.held_selected_item_count
+    - game_state.inventory.selected_slot
+    - game_state.environment.targeted_block.block_type
+    - game_state.environment.break_progress
+    - gameTimeMs

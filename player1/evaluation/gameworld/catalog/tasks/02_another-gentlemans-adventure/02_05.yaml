@@ -1,0 +1,13 @@
+task_prompt: |
+  Secure at least 5 coins in this level.
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.session_coins_collected: 5
+  metrics_fields:
+    - game_state.score
+    - game_state.completion_progress
+    - game_state.level
+    - metrics.coins
+    - metrics.coins_total

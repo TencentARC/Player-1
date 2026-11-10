@@ -1,0 +1,19 @@
+game_url_suffix: "?level=1"
+
+task_prompt: |
+  Survive long enough to score at least 200.
+  Time each jump; avoid pressing jump repeatedly without checking the next obstacle.
+
+evaluator_config:
+  objective:
+    reach:
+      game_state.score: 200
+  metrics_fields:
+    - gameTimeMs
+    - game_state.completion_progress
+    - metrics.distance
+    - metrics.points
+    - metrics.best_score
+    - metrics.deaths
+    - game_state.mode
+    - game_state.player_die

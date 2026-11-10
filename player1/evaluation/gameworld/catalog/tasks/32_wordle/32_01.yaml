@@ -1,0 +1,17 @@
+game_url_suffix: "#infinite/1"
+
+task_prompt: |
+  Finish this round with all 5 letters in the correct positions (5 green tiles).
+
+evaluator_config:
+  objective:
+    reach:
+      metrics.letters_correct: 5
+    require:
+      metrics.word_number: 1
+  metrics_fields:
+    - metrics.attempts
+    - game_state.completion_progress
+    - metrics.guesses_remaining
+    - metrics.letters_present
+    - metrics.letters_absent

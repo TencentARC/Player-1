@@ -1,0 +1,41 @@
+profile: game-gym
+game_id: 10_doodle-jump
+
+game_rules: |-
+  You are playing Doodle Jump, a vertical platform game.
+  - The character bounces automatically and must keep landing on higher platforms.
+  - Green platforms are stable, blue platforms move, red platforms break, and white platforms vanish after one landing.
+  - Moving past one horizontal edge wraps the character to the other side.
+
+roles:
+  doodle:
+    description: |-
+      You steer Doodle horizontally while it rises and falls.
+    controls:
+      - Hold arrowleft or arrowright to drift horizontally.
+      - Wait for one game step to keep the current horizontal path.
+    in_context_examples:
+      control_v0_5:
+        - name: move toward a landing platform
+          response: |-
+            <think>
+            The next safe platform is above and to the right, so I should drift right while rising to line up the landing.
+            </think>
+
+            <tool_call>
+            <function=key_control>
+            <parameter=key_hold>
+            ["arrowright"]
+            </parameter>
+            </function>
+            </tool_call>
+        - name: keep a centered landing
+          response: |-
+            <think>
+            The character is already centered above the next platform, so I should wait and keep the current path rather than drifting away.
+            </think>
+
+            <tool_call>
+            <function=wait>
+            </function>
+            </tool_call>

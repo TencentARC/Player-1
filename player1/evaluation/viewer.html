@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Player-1 · Trajectories</title>
+<style>
+:root { color-scheme: dark; font: 15px system-ui, sans-serif; background: #10141d; color: #e6eaf1; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { padding: 20px 28px; border-bottom: 1px solid #30394a; display: flex; gap: 16px; align-items: baseline; }
+h1 { font-size: 20px; margin: 0; } header span, .muted { color: #9caac1; }
+main { padding: 20px 28px; max-width: 1680px; margin: auto; }
+.selectors { display: grid; grid-template-columns: 1fr 1fr 2fr 1fr auto; gap: 12px; }
+label { display: grid; gap: 6px; font-size: 13px; color: #b6c2d5; }
+select, input, button { font: inherit; color: #e6eaf1; background: #1a2230; border: 1px solid #3c4960; border-radius: 6px; padding: 9px; min-width: 0; }
+button { cursor: pointer; } button:disabled { opacity: .4; cursor: default; }
+button:hover:enabled { background: #29364b; } :focus-visible { outline: 2px solid #8bb9ff; outline-offset: 2px; }
+#refresh { align-self: end; } #meta { min-height: 42px; padding: 12px 0; overflow-wrap: anywhere; }
+.layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr); gap: 20px; }
+.screen { aspect-ratio: 16/9; background: #080b11; border: 1px solid #30394a; display: grid; place-items: center; position: relative; }
+.screen img { width: 100%; height: 100%; object-fit: contain; position: absolute; }
+.screen img[hidden] { display: none; } #missing { padding: 30px; text-align: center; color: #9caac1; }
+.controls { display: flex; gap: 10px; align-items: center; margin: 12px 0; flex-wrap: wrap; }
+#timeline { width: 100%; padding: 0; accent-color: #8bb9ff; }
+#step-info { line-height: 1.7; overflow-wrap: anywhere; }
+details { background: #171e2b; border: 1px solid #30394a; border-radius: 6px; margin-bottom: 12px; }
+summary { padding: 12px; cursor: pointer; font-weight: 600; }
+pre { padding: 0 12px 12px; margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 420px; overflow: auto; font-size: 13px; line-height: 1.6; }
+#error { color: #ffb5b5; white-space: pre-wrap; } .hint { font-size: 13px; color: #9caac1; }
+@media (max-width: 900px) { .selectors { grid-template-columns: 1fr 1fr; } .layout { grid-template-columns: 1fr; } main { padding: 16px; } }
+</style>
+</head>
+<body>
+<header><h1>Player-1</h1><span>Evaluation trajectories</span></header>
+<main>
+<div class="selectors">
+  <label>Run<select id="run"></select></label>
+  <label>Filter episodes<input id="filter" type="search" placeholder="Task, status or seed"></label>
+  <label>Episode<select id="episode"></select></label>
+  <label>Attempt<select id="attempt"></select></label>
+  <button id="refresh">Refresh</button>
+</div>
+<div id="meta" class="muted"></div><p id="error" role="alert"></p>
+<div class="layout">
+  <section aria-label="Trajectory frames">
+    <div class="screen"><img id="frame" alt="Observation sent to the model" hidden><span id="missing">Select an episode</span></div>
+    <div class="controls">
+      <button id="previous" aria-label="Previous step">←</button><button id="play">Play</button>
+      <button id="next" aria-label="Next step">→</button><span id="position"></span>
+      <label>Speed<select id="speed"><option value="1000">1 step/s</option><option value="500" selected>2 steps/s</option><option value="200">5 steps/s</option></select></label>
+    </div>
+    <input id="timeline" type="range" min="0" max="0" value="0" aria-label="Trajectory step">
+    <p id="step-info"></p><p class="hint">Frames show the observation before each action. ← / → to step; Space to play.</p>
+  </section>
+  <section aria-label="Step details">
+    <details open><summary>Action</summary><pre id="action"></pre></details>
+    <details open><summary>Model output</summary><pre id="generation"></pre></details>
+    <details><summary>Episode result and task</summary><pre id="result"></pre></details>
+  </section>
+</div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+let runs = [], episodes = [], trajectory = null, position = 0, timer = null, requestId = 0;
+const pretty = value => value == null ? '—' : JSON.stringify(value, null, 2);
+async function api(path, params = {}) {
+  const response = await fetch(path + '?' + new URLSearchParams(params));
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || response.statusText);
+  return data;
+}
+function options(id, values, selected) {
+  $(id).replaceChildren(...values.map(([value, text]) => new Option(text, value)));
+  if (selected != null && values.some(([value]) => String(value) === String(selected))) $(id).value = selected;
+}
+function stop() { clearTimeout(timer); timer = null; $('play').textContent = 'Play'; }
+function report(error) { stop(); $('error').textContent = error.message; }
+function show() {
+  const steps = trajectory?.steps || [], final = position === steps.length && trajectory?.final_image_url;
+  const step = steps[position], url = final || step?.image_url;
+  $('frame').hidden = !url;
+  if (url) { $('frame').src = url; $('frame').alt = final ? 'Final observation after the last action' : `Observation before decision ${step.decision}`; }
+  else $('frame').removeAttribute('src');
+  $('missing').hidden = !!url;
+  $('missing').textContent = step ? 'Screenshot was not recorded for this step.' : 'No committed steps recorded in this attempt.';
+  $('timeline').max = Math.max(0, steps.length - 1 + (trajectory?.final_image_url ? 1 : 0));
+  $('timeline').value = position;
+  $('position').textContent = final ? 'Final observation' : step ? `Step ${step.decision} · ${position + 1}/${steps.length}` : 'No steps';
+  $('previous').disabled = position === 0;
+  $('next').disabled = position >= Number($('timeline').max);
+  $('play').disabled = Number($('timeline').max) === 0;
+  $('action').textContent = pretty(step?.action);
+  $('generation').textContent = pretty(step?.generation);
+  $('step-info').textContent = final ? 'Observation after the last committed action.' : step ?
+    `Reward: ${step.reward} · Action valid: ${step.valid}` + (step.invalid_reason ? ` · ${step.invalid_reason}` : '') +
+    (step.terminated ? ' · Terminated' : '') + (step.truncated ? ' · Truncated' : '') : '';
+}
+function move(delta) { stop(); position = Math.max(0, Math.min(Number($('timeline').max), position + delta)); show(); }
+function play() {
+  if (timer) return stop();
+  if (position >= Number($('timeline').max)) position = 0;
+  $('play').textContent = 'Pause'; show();
+  const tick = () => { if (position >= Number($('timeline').max)) return stop(); position++; show(); timer = setTimeout(tick, Number($('speed').value)); };
+  timer = setTimeout(tick, Number($('speed').value));
+}
+async function loadEpisode(attempt) {
+  stop(); const token = ++requestId; $('error').textContent = ''; trajectory = null; position = 0; show();
+  if (!$('episode').value) { options('attempt', []); $('meta').textContent = 'No matching episodes'; return; }
+  const params = {run: $('run').value, episode: $('episode').value};
+  if (attempt) params.attempt = attempt;
+  const data = await api('/api/episode', params);
+  if (token !== requestId) return;
+  trajectory = data;
+  options('attempt', data.attempts.map(name => [name, name]), data.attempt);
+  const run = runs.find(row => String(row.id) === $('run').value), job = data.job;
+  const completed = data.result?.complete && (!data.result.attempt || data.result.attempt === data.attempt);
+  const state = data.failure ? 'Failed attempt' : data.result?.attempt && data.result.attempt !== data.attempt ? 'Earlier attempt' : completed ? 'Complete' : 'Pending / in progress';
+  $('meta').textContent = `${job.benchmark} · ${job.task_id} · seed ${job.seed} · ${state}` +
+    (completed && data.result?.score != null ? ` · Score ${data.result.score}` : '') + (run.model ? ` · ${run.model} @ ${run.model_revision}` : '');
+  $('error').textContent = data.failure?.error || '';
+  $('result').textContent = pretty({job, result: data.result, failure: data.failure}); show();
+}
+function filterEpisodes() {
+  const filter = $('filter').value.toLowerCase(), previous = $('episode').value;
+  const visible = episodes.filter(row => `${row.job.task_id} ${row.status} ${row.job.seed}`.toLowerCase().includes(filter));
+  options('episode', visible.map(row => [row.id, `${row.job.task_id} · trial ${row.job.trial} · ${row.status}${row.score == null ? '' : ' · ' + row.score}`]), previous);
+  return loadEpisode();
+}
+async function loadRun() {
+  const runId = $('run').value, data = await api('/api/episodes', {run: runId});
+  if ($('run').value !== runId) return;
+  episodes = data; await filterEpisodes();
+}
+async function refresh() {
+  runs = await api('/api/runs'); options('run', runs.map(row => [row.id, `${row.name} (${row.episodes} episodes)`]), $('run').value);
+  await loadRun();
+}
+$('run').onchange = () => { $('filter').value = ''; loadRun().catch(report); };
+$('filter').oninput = () => filterEpisodes().catch(report);
+$('episode').onchange = () => loadEpisode().catch(report);
+$('attempt').onchange = () => loadEpisode($('attempt').value).catch(report);
+$('refresh').onclick = () => refresh().catch(report);
+$('previous').onclick = () => move(-1); $('next').onclick = () => move(1); $('play').onclick = play;
+$('timeline').oninput = () => { stop(); position = Number($('timeline').value); show(); };
+$('frame').onerror = () => { $('frame').hidden = true; $('missing').hidden = false; $('missing').textContent = 'Screenshot could not be loaded.'; };
+document.addEventListener('keydown', event => {
+  if (['INPUT', 'SELECT', 'BUTTON', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+  if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
+  if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
+  if (event.code === 'Space') { event.preventDefault(); if (!$('play').disabled) play(); }
+});
+show(); refresh().catch(report);
+</script>
+</body>
+</html>
